@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
   workflow_dispatch:
 
 permissions:
@@ -19,34 +22,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+
       - run: pnpm install --frozen-lockfile || pnpm install
+
       - name: Build blocks-ui (goog → UMD)
         run: node packages/blocks-ui/build.mjs
-      - name: Verify dev server starts
-        run: timeout 30 pnpm dev 2>&1 | grep -q 'ready in'
-      - name: Start dev server and smoke test
-        run: |
-          pnpm dev &
-          DEV_PID=$!
-          sleep 10
-          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/editor.html
-          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/
-          kill $DEV_PID 2>/dev/null
-          wait $DEV_PID 2>/dev/null || true
+
+      - name: Production build for GitHub Pages
+        run: pnpm --filter @sailfish/web build
         env:
-          PORT: 8602
-          CI: true
-      - name: Build web app for Pages (static)
-        run: |
-          npx vite build --mode development --base /Sailfish-Studio/ --out apps/web/build 2>&1 || true
-          cp index.html apps/web/build/index-landing.html 2>/dev/null || true
+          NODE_ENV: production
+          ROOT: /Sailfish-Studio/
+
+      - name: Copy landing page
+        run: cp apps/web/index.html apps/web/build/index-landing.html
+
       - uses: actions/upload-pages-artifact@v4
         with:
           path: apps/web/build

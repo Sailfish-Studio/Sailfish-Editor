@@ -11,48 +11,48 @@ on:
       - 'LICENSE'
 
 jobs:
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile || pnpm install
-      - name: Typecheck TS config files only
-        run: npx tsc --noEmit apps/web/vite.config.ts apps/web/vite-plugin-webpack-compat.ts 2>&1 || true
-      - name: Verify blocks-ui build exists
-        run: test -f packages/blocks-ui/dist/vertical.js || (echo 'blocks-ui not built' && exit 1)
-
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+
       - run: pnpm install --frozen-lockfile || pnpm install
+
       - name: Build blocks-ui (goog → UMD)
         run: node packages/blocks-ui/build.mjs
-      - name: Verify dev server starts
-        run: timeout 30 pnpm dev 2>&1 | grep -q 'ready in'
+
+      - name: Verify blocks-ui output exists
+        run: test -f packages/blocks-ui/dist/vertical.js
+
+      - name: Production build
+        run: pnpm --filter @sailfish/web build
+        env:
+          NODE_ENV: production
+          ROOT: /
+
+      - name: Verify build output exists
+        run: test -f apps/web/build/index.html
+
       - name: Start dev server and smoke test
         run: |
           pnpm dev &
           DEV_PID=$!
-          sleep 10
-          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/editor.html
-          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/
+          sleep 15
+          STATUS1=$(curl -sf -o /dev/null -w '%{http_code}' http://localhost:8601/editor.html || echo 'FAIL')
+          STATUS2=$(curl -sf -o /dev/null -w '%{http_code}' http://localhost:8601/ || echo 'FAIL')
+          echo "editor.html: $STATUS1"
+          echo "/: $STATUS2"
+          [ "$STATUS1" = "200" ] && [ "$STATUS2" = "200" ] || (echo "Smoke test failed" && kill $DEV_PID 2>/dev/null && exit 1)
           kill $DEV_PID 2>/dev/null
           wait $DEV_PID 2>/dev/null || true
         env:
-          PORT: 8602
           CI: true

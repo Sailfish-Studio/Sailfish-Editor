@@ -1,4 +1,6 @@
 const twgl = require('twgl.js');
+import spriteVert from './shaders/sprite.vert?raw';
+import spriteFrag from './shaders/sprite.frag?raw';
 
 
 class ShaderManager {
@@ -64,8 +66,8 @@ class ShaderManager {
         const definesText = `${defines.join('\n')}\n`;
 
         /* eslint-disable global-require */
-        const vsFullText = definesText + require('raw-loader!./shaders/sprite.vert');
-        const fsFullText = definesText + require('raw-loader!./shaders/sprite.frag');
+        const vsFullText = definesText + spriteVert;
+        const fsFullText = definesText + spriteFrag;
         /* eslint-enable global-require */
 
         let errorMessage = null;

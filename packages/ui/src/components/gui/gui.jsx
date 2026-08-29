@@ -6,7 +6,8 @@ import {defineMessages, FormattedMessage, injectIntl, intlShape} from 'react-int
 import {connect} from 'react-redux';
 import MediaQuery from 'react-responsive';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-import tabStyles from 'react-tabs/style/react-tabs.css';
+import tabStyles from './react-tabs-classes';
+import 'react-tabs/style/react-tabs.css';
 import VM from '@sailfish/core';
 
 import Blocks from '../../containers/blocks.jsx';

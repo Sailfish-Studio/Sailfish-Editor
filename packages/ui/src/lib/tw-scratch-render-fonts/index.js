@@ -90,3 +90,7 @@ const getFonts = () => fontData;
 module.exports = getFonts;
 module.exports.loadFonts = loadFonts;
 module.exports.FONTS = fontData;
+
+// ESM named exports for Vite/Rollup build
+export { loadFonts, getFonts };
+export const FONTS = fontData;

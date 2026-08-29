@@ -2,6 +2,7 @@ const EventEmitter = require('events');
 
 const hull = require('@turbowarp/ancient-hull.js');
 const twgl = require('twgl.js');
+import rendererCSS from './renderer.css?inline';
 
 const SVGRenderer = require('@sailfish/render');
 const Skin = require('./Skin');
@@ -105,7 +106,7 @@ const loadStyles = () => {
     if (!_stylesheet) {
         _stylesheet = document.createElement('style');
         // eslint-disable-next-line global-require
-        _stylesheet.textContent = require('!raw-loader!./renderer.css');
+        _stylesheet.textContent = rendererCSS;
         _stylesheet.className = 'scratch-render-styles';
         document.head.appendChild(_stylesheet);
     }

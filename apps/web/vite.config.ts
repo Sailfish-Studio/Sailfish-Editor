@@ -34,7 +34,11 @@ const stripFlowPropTypes: PluginOption = {
 };
 
 // Workspace packages → source code (direct references, not node_modules)
+// Subpath aliases MUST come before bare package aliases (longer prefix first)
 const workspaceAliases: Record<string, string> = {
+  '@sailfish/core/src': resolve(MONO_ROOT, 'packages/core/src'),
+  '@sailfish/render/src': resolve(MONO_ROOT, 'packages/render/src'),
+  '@sailfish/ui/src': resolve(MONO_ROOT, 'packages/ui/src'),
   '@sailfish/core': resolve(MONO_ROOT, 'packages/core/src/index.js'),
   '@sailfish/render': resolve(MONO_ROOT, 'packages/render/src/index.js'),
   '@sailfish/ui': resolve(MONO_ROOT, 'packages/ui/src/index.js'),
@@ -105,6 +109,10 @@ export default defineConfig(({ mode }) => {
       minify: IS_PROD,
       emptyOutDir: true,
       target: 'esnext',
+      commonjsOptions: {
+        // Force CJS→ESM transform for workspace packages resolved via alias
+        include: [/node_modules/, /packages\/(core|render|ui|shared|paper)\//],
+      },
       rollupOptions: {
         input: {
           editor: resolve(__dirname, 'editor.html'),
