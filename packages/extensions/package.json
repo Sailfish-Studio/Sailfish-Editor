@@ -1,5 +1,5 @@
 {
-  "name": "@turbowarp/extensions",
+  "name": "@sailfish/extensions",
   "version": "0.0.1",
   "description": "Unsandboxed extensions for TurboWarp",
   "exports": {

@@ -1,5 +1,5 @@
 {
-  "name": "@turbowarp/nanolog",
+  "name": "@sailfish/nanolog",
   "version": "1.0.1",
   "description": "minilog replacement for TurboWarp.",
   "main": "index.js",

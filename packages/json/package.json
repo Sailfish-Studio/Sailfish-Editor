@@ -1,5 +1,5 @@
 {
-  "name": "@turbowarp/json",
+  "name": "@sailfish/json",
   "version": "0.1.2",
   "description": " Parse and stringify non-standards-compliant JSON",
   "main": "./lib/cjs.cjs",

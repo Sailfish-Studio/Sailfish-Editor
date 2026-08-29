@@ -41,7 +41,7 @@ jobs:
         run: pnpm --filter @sailfish/web build
         env:
           NODE_ENV: production
-          ROOT: /Sailfish-Studio/
+          ROOT: /Sailfish-Editor/
 
       - name: Copy landing page
         run: cp apps/web/index.html apps/web/build/index-landing.html

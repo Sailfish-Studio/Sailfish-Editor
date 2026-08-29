@@ -9,7 +9,8 @@ import runAddons from '../addons/entry';
 import {Theme} from '../lib/themes/index.js';
 
 import GUI from './render-gui.jsx';
-import TWWindchimeSubmitter from '../containers/tw-windchime-submitter.jsx';
+const TWWindchimeSubmitter = React.lazy(() => import('../containers/tw-windchime-submitter.jsx').then(m => ({default: m.default})));
+
 import render from './app-target';
 
 const getProjectId = () => {
@@ -47,7 +48,7 @@ const onProjectLoaded = () => {
 const Embed = props => (
     <React.Fragment>
         <GUI {...props} />
-        <TWWindchimeSubmitter />
+        <React.Suspense fallback={null}><TWWindchimeSubmitter /></React.Suspense>
     </React.Fragment>
 );
 

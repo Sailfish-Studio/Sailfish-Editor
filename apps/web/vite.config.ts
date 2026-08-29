@@ -124,16 +124,47 @@ export default defineConfig(({ mode }) => {
         },
         output: {
           manualChunks(id: string) {
+            // React ecosystem
             if (
               id.includes('node_modules/react/') ||
-              id.includes('node_modules/react-dom/') ||
-              id.includes('node_modules/redux/') ||
-              id.includes('node_modules/react-redux/')
+              id.includes('node_modules/react-dom/')
             ) {
               return 'vendor-react';
             }
+            // Redux
+            if (
+              id.includes('node_modules/redux/') ||
+              id.includes('node_modules/react-redux/')
+            ) {
+              return 'vendor-redux';
+            }
+            // Blocks UI (pre-built UMD, large)
             if (id.includes('blocks-ui')) {
               return 'blocks-ui';
+            }
+            // VM / engine core
+            if (id.includes('packages/core/src/engine') || id.includes('packages/core/src/compiler')) {
+              return 'vm-engine';
+            }
+            // Audio
+            if (id.includes('node_modules/howler') || id.includes('packages/core/src/audio')) {
+              return 'audio';
+            }
+            // Paint editor (lazy loaded)
+            if (id.includes('packages/paper')) {
+              return 'paint-editor';
+            }
+            // Addons system
+            if (id.includes('packages/ui/src/addons/')) {
+              return 'addons';
+            }
+            // Scratch libraries (decks, sprites, costumes JSONs)
+            if (id.includes('libraries/decks')) {
+              return 'library-decks';
+            }
+            // Other vendor libs
+            if (id.includes('node_modules/') && !id.includes('scratch-')) {
+              return 'vendor-misc';
             }
           },
         },

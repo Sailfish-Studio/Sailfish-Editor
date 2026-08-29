@@ -1,5 +1,5 @@
 {
-  "name": "@turbowarp/types",
+  "name": "@sailfish/types-tw",
   "version": "0.0.14",
   "description": "Type definitions for the Scratch VM and editor",
   "keywords": [
