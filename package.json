@@ -31,12 +31,32 @@
     "trampoline"
   ],
   "scripts": {
-    "dev": "bun run scripts/dev.js",
-    "build": "bun run scripts/build.js",
-    "clean": "bun run scripts/clean.js"
+    "dev": "bun --bun vite --config scratch-gui/vite.config.mjs",
+    "build:gui": "bun --bun vite build --config scratch-gui/vite.config.mjs",
+    "build:libs": "bun run scripts/build-libs.js",
+    "build": "bun run build:libs && bun run build:gui",
+    "build:vm": "bun --bun vite build --config scratch-vm/vite.config.mjs",
+    "build:render": "bun --bun vite build --config scratch-render/vite.config.mjs",
+    "build:blocks": "bun --bun vite build --config scratch-blocks/vite.config.mjs",
+    "build:paint": "bun --bun vite build --config scratch-paint/vite.config.mjs",
+    "build:storage": "bun --bun vite build --config scratch-storage/vite.config.mjs",
+    "build:svg-renderer": "bun --bun vite build --config scratch-svg-renderer/vite.config.mjs",
+    "build:parser": "bun --bun vite build --config scratch-parser/vite.config.mjs",
+    "build:audio": "bun --bun vite build --config scratch-audio/vite.config.mjs",
+    "build:nanolog": "bun --bun vite build --config nanolog/vite.config.mjs",
+    "build:sb3fix": "bun --bun vite build --config sb3fix/vite.config.mjs",
+    "clean": "bun run scripts/clean.js",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "vite": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "postcss": "^8.0.0",
+    "postcss-import": "^16.0.0",
+    "postcss-simple-vars": "^7.0.0",
+    "autoprefixer": "^10.0.0",
+    "babel-plugin-react-intl": "^3.0.0"
   }
 }
