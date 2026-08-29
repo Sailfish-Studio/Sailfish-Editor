@@ -113,7 +113,7 @@ export default defineConfig(({ mode }) => {
         // Force CJS→ESM transform for ALL workspace packages resolved via alias
         // This is critical because workspace aliases bypass node_modules,
         // so Vite's default CJS detection doesn't apply
-        include: [/node_modules/, /packages\/(?!blocks-ui\/dist)/],
+        include: /.*/, // Transform ALL files (workspace pkgs + node_modules)
       },
       rollupOptions: {
         input: {
