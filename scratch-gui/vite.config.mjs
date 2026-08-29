@@ -8,36 +8,72 @@ import autoprefixer from 'autoprefixer';
 import webpackCompat from './vite-plugin-webpack-compat.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = process.env.ROOT || '';
+const ROOT = process.env.ROOT || '/';
 const IS_PROD = process.env.NODE_ENV === 'production';
 const PORT = parseInt(process.env.PORT || '8601', 10);
+const MONO_ROOT = resolve(__dirname, '..');
 
-// Read brand
-// eslint-disable-next-line import/no-anonymous-default-export
+// esbuild plugin to strip broken Flow prop-type imports/exports from react-virtualized
+// Must run during optimizeDeps (pre-bundling) phase
+const stripFlowPropTypes = {
+  name: 'strip-flow-prop-types',
+  setup (build) {
+    build.onLoad({ filter: /react-virtualized.*\.js$/ }, async (args) => {
+      const fs = await import('fs');
+      let code = await fs.promises.readFile(args.path, 'utf8');
+      // Strip imports containing bpfrpt_proptype_
+      code = code.replace(
+        /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"]+['"];?/g,
+        ''
+      );
+      // Strip re-exports containing bpfrpt_proptype_
+      code = code.replace(
+        /export\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\};?/g,
+        ''
+      );
+      return { contents: code, loader: 'js' };
+    });
+  },
+};
+
+// Workspace packages → source code (direct references, not node_modules)
+const workspaceAliases = {
+  // scratch-* core packages
+  'scratch-vm':                 resolve(MONO_ROOT, 'scratch-vm/src/index.js'),
+  'scratch-render':             resolve(MONO_ROOT, 'scratch-render/src/index.js'),
+  'scratch-audio':              resolve(MONO_ROOT, 'scratch-audio/src/index.js'),
+  'scratch-paint':              resolve(MONO_ROOT, 'scratch-paint/src/index.js'),
+  'scratch-parser':             resolve(MONO_ROOT, 'scratch-parser/index.js'),
+  'scratch-blocks':             resolve(MONO_ROOT, 'scratch-blocks/dist/vertical.js'),
+  // @sailfish-studio scoped packages
+  '@sailfish-studio/scratch-storage':    resolve(MONO_ROOT, 'scratch-storage/src/index.js'),
+  '@sailfish-studio/scratch-svg-renderer': resolve(MONO_ROOT, 'scratch-svg-renderer/src/index.js'),
+  '@sailfish-studio/nanolog':            resolve(MONO_ROOT, 'nanolog/index.js'),
+  '@sailfish-studio/jszip':              resolve(MONO_ROOT, 'jszip/lib/index.js'),
+  '@sailfish-studio/sb3fix':             resolve(MONO_ROOT, 'sb3fix/src/sb3fix.js'),
+  '@sailfish-studio/paper':              resolve(MONO_ROOT, 'paper.js/dist/paper-full.js'),
+};
+
 export default defineConfig(({ mode }) => {
-  const APP_NAME = 'Sailfish Studio';
-
   return {
-    // Dev server
     server: {
       port: PORT,
       host: '0.0.0.0',
       open: false,
-      historyApiFallback: true,
     },
 
-    // Base path
-    base: ROOT || '/',
+    base: ROOT,
 
-    // Resolve
     resolve: {
       alias: {
+        // Workspace packages: direct source references
+        ...workspaceAliases,
+        // Other shims
         'text-encoding$': resolve(__dirname, 'src/lib/tw-text-encoder'),
         'scratch-render-fonts': resolve(__dirname, 'src/lib/tw-scratch-render-fonts'),
       },
     },
 
-    // CSS
     css: {
       modules: {
         localsConvention: 'camelCase',
@@ -50,32 +86,23 @@ export default defineConfig(({ mode }) => {
           autoprefixer,
         ],
       },
-      preprocessorOptions: {},
     },
 
-    // JSX
     plugins: [
       webpackCompat(),
       react({
         babel: {
           plugins: [
-            ['react-intl', {
-              messagesDir: './translations/messages/',
-            }],
+            ['react-intl', { messagesDir: './translations/messages/' }],
           ],
           presets: [
-            ['@babel/preset-env', {
-              targets: '> 1%, not dead',
-            }],
-            ['@babel/preset-react', {
-              runtime: 'automatic',
-            }],
+            ['@babel/preset-env', { targets: '> 1%, not dead' }],
+            ['@babel/preset-react', { runtime: 'automatic' }],
           ],
         },
       }),
     ],
 
-    // Environment defines (replaces webpack.DefinePlugin)
     define: {
       'process.env.NODE_ENV': JSON.stringify(mode),
       'process.env.DEBUG': JSON.stringify(!!process.env.DEBUG),
@@ -85,14 +112,12 @@ export default defineConfig(({ mode }) => {
       'process.env.ENABLE_WINDCHIMES': JSON.stringify(process.env.ENABLE_WINDCHIMES || ''),
     },
 
-    // Multi-page build (replaces multiple webpack entries + HtmlWebpackPlugin)
     build: {
       outDir: 'build',
       sourcemap: mode === 'development' ? 'inline' : false,
       minify: IS_PROD,
       emptyOutDir: true,
       target: 'esnext',
-      // Copy static assets
       rollupOptions: {
         input: {
           editor: resolve(__dirname, 'src/playground/editor.html'),
@@ -102,7 +127,6 @@ export default defineConfig(({ mode }) => {
           'addon-settings': resolve(__dirname, 'src/playground/addons.html'),
           credits: resolve(__dirname, 'src/playground/credits.html'),
         },
-        // Code splitting (replaces webpack splitChunks)
         output: {
           manualChunks (id) {
             if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/') || id.includes('node_modules/redux/') || id.includes('node_modules/react-redux/')) {
@@ -114,25 +138,17 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      // Chunk size warning limit
       chunkSizeWarningLimit: 1000,
     },
 
-    // Public directory (for blocks-media, images, etc.)
     publicDir: resolve(__dirname, 'static'),
 
-    // Optimize deps
+    // Exclude workspace packages from pre-bundling (they resolve to source via alias)
     optimizeDeps: {
-      include: [
-        'react', 'react-dom', 'react-redux', 'redux',
-        'scratch-vm', 'scratch-render', 'scratch-blocks', 'scratch-paint',
-        '@sailfish-studio/scratch-storage',
-        '@sailfish-studio/scratch-svg-renderer',
-        '@sailfish-studio/jszip',
-        '@sailfish-studio/nanolog',
-      ],
-      // Force re-bundling of scratch-* packages from workspace
-      force: true,
+      exclude: Object.keys(workspaceAliases),
+      esbuildOptions: {
+        plugins: [stripFlowPropTypes],
+      },
     },
   };
 });

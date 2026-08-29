@@ -1,24 +1,38 @@
 /**
- * Vite plugin to handle webpack inline loader syntax
- * Transforms: !css-loader!, !url-loader!, !raw-loader!, !!file-loader?opts!
+ * Vite plugin for webpack → Vite migration compat
+ * 1. Strips webpack inline loader syntax (!url-loader! etc.)
+ * 2. CSS Modules: adds ?module suffix
+ * 3. Strips broken Flow prop-type imports from react-virtualized
  */
 export default function webpackCompatPlugin () {
   return {
     name: 'webpack-compat',
     enforce: 'pre',
     transform (code, id) {
-      if (id.includes('node_modules')) return null;
       let result = code;
       let changed = false;
 
+      // --- Handle react-virtualized broken Flow prop-type imports ---
+      // react-virtualized ESM ships imports like:
+      //   import { bpfrpt_proptype_WindowScroller } from '../WindowScroller';
+      // but that export doesn't actually exist. Strip them.
+      if (id.includes('react-virtualized')) {
+        result = result.replace(
+          /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"]+['"];?/g,
+          () => { changed = true; return ''; }
+        );
+        if (changed) return result;
+      }
+
+      // --- Skip node_modules for the rest ---
+      if (id.includes('node_modules')) return null;
+
       // CSS Modules: webpack treated ALL .css imports as CSS Modules.
-      // Vite needs ?module suffix. Also transform default imports to namespace imports
-      // because Rollup CSS modules use named exports, not default.
+      // Vite needs ?module suffix. Also transform default imports to namespace imports.
       result = result.replace(
         /(import\s+)(\w+)(\s+from\s+['"])([^'"\n]+\.css)(['"])/g,
         (match, imp, name, mid, path, suffix) => {
           if (path.includes('?module') || path.includes('.module.css')) {
-            // Already has ?module, just ensure namespace import
             changed = true;
             return `${imp}* as ${name}${mid}${path}${suffix}`;
           }
@@ -34,7 +48,6 @@ export default function webpackCompatPlugin () {
       );
 
       // Single loader, no query, import form (double quotes)
-      // import X from "!url-loader!./file.svg" -> import X from "./file.svg?url"
       result = result.replace(
         /import\s+(\w+)\s+from\s+"!url-loader!([^"\n]+)"/g,
         (_m, name, path) => { changed = true; return `import ${name} from "${path}?url"`; }
