@@ -19,9 +19,10 @@
     "scratch-gui"
   ],
   "scripts": {
-    "dev": "bun --bun vite --config scratch-gui/vite.config.mjs",
-    "build:blocks": "node scratch-blocks/build-vite.js",
-    "build:gui": "bun --bun vite build --config scratch-gui/vite.config.mjs",
+    "dev": "bun --bun vite --config scratch-gui/vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "build:blocks": "bun run scratch-blocks/build.ts",
+    "build:gui": "bun --bun vite build --config scratch-gui/vite.config.ts",
     "build": "bun run build:blocks && bun run build:gui",
     "clean": "rm -rf scratch-gui/build scratch-blocks/dist"
   },

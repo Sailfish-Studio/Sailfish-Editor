@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -18,28 +18,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: "1.3.14"
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile || bun install
-
-      - name: Build scratch-blocks (goog → UMD)
-        run: node scratch-blocks/build-vite.js
-
-      - name: Build scratch-gui (production)
-        run: bun --bun vite build --config scratch-gui/vite.config.mjs
+          bun-version: '1.3.14'
+      - run: bun install --frozen-lockfile || bun install
+      - name: Build scratch-blocks (TS)
+        run: bun run scratch-blocks/build.ts
+      - name: Build scratch-gui (Vite + TS)
+        run: bun --bun vite build --config scratch-gui/vite.config.ts
         env:
           NODE_ENV: production
           ROOT: /Sailfish-Studio/
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Copy landing page
+        run: cp index.html scratch-gui/build/index-landing.html
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: scratch-gui/build
 
@@ -50,6 +43,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4

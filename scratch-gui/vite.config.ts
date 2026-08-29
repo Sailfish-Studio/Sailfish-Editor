@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type PluginOption } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import postcssImport from 'postcss-import';
 import postcssVars from 'postcss-simple-vars';
 import autoprefixer from 'autoprefixer';
-import webpackCompat from './vite-plugin-webpack-compat.js';
+import webpackCompat from './vite-plugin-webpack-compat.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.ROOT || '/';
@@ -14,22 +14,19 @@ const PORT = parseInt(process.env.PORT || '8601', 10);
 const MONO_ROOT = resolve(__dirname, '..');
 
 // esbuild plugin to strip broken Flow prop-type imports/exports from react-virtualized
-// Must run during optimizeDeps (pre-bundling) phase
-const stripFlowPropTypes = {
+const stripFlowPropTypes: PluginOption = {
   name: 'strip-flow-prop-types',
-  setup (build) {
+  setup(build) {
     build.onLoad({ filter: /react-virtualized.*\.js$/ }, async (args) => {
-      const fs = await import('fs');
+      const fs = await import('node:fs');
       let code = await fs.promises.readFile(args.path, 'utf8');
-      // Strip imports containing bpfrpt_proptype_
       code = code.replace(
-        /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"]+['"];?/g,
-        ''
+        /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"]["'];?/g,
+        '',
       );
-      // Strip re-exports containing bpfrpt_proptype_
       code = code.replace(
         /export\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\};?/g,
-        ''
+        '',
       );
       return { contents: code, loader: 'js' };
     });
@@ -37,21 +34,19 @@ const stripFlowPropTypes = {
 };
 
 // Workspace packages → source code (direct references, not node_modules)
-const workspaceAliases = {
-  // scratch-* core packages
-  'scratch-vm':                 resolve(MONO_ROOT, 'scratch-vm/src/index.js'),
-  'scratch-render':             resolve(MONO_ROOT, 'scratch-render/src/index.js'),
-  'scratch-audio':              resolve(MONO_ROOT, 'scratch-audio/src/index.js'),
-  'scratch-paint':              resolve(MONO_ROOT, 'scratch-paint/src/index.js'),
-  'scratch-parser':             resolve(MONO_ROOT, 'scratch-parser/index.js'),
-  'scratch-blocks':             resolve(MONO_ROOT, 'scratch-blocks/dist/vertical.js'),
-  // @sailfish-studio scoped packages
-  '@sailfish-studio/scratch-storage':    resolve(MONO_ROOT, 'scratch-storage/src/index.js'),
+const workspaceAliases: Record<string, string> = {
+  'scratch-vm': resolve(MONO_ROOT, 'scratch-vm/src/index.js'),
+  'scratch-render': resolve(MONO_ROOT, 'scratch-render/src/index.js'),
+  'scratch-audio': resolve(MONO_ROOT, 'scratch-audio/src/index.js'),
+  'scratch-paint': resolve(MONO_ROOT, 'scratch-paint/src/index.js'),
+  'scratch-parser': resolve(MONO_ROOT, 'scratch-parser/index.js'),
+  'scratch-blocks': resolve(MONO_ROOT, 'scratch-blocks/dist/vertical.js'),
+  '@sailfish-studio/scratch-storage': resolve(MONO_ROOT, 'scratch-storage/src/index.js'),
   '@sailfish-studio/scratch-svg-renderer': resolve(MONO_ROOT, 'scratch-svg-renderer/src/index.js'),
-  '@sailfish-studio/nanolog':            resolve(MONO_ROOT, 'nanolog/index.js'),
-  '@sailfish-studio/jszip':              resolve(MONO_ROOT, 'jszip/lib/index.js'),
-  '@sailfish-studio/sb3fix':             resolve(MONO_ROOT, 'sb3fix/src/sb3fix.js'),
-  '@sailfish-studio/paper':              resolve(MONO_ROOT, 'paper.js/dist/paper-full.js'),
+  '@sailfish-studio/nanolog': resolve(MONO_ROOT, 'nanolog/index.js'),
+  '@sailfish-studio/jszip': resolve(MONO_ROOT, 'jszip/lib/index.js'),
+  '@sailfish-studio/sb3fix': resolve(MONO_ROOT, 'sb3fix/src/sb3fix.js'),
+  '@sailfish-studio/paper': resolve(MONO_ROOT, 'paper.js/dist/paper-full.js'),
 };
 
 export default defineConfig(({ mode }) => {
@@ -60,15 +55,18 @@ export default defineConfig(({ mode }) => {
       port: PORT,
       host: '0.0.0.0',
       open: false,
+      // Use polling to avoid ENOSPC (inotify watcher limit)
+      watch: {
+        usePolling: true,
+        interval: 1000,
+      },
     },
 
     base: ROOT,
 
     resolve: {
       alias: {
-        // Workspace packages: direct source references
         ...workspaceAliases,
-        // Other shims
         'text-encoding$': resolve(__dirname, 'src/lib/tw-text-encoder'),
         'scratch-render-fonts': resolve(__dirname, 'src/lib/tw-scratch-render-fonts'),
       },
@@ -76,15 +74,11 @@ export default defineConfig(({ mode }) => {
 
     css: {
       modules: {
-        localsConvention: 'camelCase',
+        localsConvention: 'camelCase' as const,
         generateScopedName: '[name]_[local]_[hash:base64:5]',
       },
       postcss: {
-        plugins: [
-          postcssImport,
-          postcssVars,
-          autoprefixer,
-        ],
+        plugins: [postcssImport, postcssVars, autoprefixer],
       },
     },
 
@@ -92,9 +86,7 @@ export default defineConfig(({ mode }) => {
       webpackCompat(),
       react({
         babel: {
-          plugins: [
-            ['react-intl', { messagesDir: './translations/messages/' }],
-          ],
+          plugins: [['react-intl', { messagesDir: './translations/messages/' }]],
           presets: [
             ['@babel/preset-env', { targets: '> 1%, not dead' }],
             ['@babel/preset-react', { runtime: 'automatic' }],
@@ -120,16 +112,21 @@ export default defineConfig(({ mode }) => {
       target: 'esnext',
       rollupOptions: {
         input: {
-          editor: resolve(__dirname, 'src/playground/editor.html'),
-          player: resolve(__dirname, 'src/playground/index.html'),
-          fullscreen: resolve(__dirname, 'src/playground/fullscreen.html'),
-          embed: resolve(__dirname, 'src/playground/embed.html'),
-          'addon-settings': resolve(__dirname, 'src/playground/addons.html'),
-          credits: resolve(__dirname, 'src/playground/credits.html'),
+          editor: resolve(__dirname, 'editor.html'),
+          player: resolve(__dirname, 'index.html'),
+          fullscreen: resolve(__dirname, 'fullscreen.html'),
+          embed: resolve(__dirname, 'embed.html'),
+          'addon-settings': resolve(__dirname, 'addons.html'),
+          credits: resolve(__dirname, 'credits.html'),
         },
         output: {
-          manualChunks (id) {
-            if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/') || id.includes('node_modules/redux/') || id.includes('node_modules/react-redux/')) {
+          manualChunks(id: string) {
+            if (
+              id.includes('node_modules/react/') ||
+              id.includes('node_modules/react-dom/') ||
+              id.includes('node_modules/redux/') ||
+              id.includes('node_modules/react-redux/')
+            ) {
               return 'vendor-react';
             }
             if (id.includes('scratch-blocks')) {
@@ -143,7 +140,6 @@ export default defineConfig(({ mode }) => {
 
     publicDir: resolve(__dirname, 'static'),
 
-    // Exclude workspace packages from pre-bundling (they resolve to source via alias)
     optimizeDeps: {
       exclude: Object.keys(workspaceAliases),
       esbuildOptions: {

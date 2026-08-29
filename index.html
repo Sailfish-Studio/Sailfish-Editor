@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sailfish Studio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #21262d;
+    }
+    .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    .logo span { color: #58a6ff; }
+    nav a {
+      color: #8b949e;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #e6edf3; }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      gap: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+    .hero h1 span { color: #58a6ff; }
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #8b949e;
+      line-height: 1.6;
+    }
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: #58a6ff; color: #fff; }
+    .btn-primary:hover { background: #79b8ff; transform: translateY(-1px); }
+    .btn-secondary { background: #21262d; color: #e6edf3; border: 1px solid #30363d; }
+    .btn-secondary:hover { background: #30363d; transform: translateY(-1px); }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: #58a6ff; }
+    .feature-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.85rem; color: #8b949e; line-height: 1.5; }
+    .feature-card .icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #484f58;
+      font-size: 0.8rem;
+      border-top: 1px solid #21262d;
+    }
+    footer a { color: #58a6ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span>Sailfish</span> Studio</div>
+    <nav>
+      <a href="editor.html">Editor</a>
+      <a href="credits.html">Credits</a>
+      <a href="https://github.com/Sailfish-Studio/Sailfish-Studio">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>A faster, more powerful <span>Scratch</span> experience</h1>
+    <p>Sailfish Studio is a Scratch-compatible creative coding platform with a compiler for faster project execution, dark mode, addons, and more.</p>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="editor.html">Open Editor</a>
+      <a class="btn btn-secondary" href="https://github.com/Sailfish-Studio/Sailfish-Studio">View Source</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <div class="icon">⚡</div>
+      <h3>Faster Execution</h3>
+      <p>Compiler-powered project runtime for significantly better performance.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🌙</div>
+      <h3>Dark Mode</h3>
+      <p>Built-in dark theme that's easy on your eyes during late-night coding sessions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧩</div>
+      <h3>Addons System</h3>
+      <p>Extend the editor with community-built addons for extra functionality.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔧</div>
+      <h3>Developer Tools</h3>
+      <p>Built-in debugger, performance monitor, and advanced inspection tools.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📦</div>
+      <h3>Monorepo Architecture</h3>
+      <p>Bun workspaces + Vite + TypeScript. 13 packages, one repo, direct source linking.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🚀</div>
+      <h3>Bun + Vite + TS</h3>
+      <p>Modern toolchain replacing Webpack. Fast HMR, optimized builds, type safety.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Forked from <a href="https://github.com/TurboWarp/">TurboWarp</a> &middot; Built with Bun, Vite & TypeScript</p>
+  </footer>
+</body>
+</html>

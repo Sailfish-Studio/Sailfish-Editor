@@ -31,7 +31,9 @@
     "types": ["node"]
   },
   "include": [
-    "scripts/*.js",
+    "scratch-gui/vite.config.ts",
+    "scratch-gui/vite-plugin-webpack-compat.ts",
+    "scratch-blocks/build.ts",
     "scratch-gui/src/**/*",
     "scratch-vm/src/**/*",
     "scratch-render/src/**/*",
