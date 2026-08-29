@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "bun --bun vite --config scratch-gui/vite.config.ts",
     "typecheck": "tsc --noEmit",
-    "build:blocks": "bun run scratch-blocks/build.ts",
+    "build:blocks": "node scratch-blocks/build.mjs",
     "build:gui": "bun --bun vite build --config scratch-gui/vite.config.ts",
     "build": "bun run build:blocks && bun run build:gui",
     "clean": "rm -rf scratch-gui/build scratch-blocks/dist"
