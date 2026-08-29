@@ -110,7 +110,9 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       target: 'esnext',
       commonjsOptions: {
-        include: [/node_modules/],
+        // Cover workspace packages too (resolved via alias, not node_modules)
+        // Do NOT use transformMixedEsModules - it causes webpack-compat issues
+        include: [/node_modules/, /packages\/(!blocks-ui\/dist)/],
       },
       rollupOptions: {
         input: {
