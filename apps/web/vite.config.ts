@@ -74,7 +74,7 @@ export default defineConfig(({ mode }) => {
     css: {
       modules: {
         localsConvention: 'camelCase' as const,
-        generateScopedName: '[name]_[local]_[hash:base64:5]',
+        generateScopedName: '[name]_[local]_ash:base64:5]',
       },
       postcss: {
         plugins: [postcssImport, postcssVars, autoprefixer],
@@ -112,7 +112,7 @@ export default defineConfig(({ mode }) => {
       commonjsOptions: {
         // Cover workspace packages too (resolved via alias, not node_modules)
         // Do NOT use transformMixedEsModules - it causes webpack-compat issues
-        include: [/node_modules/, /packages\/(!blocks-ui\/dist)/],
+        include: [/node_modules/, /packages\/(?!blocks-ui\/dist)/],
       },
       rollupOptions: {
         input: {
