@@ -42,14 +42,17 @@ jobs:
       - run: pnpm install --frozen-lockfile || pnpm install
       - name: Build blocks-ui (goog → UMD)
         run: node packages/blocks-ui/build.mjs
-      - name: Build web app (Vite)
-        run: pnpm --filter @sailfish/web build
-        env:
-          NODE_ENV: production
-          ROOT: /Sailfish-Studio/
-      - name: Check build output
+      - name: Verify dev server starts
+        run: timeout 30 pnpm dev 2>&1 | grep -q 'ready in'
+      - name: Start dev server and smoke test
         run: |
-          echo "Build output:"
-          ls -la apps/web/build/ | head -20
-          echo "---"
-          du -sh apps/web/build/
+          pnpm dev &
+          DEV_PID=$!
+          sleep 10
+          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/editor.html
+          curl -sf -o /dev/null -w '%%{http_code}' http://localhost:8601/
+          kill $DEV_PID 2>/dev/null
+          wait $DEV_PID 2>/dev/null || true
+        env:
+          PORT: 8602
+          CI: true

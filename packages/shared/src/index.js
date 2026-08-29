@@ -32,3 +32,4 @@ const createLog = (namespace = '') => {
 createLog.enable = createLog.disable = () => {};
 
 module.exports = createLog;
+export default createLog;

@@ -1,23 +1,69 @@
 import type { Plugin } from 'vite';
+import { resolve as pathResolve, dirname } from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
 
 /**
  * Vite plugin for webpack → Vite migration compat.
- * 1. Strips webpack inline loader syntax (!url-loader! etc.)
- * 2. CSS Modules: adds ?module suffix, converts default→namespace imports
+ * 1. CSS Modules: all .css imports from packages/ get virtual module treatment
+ *    to bypass Rollup's inability to resolve CSS files outside project root.
+ * 2. Strips webpack inline loader syntax (!url-loader! etc.)
  * 3. Strips broken Flow prop-type imports from react-virtualized
  */
+const CSS_MODULE_PREFIX = '\0css-module:';
+
 export default function webpackCompatPlugin(): Plugin {
   return {
     name: 'webpack-compat',
     enforce: 'pre',
+    resolveId(source, importer) {
+      // CSS Modules: redirect .css imports from source to virtual modules
+      if (
+        source.endsWith('.css') &&
+        !source.includes('?') &&
+        importer &&
+        !importer.includes('node_modules')
+      ) {
+        // Resolve the actual file path
+        const dir = dirname(importer);
+        const resolved = pathResolve(dir, source);
+        if (existsSync(resolved)) {
+          return CSS_MODULE_PREFIX + resolved.replace(/\.css$/, '.css.js');
+        }
+      }
+      return null;
+    },
+    load(id) {
+      // Handle virtual CSS modules
+      if (!id.startsWith(CSS_MODULE_PREFIX)) return null;
+      const filePath = id.slice(CSS_MODULE_PREFIX.length).replace(/\.css\.js$/, '.css');
+      try {
+        const css = readFileSync(filePath, 'utf-8');
+        // Extract class names from CSS
+        const classMap: Record<string, string> = {};
+        const seen = new Set<string>();
+        const regex = /\.([a-zA-Z_][a-zA-Z0-9_-]*)/g;
+        let match;
+        while ((match = regex.exec(css)) !== null) {
+          const cls = match[1];
+          if (!seen.has(cls) && !cls.startsWith('keyframes') && cls !== 'from' && cls !== 'to') {
+            seen.add(cls);
+            classMap[cls] = cls.replace(/-([a-z])/g, (_: string, c: string) => c.toUpperCase());
+          }
+        }
+        const entries = Object.entries(classMap).map(([k, v]) => `  "${k}": "${v}"`).join(',\n');
+        return `export default {\n${entries}\n};`;
+      } catch {
+        return 'export default {};';
+      }
+    },
     transform(code: string, id: string) {
       let result = code;
       let changed = false;
 
-      // Handle react-virtualized broken Flow prop-type imports (in transform phase for rollup)
+      // Handle react-virtualized broken Flow prop-type imports
       if (id.includes('react-virtualized')) {
         result = result.replace(
-          /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"]+['"];?/g,
+          /import\s*\{[^}]*bpfrpt_proptype_\w+[^}]*\}\s*from\s*['"][^'"\n]+['"];?/g,
           () => { changed = true; return ''; },
         );
         result = result.replace(
@@ -29,20 +75,6 @@ export default function webpackCompatPlugin(): Plugin {
 
       // Skip node_modules for the rest
       if (id.includes('node_modules')) return null;
-
-      // CSS Modules: webpack treated ALL .css imports as CSS Modules.
-      // Vite needs ?module suffix. Transform default imports to namespace imports.
-      result = result.replace(
-        /(import\s+)(\w+)(\s+from\s+['"])([^'"\n]+\.css)(['"])/g,
-        (match, imp, name, mid, path, suffix) => {
-          if (path.includes('?module') || path.includes('.module.css')) {
-            changed = true;
-            return `${imp}* as ${name}${mid}${path}${suffix}`;
-          }
-          changed = true;
-          return `${imp}* as ${name}${mid}${path}?module${suffix}`;
-        },
-      );
 
       // Handle !!loader?opts!path or !loader?opts!path
       result = result.replace(

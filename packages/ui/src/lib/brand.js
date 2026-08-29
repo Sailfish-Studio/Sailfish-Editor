@@ -1,5 +1,7 @@
-// Legacy export format because this is used by some build-time scripts stuck in the past.
+const APP_NAME = 'Sailfish-Studio';
+
+export { APP_NAME };
+
+// Legacy CJS export for build scripts
 // eslint-disable-next-line import/no-commonjs
-module.exports = {
-    APP_NAME: 'Sailfish-Studio'
-};
+if (typeof module !== 'undefined') module.exports = { APP_NAME };
