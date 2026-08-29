@@ -3,7 +3,7 @@ const EventEmitter = require('events');
 const hull = require('@sailfish-studio/ancient-hull.js');
 const twgl = require('twgl.js');
 
-const SVGRenderer = require('@sailfish-studio/scratch-svg-renderer');
+const SVGRenderer = require('@sailfish/render');
 const Skin = require('./Skin');
 const BitmapSkin = require('./BitmapSkin');
 const Drawable = require('./Drawable');

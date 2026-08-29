@@ -1,4 +1,4 @@
-const JSZip = require('@sailfish-studio/jszip');
+const JSZip = require('@sailfish/shared');
 const log = require('../util/log');
 
 /**

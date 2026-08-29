@@ -1,5 +1,5 @@
 import storage from './storage';
-import {inlineSvgFonts} from '@sailfish-studio/scratch-svg-renderer';
+import {inlineSvgFonts} from '@sailfish/render';
 
 // Contains 'font-family', but doesn't only contain 'font-family="none"'
 const HAS_FONT_REGEXP = 'font-family(?!="none")';

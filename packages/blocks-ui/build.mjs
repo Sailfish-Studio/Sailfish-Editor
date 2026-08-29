@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const subdirs = ['msg', 'core', 'blocks_common', 'blocks_vertical'];
+const subdirs = ['src/msg', 'src/core', 'src/blocks_common', 'src/blocks_vertical'];
 const allFiles = [];
 for (const sub of subdirs) {
   allFiles.push(
@@ -43,6 +43,7 @@ for (const name of provides.keys()) visit(name);
 console.log(`Sorted ${order.length} files in dependency order`);
 
 const googShim = readFileSync(resolve(__dirname, 'goog-shim.js'), 'utf8');
+
 
 const RE_PROVIDE = new RegExp("^goog\\.provide\\(['\"][^'\"]+['\"]\\);?\\s*$", "gm");
 const RE_REQUIRE = new RegExp("^goog\\.require\\(['\"][^'\"]+['\"]\\);?\\s*$", "gm");

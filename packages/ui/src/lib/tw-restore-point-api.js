@@ -1,4 +1,4 @@
-import JSZip from '@sailfish-studio/jszip';
+import JSZip from '@sailfish/shared';
 import {base64ToArrayBuffer} from './tw-base64-utils';
 
 const TYPE_AUTOMATIC = 0;

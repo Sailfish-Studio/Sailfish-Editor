@@ -1,49 +1,6 @@
 {
-  "name": "@sailfish-studio/paper",
-  "version": "0.13.0",
-  "description": "paper.js fork",
-  "license": "MIT",
-  "homepage": "https://github.com/Sailfish-Studio/paper.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sailfish-Studio/paper.js"
-  },
-  "bugs": "https://github.com/Sailfish-Studio/paper.js/issues",
-  "contributors": [
-    "Jürg Lehni <juerg@scratchdisk.com> (http://scratchdisk.com)",
-    "Jonathan Puckey <jonathan@puckey.studio> (http://studiomoniker.com)"
-  ],
-  "main": "dist/paper-full.js",
-  "types": "dist/paper.d.ts",
-  "browser": "./src/paper.js",
-  "scripts": {},
-  "files": [
-    "AUTHORS.md",
-    "CHANGELOG.md",
-    "dist/",
-    "examples/",
-    "LICENSE.txt",
-    "README.md"
-  ],
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "devDependencies": {},
-  "keywords": [
-    "vector",
-    "graphic",
-    "graphics",
-    "2d",
-    "geometry",
-    "bezier",
-    "curve",
-    "curves",
-    "path",
-    "paths",
-    "canvas",
-    "svg",
-    "paper",
-    "paper.js",
-    "paperjs"
-  ]
+  "name": "@sailfish/paper",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/paper.js"
 }

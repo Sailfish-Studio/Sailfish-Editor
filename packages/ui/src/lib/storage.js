@@ -1,4 +1,4 @@
-import ScratchStorage from '@sailfish-studio/scratch-storage';
+import ScratchStorage from '@sailfish/core';
 
 import defaultProject from './default-project';
 

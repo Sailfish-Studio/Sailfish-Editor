@@ -1,7 +1,7 @@
 // TODO: access `BlockType` and `ArgumentType` without reaching into VM
 // Should we move these into a new extension support module or something?
-import ArgumentType from 'scratch-vm/src/extension-support/argument-type';
-import BlockType from 'scratch-vm/src/extension-support/block-type';
+import ArgumentType from '@sailfish/core/src/extension-support/argument-type';
+import BlockType from '@sailfish/core/src/extension-support/block-type';
 import {injectExtensionBlockTheme} from './themes/blockHelpers';
 
 /**

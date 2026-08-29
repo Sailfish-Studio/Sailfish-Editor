@@ -1,4 +1,4 @@
-import {BitmapAdapter, sanitizeSvg, fixForVanilla} from '@sailfish-studio/scratch-svg-renderer';
+import {BitmapAdapter, sanitizeSvg, fixForVanilla} from '@sailfish/render';
 import randomizeSpritePosition from './randomize-sprite-position.js';
 import bmpConverter from './bmp-converter';
 import gifDecoder from './gif-decoder';

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import bindAll from 'lodash.bindall';
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 import PaintEditor from '../lib/tw-scratch-paint';
-import {inlineSvgFonts, sanitizeSvg} from '@sailfish-studio/scratch-svg-renderer';
+import {inlineSvgFonts, sanitizeSvg} from '@sailfish/render';
 import ErrorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
 import {openFontsModal} from '../reducers/modals';
 

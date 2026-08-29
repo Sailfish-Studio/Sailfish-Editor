@@ -13,7 +13,7 @@ import {Theme} from '../lib/themes';
 import SliderPrompt from './slider-prompt.jsx';
 
 import {connect} from 'react-redux';
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 
 const availableModes = opcode => (
     monitorModes.filter(t => {

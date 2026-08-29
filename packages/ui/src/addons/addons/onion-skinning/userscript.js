@@ -1,4 +1,4 @@
-import {sanitizeSvg} from '@sailfish-studio/scratch-svg-renderer';
+import {sanitizeSvg} from '@sailfish/render';
 
 export default async function ({ addon, console, msg }) {
   const paper = await addon.tab.traps.getPaper();

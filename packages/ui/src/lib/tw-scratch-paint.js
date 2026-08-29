@@ -3,7 +3,7 @@ import React from 'react';
 let realScratchPaint;
 const getRealScratchPaint = () => {
     if (!realScratchPaint) {
-        realScratchPaint = require('scratch-paint');
+        realScratchPaint = require('@sailfish/ui/src/paint');
     }
     return realScratchPaint;
 };

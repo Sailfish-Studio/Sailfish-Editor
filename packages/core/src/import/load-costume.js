@@ -1,7 +1,7 @@
 const StringUtil = require('../util/string-util');
 const log = require('../util/log');
 const AsyncLimiter = require('../util/async-limiter');
-const {loadSvgString, serializeSvgToString} = require('@sailfish-studio/scratch-svg-renderer');
+const {loadSvgString, serializeSvgToString} = require('@sailfish/render');
 const {parseVectorMetadata} = require('../serialization/tw-costume-import-export');
 
 const loadVector_ = function (costume, runtime, rotationCenter, optVersion) {

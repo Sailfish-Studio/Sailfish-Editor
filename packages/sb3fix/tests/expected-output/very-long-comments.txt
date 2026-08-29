@@ -1,3 +1,0 @@
-checking target 0
-comment d had length 8001
-comment e had length 1000000

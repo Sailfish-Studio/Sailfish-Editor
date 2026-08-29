@@ -24,7 +24,7 @@ import log from './log';
 import storage from './storage';
 import {ProjectUnsharedError, ProjectFetchError} from './tw-load-project-error';
 
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 import {fetchProjectMeta} from './tw-project-meta-fetcher-hoc.jsx';
 
 // TW: Temporary hack for project tokens

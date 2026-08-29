@@ -2,8 +2,8 @@ import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
-import VM from 'scratch-vm';
-import AudioEngine from 'scratch-audio';
+import VM from '@sailfish/core';
+import AudioEngine from '@sailfish/core';
 import SharedAudioContext from '../lib/audio/shared-audio-context';
 
 import LibraryComponent from '../components/library/library.jsx';

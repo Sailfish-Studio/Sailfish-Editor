@@ -1,4 +1,4 @@
-const nanolog = require('@sailfish-studio/nanolog');
+const nanolog = require('@sailfish/shared');
 nanolog.enable();
 
 module.exports = nanolog('scratch-render');

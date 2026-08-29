@@ -1,4 +1,4 @@
-import nanolog from '@sailfish-studio/nanolog';
+import nanolog from '@sailfish/shared';
 nanolog.enable();
 
 export default nanolog('gui');

@@ -1,4 +1,4 @@
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 import storage from '../lib/storage';
 import {MAXIMUM_CLOUD_VARIABLES} from '../lib/tw-cloud-limits';
 

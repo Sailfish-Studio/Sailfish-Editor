@@ -1,7 +1,0 @@
-[
-  {
-    "id": "tw.fonts.add",
-    "description": "Part of font management modal. This is the button that will actually add the font.",
-    "defaultMessage": "Add"
-  }
-]

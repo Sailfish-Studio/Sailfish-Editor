@@ -1,4 +1,0 @@
-checking target 0
-checking target 1
-color native had invalid value
-color native had invalid value

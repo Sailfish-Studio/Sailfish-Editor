@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import styles from './fonts-modal.css';
-import VanillaFonts from 'scratch-paint/src/lib/fonts';
+import VanillaFonts from '@sailfish/ui/src/paint/lib/fonts';
 import bindAll from 'lodash.bindall';
 import classNames from 'classnames';
 

@@ -1,39 +1,9 @@
 {
-  "name": "scratch-vm",
-  "version": "2.1.46",
-  "description": "Virtual Machine for Scratch 3.0",
-  "author": "Massachusetts Institute of Technology",
-  "license": "MPL-2.0",
-  "homepage": "https://github.com/scratchfoundation/scratch-vm#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scratchfoundation/scratch-vm.git"
-  },
-  "main": "./src/index.js",
-  "browser": "./src/index.js",
-  "scripts": {
-    "start": "bun run ../../scripts/dev.js"
-  },
+  "name": "@sailfish/core",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
   "dependencies": {
-    "@sailfish-studio/jszip": "workspace:*",
-    "@sailfish-studio/nanolog": "workspace:*",
-    "@vernier/godirect": "1.5.0",
-    "atob": "2.1.2",
-    "btoa": "1.2.1",
-    "canvas-toBlob": "1.0.0",
-    "decode-html": "2.0.0",
-    "diff-match-patch": "1.0.4",
-    "format-message": "6.2.1",
-    "htmlparser2": "3.10.0",
-    "scratch-parser": "workspace:*",
-    "scratch-sb1-converter": "0.2.7",
-    "scratch-translate-extension-languages": "^1.0.7",
-    "text-encoding": "0.7.0",
-    "uuid": "8.3.2"
-  },
-  "peerDependencies": {
-    "@sailfish-studio/scratch-svg-renderer": "workspace:*"
-  },
-  "devDependencies": {},
-  "private": true
+    "@sailfish/shared": "workspace:*"
+  }
 }

@@ -1,2 +1,0 @@
-checking target 0
-stage is missing; adding an empty one

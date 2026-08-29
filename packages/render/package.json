@@ -1,28 +1,10 @@
 {
-  "name": "scratch-render",
-  "version": "0.1.0",
-  "description": "WebGL Renderer for Scratch 3.0",
-  "author": "Massachusetts Institute of Technology",
-  "license": "MPL-2.0",
-  "homepage": "https://github.com/LLK/scratch-render#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/LLK/scratch-render.git"
-  },
-  "main": "./dist/node/scratch-render.js",
-  "browser": "./src/index.js",
-  "scripts": {
-    "start": "bun run ../../scripts/dev.js"
-  },
+  "name": "@sailfish/render",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
   "dependencies": {
-    "@turbowarp/ancient-hull.js": "^0.2.13",
-    "@sailfish-studio/nanolog": "workspace:*",
-    "@sailfish-studio/scratch-svg-renderer": "workspace:*",
-    "grapheme-breaker": "0.3.2",
-    "linebreak": "0.3.0",
-    "@sailfish-studio/scratch-storage": "workspace:*",
-    "twgl.js": "4.4.0"
-  },
-  "devDependencies": {},
-  "private": true
+    "@sailfish/core": "workspace:*",
+    "@sailfish/shared": "workspace:*"
+  }
 }

@@ -1,2 +1,0 @@
-checking target 0
-sound 0 had invalid dataFormat flac

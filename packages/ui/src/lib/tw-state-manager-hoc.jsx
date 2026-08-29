@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import bindAll from 'lodash.bindall';
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 import log from './log';
 import {defineMessages, intlShape, injectIntl} from 'react-intl';
 

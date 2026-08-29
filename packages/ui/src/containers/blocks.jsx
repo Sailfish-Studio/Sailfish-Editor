@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {intlShape, injectIntl, defineMessages} from 'react-intl';
 import VMScratchBlocks from '../lib/blocks';
-import VM from 'scratch-vm';
+import VM from '@sailfish/core';
 
 import log from '../lib/log.js';
 import Prompt from './prompt.jsx';
