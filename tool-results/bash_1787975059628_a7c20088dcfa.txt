@@ -1,0 +1,1928 @@
+Port 8601 is in use, trying another one...
+editor.html → 404
+index.html → 404
+fullscreen.html → 404
+embed.html → 404
+addons.html → 404
+credits.html → 404
+
+stderr:
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/subthread.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/subthread.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/subthread.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/logs.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/logs.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/debugger/icons/logs.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen.png",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/events_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/events_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/events_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sensing_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sensing_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sensing_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/looks_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/looks_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/looks_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sound_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sound_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/sound_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/block_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/block_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/block_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/list_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/list_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/list_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/variables_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/variables_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/variables_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/control_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/control_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/control_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/operators_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/operators_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/operators_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/motion_icon.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/motion_icon.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/block-palette-icons/icons/motion_icon.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey.png",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/makeymakey/makeymakey-small.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/pen/pen-small.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/custom.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/custom.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/custom.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/README.md'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/README.md",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/README.md",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/return.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/return.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/custom/return.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/decrement.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/decrement.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/decrement.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/off.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/off.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/off.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/increment.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/increment.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/increment.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/settings.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/settings.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/settings.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/on.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/on.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/on.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/snap.svg'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/snap.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/paint-snap/icons/snap.svg",
+     code: "ENOSPC"
+
+      at watch (unknown:1:1)
+      at FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:23)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32480:9)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32666:11)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:32820:11)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:33358:3)
+      at processTicksAndRejections (unknown:7:39)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/decks/steps'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/decks/steps",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/decks/steps",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleDir (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22633:19)
+      at async _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22683:27)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/addons/addons/2d-color-picker/assets/sv-gr.png'
+     path: "/home/z/my-project/scratch-gui/src/addons/addons/2d-color-picker/assets/sv-gr.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/addons/addons/2d-color-picker/assets/sv-gr.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/slider-prompt/slider-prompt.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/slider-prompt/slider-prompt.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/slider-prompt/slider-prompt.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/microbit/microbit-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-button-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-button-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/boost/boost-button-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/text2speech/text2speech.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/videoSensing/video-sensing-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/speech2text/speech.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/speech2text/speech.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/speech2text/speech.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/faceSensing/face-sensing-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate-small.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate-small.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/translate/translate-small.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/music/music.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/gdxfor/gdxfor.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/README.md'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/README.md",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/README.md",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/tw.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/tw.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/tw/tw.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-button-illustration.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-button-illustration.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-button-illustration.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo.png'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo.png",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo.png",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-small.svg'
+     path: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-small.svg",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/scratch-gui/src/lib/libraries/extensions/wedo2/wedo-small.svg",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/telemetry-modal/telemetry-modal.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/telemetry-modal/telemetry-modal.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/telemetry-modal/telemetry-modal.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/sprite-selector-item/sprite-selector-item.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/sprite-selector-item/sprite-selector-item.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/sprite-selector-item/sprite-selector-item.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor-scroller.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor-scroller.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor-scroller.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/list-monitor.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/monitor.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/monitor.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/monitor/monitor.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/stage-selector/stage-selector.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/stage-selector/stage-selector.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/stage-selector/stage-selector.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/custom-extension-modal.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/custom-extension-modal.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/custom-extension-modal.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/file-input.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/file-input.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-custom-extension-modal/file-input.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-username-modal/username-modal.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-username-modal/username-modal.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-username-modal/username-modal.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/community-button.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/community-button.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/community-button.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-desktop-settings.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-desktop-settings.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-desktop-settings.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-see-inside.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-see-inside.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-see-inside.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/settings-menu.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/settings-menu.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/settings-menu.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-accent.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-accent.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-accent.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-save-status.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-save-status.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-save-status.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-gui.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-gui.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-gui.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/author-info.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/author-info.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/author-info.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/save-status.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/save-status.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/save-status.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/menu-bar.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/menu-bar.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/menu-bar.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-blocks.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-blocks.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/tw-theme-blocks.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/share-button.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/share-button.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/share-button.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/project-title-input.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/project-title-input.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/project-title-input.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/language-menu.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/language-menu.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/menu-bar/language-menu.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/controls/controls.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/controls/controls.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/controls/controls.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/security-manager-modal.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/security-manager-modal.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/security-manager-modal.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/redirect.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/redirect.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/redirect.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-audio.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-audio.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-audio.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/read-clipboard.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/read-clipboard.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/read-clipboard.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/geolocate.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/geolocate.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/geolocate.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/load-extension.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/load-extension.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/load-extension.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/open-window.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/open-window.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/open-window.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-video.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-video.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/record-video.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/notify.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/notify.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/notify.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
+22190 |         sysPath$2.resolve(path, evPath), KEY_LISTENERS, sysPath$2.join(path, evPath)
+22191 |       );
+22192 |     }
+22193 |   };
+22194 |   try {
+22195 |     return fs$4.watch(path, options, handleEvent);
+                        ^
+ENOSPC: no space left on device, watch '/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/fetch.json'
+     path: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/fetch.json",
+  syscall: "watch",
+    errno: -28,
+ filename: "/home/z/my-project/translations/messages/scratch-gui/src/components/tw-security-manager-modal/fetch.json",
+     code: "ENOSPC"
+
+      at new FSWatcher (node:fs:33:31)
+      at watch (node:fs:300:10)
+      at createFsWatchInstance (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22195:17)
+      at setFsWatchListener (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22242:15)
+      at _watchWithNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22397:14)
+      at _handleFile (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22461:23)
+      at _addToNodeFs (/home/z/my-project/node_modules/.bun/vite@6.4.3+9b39e9d4b7d773a6/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:22703:21)
