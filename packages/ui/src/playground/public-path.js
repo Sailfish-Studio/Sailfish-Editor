@@ -1,4 +1,2 @@
 /* eslint-disable */
-if (process.env.ROOT) {
-    __webpack_public_path__ = process.env.ROOT;
-}
+// Vite does not use __webpack_public_path__, this file is kept as a no-op for compatibility.
