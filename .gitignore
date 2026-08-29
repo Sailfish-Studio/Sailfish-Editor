@@ -1,2 +1,46 @@
-skills/
+# Dependencies
 node_modules/
+
+# Build outputs
+**/build/
+**/dist/
+**/playground/
+**/gh-pages/
+
+# Bun
+bun.lockb
+
+# pnpm
+pnpm-lock.yaml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files (old webpack configs)
+*.bak
+
+# Environment
+.env.local
+.env.*.local
+
+# Temp
+tmp/
+*.tmp
+
+# TurboWarp original repos (archived)
+turbowarp-repos/
+
+# Non-workspace repos (keep but ignore in git)
+.github/
+addons/
+dangotron/
+packager-extras/
+winget-pkgs/
+types/

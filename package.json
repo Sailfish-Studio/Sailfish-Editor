@@ -1,0 +1,42 @@
+{
+  "name": "sailfish-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sailfish Studio - A Scratch-compatible creative coding platform (forked from TurboWarp)",
+  "workspaces": [
+    "scratch-gui",
+    "scratch-vm",
+    "scratch-render",
+    "scratch-blocks",
+    "scratch-paint",
+    "scratch-storage",
+    "scratch-svg-renderer",
+    "scratch-parser",
+    "scratch-audio",
+    "nanolog",
+    "jszip",
+    "sb3fix",
+    "types-tw",
+    "paper.js",
+    "scaffolding",
+    "packager",
+    "desktop",
+    "extensions",
+    "cloud-server",
+    "unpackager",
+    "windchimes",
+    "share.sailfish-studio.org",
+    "sailfish-studio.org",
+    "docs",
+    "trampoline"
+  ],
+  "scripts": {
+    "dev": "bun run scripts/dev.js",
+    "build": "bun run scripts/build.js",
+    "clean": "bun run scripts/clean.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

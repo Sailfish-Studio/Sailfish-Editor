@@ -1,0 +1,29 @@
+# Core editor workspace - minimal set for dev server
+packages:
+  - 'scratch-gui'
+  - 'scratch-vm'
+  - 'scratch-render'
+  - 'scratch-blocks'
+  - 'scratch-paint'
+  - 'scratch-storage'
+  - 'scratch-svg-renderer'
+  - 'scratch-parser'
+  - 'scratch-audio'
+  - 'nanolog'
+  - 'jszip'
+  - 'sb3fix'
+  - 'types-tw'
+  - 'paper.js'     # scratch-paint dep
+  # - 'scaffolding'  # desktop wrapper, add later
+  # - 'packager'     # packaging tool, add later
+  # - 'desktop'      # electron app, add later
+  # - 'extensions'   # extension system, add later
+  # - 'paper.js'     # scratch-paint dep, pulled via npm
+  # - 'cloud-server' # server, standalone
+  # - 'docs'         # docusaurus site, standalone
+  # - 'share.sailfish-studio.org' # share site, standalone
+  # - 'sailfish-studio.org' # website, standalone
+  # - 'trampoline'   # standalone server
+  # - 'unpackager'   # tool, standalone
+  # - 'windchimes'   # standalone
+  # - 'cloud-server' # standalone

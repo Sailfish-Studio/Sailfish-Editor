@@ -1,0 +1,32 @@
+{
+  "name": "@sailfish-studio/types",
+  "version": "0.0.14",
+  "description": "Type definitions for the Scratch VM and editor",
+  "keywords": [
+    "scratch"
+  ],
+  "main": "",
+  "types": "index.d.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tsc",
+    "watch": "tsc -w",
+    "build": "typedoc types/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sailfish-Studio/types.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Sailfish-Studio/types/issues"
+  },
+  "homepage": "https://github.com/Sailfish-Studio/types#readme",
+  "devDependencies": {
+    "typedoc": "^0.28.15",
+    "typescript": "^5.9.3"
+  }
+}

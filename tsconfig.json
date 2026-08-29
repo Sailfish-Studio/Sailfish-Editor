@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "scratch-gui": ["./scratch-gui/src"],
+      "scratch-vm": ["./scratch-vm/src"],
+      "scratch-render": ["./scratch-render/src"],
+      "scratch-blocks": ["./scratch-blocks/src"],
+      "scratch-paint": ["./scratch-paint/src"],
+      "scratch-storage": ["./scratch-storage/src"],
+      "scratch-svg-renderer": ["./scratch-svg-renderer/src"],
+      "scratch-parser": ["./scratch-parser/src"],
+      "scratch-audio": ["./scratch-audio/src"],
+      "@sailfish-studio/*": ["./*/src"]
+    },
+    "types": ["node"]
+  },
+  "include": [
+    "scripts/*.js",
+    "scratch-gui/src/**/*",
+    "scratch-vm/src/**/*",
+    "scratch-render/src/**/*",
+    "scratch-blocks/src/**/*",
+    "scratch-paint/src/**/*",
+    "scratch-storage/src/**/*",
+    "scratch-svg-renderer/src/**/*",
+    "scratch-parser/src/**/*",
+    "scratch-audio/src/**/*",
+    "nanolog/src/**/*",
+    "jszip/lib/**/*",
+    "sb3fix/src/**/*",
+    "types-tw/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "**/dist/**", "**/build/**", "**/playground/**"]
+}

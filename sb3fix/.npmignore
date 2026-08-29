@@ -1,0 +1,8 @@
+dist
+static
+.github
+tests
+webpack.config.js
+*.html
+*.tgz
+*.map

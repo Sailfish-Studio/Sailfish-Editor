@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--
+  sb3fix - https://github.com/Sailfish-Studio/sb3fix
+
+  Copyright (C) 2023-2025 Thomas Weber
+
+  This Source Code Form is subject to the terms of the Mozilla Public
+  License, v. 2.0. If a copy of the MPL was not distributed with this
+  file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>sb3fix - fix corrupted Scratch projects</title>
+    <meta name="description" content="sb3fix tries to fix corrupted Scratch 3 projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <style>
+      :root {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background-color: #111;
+          color: #eee;
+        }
+        a {
+          color: #4af;
+        }
+        a:visited {
+          color: rgb(196, 137, 255);
+        }
+        a:active {
+          color: red;
+        }
+      }
+
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 720px;
+        margin: auto;
+        padding: 0 8px;
+      }
+      summary {
+        cursor: pointer;
+      }
+
+      .header {
+        background-color: #ff4c4c;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .header-inner {
+        display: flex;
+        max-width: 720px;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+      .header a {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.5rem 0.25rem 0.5rem 0;
+        align-items: center;
+        text-decoration: none;
+        color: inherit !important;
+      }
+      .header a:hover {
+        text-decoration: underline;
+      }
+      .header img {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+      }
+      @media (prefers-color-scheme: dark) {
+        .header {
+          background-color: #333;
+        }
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .error-list {
+        overflow-wrap: break-word;
+      }
+
+      .drop-indicator {
+        display: none;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 10px dashed #7f7fff;
+      }
+      .dropping .drop-indicator {
+        display: block;
+      }
+
+      .project {
+        padding: 12px;
+        border-radius: 12px;
+        margin: 12px 0;
+        box-sizing: border-box;
+        transition: .2s background-color;
+        border: 1px solid rgba(76, 78, 208, 0.8);
+        background-color: rgba(76, 78, 208, 0.2);
+      }
+      .project[data-success] {
+        border-color: rgba(91, 181, 91, 0.8);
+        background-color: rgba(0, 255, 0, 0.2);
+      }
+      .project[data-error] {
+        border-color: rgba(255, 67, 67, 0.8);
+        background-color: rgba(255, 0, 0, 0.2);
+      }
+
+      .project-title {
+        margin-top: 0;
+      }
+
+      .error-message {
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+      .log-container {
+        margin-top: 12px;
+      }
+      .log-messages {
+        box-sizing: border-box;
+        width: 100%;
+        height: 200px;
+      }
+
+      .new {
+        background-color: #b117f8;
+        border-bottom: 2px solid #6f0073;
+        color: white;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      .spork-notice {
+        background-color: #17b1f86a;
+        border: 1px solid #005873;
+        padding: 8px;
+        border-radius: 8px;
+      }
+      .spork-notice p:first-child {
+        margin-top: 0;
+      }
+      .spork-notice p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-inner">
+        <a href="https://sailfish-studio.org/">
+          <img src="sailfish-studio.svg" alt="">
+          <span>Sailfish-Studio</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="drop-indicator"></div>
+
+    <main>
+      <h1>sb3fix - fix corrupted Scratch projects</h1>
+      <p>
+        sb3fix fixes common problems that make Scratch projects not be able to load.
+        It's not magic, but it has successfully recovered <i>many</i> projects and continues to improve.
+        Just put your projects into the input below.
+      </p>
+      <p>
+        If you use Sailfish-Studio, please first try File &gt; Restore Points to access a previous version of your project.
+        sb3fix is a community project and is not affiliated with the Scratch Team.
+      </p>
+
+      <div class="spork-notice">
+        <p>
+          On April 16, 2026, Scratch released an update to the code editor with several corruption bugs, incorrect behaviors, and several backwards-incompatibilities with Scratch Desktop and Scratch mods like Sailfish-Studio.
+        </p>
+        <p>
+          We've updated sb3fix to be able to recover the most common sources of corruption with almost no data loss (generally, only a few blocks might be missing). sb3fix will also make your project backwards-compatible with versions of Scratch using the old code editor.
+        </p>
+      </div>
+
+      <noscript><p><b>sb3fix requires JavaScript. This lets us do all the processing in your browser instead of uploading to a server.</b></p></noscript>
+
+      <p class="input-container">
+        <label>
+          Files to fix:
+          <input class="file" type="file" accept=".sb3, .sprite3, .json" multiple autocomplete="off">
+        </label>
+
+        <label>
+          Platform:
+          <select class="platform">
+            <option value="scratch" selected>Scratch</option>
+            <option value="sailfish-studio">Sailfish-Studio</option>
+          </select>
+        </label>
+      </p>
+
+      <div class="output"></div>
+
+      <h2>If your project is still broken</h2>
+      <p>Please get your project to us. A real human will try to fix your project. If you have a GitHub account, the easiest way is to <a href="https://github.com/Sailfish-Studio/sb3fix/issues/new?template=corrupted-project.yml">open a GitHub issue</a>. Put your project file inside a zip, then you'll be able to attach it to the issue.</p>
+      <p>Don't waste your time asking AI to fix corrupted projects. It won't be able to help you, but it will happily gaslight you into thinking it does.</p>
+
+      <h2>How sb3fix works</h2>
+      <p>A Scratch project has three main components that can be "corrupted" in different ways.</p>
+      <p>
+        Scratch project files are zip files.
+        The zip file can often be corrupted by a storage device failure, for example, due to a power outage or not ejecting a USB drive before unplugging.
+        Scratch and most other tools that open zips don't know how to handle corruption.
+        sb3fix uses an alternative approach (<a href="https://www.construct.net/en/blogs/ashleys-blog-2/recovering-corrupt-zip-files-1895">similar to this post</a>) that lets it read a zip file even when the "central directory" used by most apps is missing or corrupt.
+        Depending on how badly the zip is corrupted, sb3fix might recover your project in its entirety or may miss significant parts.
+      </p>
+      <details>
+        <summary>Examples of error messages due to zip corruption</summary>
+        <ul class="error-list">
+          <li><code>Failed to unzip and extract project.json, with error: Error: Corrupted zip: can't find end of central directory</code></li>
+          <li><code>Failed to unzip and extract project.json, with error: Corrupted zip or bug: unexpected signature (\x00\x00\x00\x00, expected \x50\x4B\x03\x04)</code></li>
+          <li><code>Bug : uncompressed data size mismatch</code></li>
+        </ul>
+      </details>
+      <p>
+        Inside the zip is a file called <a href="https://en.scratch-wiki.info/wiki/Scratch_File_Format#Format">project.json</a>.
+        This file contains your project's sprites, scripts, variables, lists, and metadata about costumes and sounds.
+        When you load a project, Scratch checks that all parts of the JSON are in the correct format.
+        There are bugs that allow the project.json that gets generated when you save your project to not pass these checks.
+        sb3fix checks for a bunch of these failure cases and changes the JSON to make the checks pass.
+        This usually results in your whole project being recovered, and writing new fixes is usually easy when we become aware of missing fixes.
+      </p>
+      <details>
+        <summary>Examples of error messages due to project.json corruption</summary>
+        <ul class="error-list">
+          <li><code>Error: Unknown extension: ...</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[2].variables['32!k|mRA^e^r;{*i9Z[p-getParam,number1,r-'][0]","schemaPath":"#/items/0/type","params":{"type":"string"},"message":"should be string"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[1].costumes[0].name","schemaPath":"#/properties/name/type","params":{"type":"string"},"message":"should be string"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[1].sounds[0].name","schemaPath":"#/properties/name/type","params":{"type":"string"},"message":"should be string"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[2].blocks['b'].inputs['MESSAGE'][1]","schemaPath":"#/definitions/optionalString/oneOf/0/type","params":{"type":"string"},"message":"should be string"},{"keyword":"type","dataPath":".targets[2].blocks['b'].inputs['MESSAGE'][1]","schemaPath":"#/definitions/optionalString/oneOf/1/type","params":{"type":"null"},"message":"should be null"}, ...}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"enum","dataPath":".targets[0].name","schemaPath":"sb3_definitions.json#/definitions/stage/properties/name/enum","params":{"allowedValues":["Stage"]},"message":"should be equal to one of the allowed values"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"minItems","dataPath":".targets[0].costumes","schemaPath":"#/properties/costumes/minItems","params":{"limit":1},"message":"should NOT have less than 1 items"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"required","dataPath":".targets[0].costumes[0]","schemaPath":"#/required","params":{"missingProperty":"assetId"},"message":"should have required property 'assetId'"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[0].variables['`jEk@4|i[#Fk?(8x)AV.-my variable'][1]","schemaPath":"#/definitions/stringOrNumber/oneOf/0/type","params":{"type":"string"},"message":"should be string"},{"keyword":"type","dataPath":".targets[0].variables['`jEk@4|i[#Fk?(8x)AV.-my variable'][1]","schemaPath":"#/definitions/stringOrNumber/oneOf/1/type","params":{"type":"number"},"message":"should be number"},{"keyword":"oneOf","dataPath":".targets[0].variables['`jEk@4|i[#Fk?(8x)AV.-my variable'][1]","schemaPath":"#/definitions/stringOrNumber/oneOf","params":{"passingSchemas":null},"message":"should match exactly one schema in oneOf"}...}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[0].videoState","schemaPath":"sb3_definitions.json#/definitions/stage/properties/videoState/type","params":{"type":"string"},"message":"should be string"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"type","dataPath":".targets[1].x","schemaPath":"sb3_definitions.json#/definitions/sprite/properties/x/type","params":{"type":"number"},"message":"should be number"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"maxLength","dataPath":".targets[0].comments['d'].text","schemaPath":"#/properties/text/maxLength","params":{"limit":8000},"message":"should NOT be longer than 8000 characters"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"enum","dataPath":".targets[1].rotationStyle","schemaPath":"sb3_definitions.json#/definitions/sprite/properties/rotationStyle/enum","params":{"allowedValues":["all around","don't rotate","left-right"]},"message":"should be equal to one of the allowed values"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+          <li><code>Could not load project: {"validationError":"Could not parse as a valid SB2 or SB3 project.","sb3Errors":[{"keyword":"enum","dataPath":".targets[1].isStage","schemaPath":"sb3_definitions.json#/definitions/sprite/properties/isStage/enum","params":{"allowedValues":[false]},"message":"should be equal to one of the allowed values"}],"sb2Errors":[{"keyword":"required","dataPath":"","schemaPath":"#/required","params":{"missingProperty":"objName"},"message":"should have required property 'objName'"}]}</code></li>
+        </ul>
+      </details>
+      <p>
+        The last part of a Scratch project is your project's costumes and sounds, known as assets.
+        Assets are also files in the zip and use standard file formats such as <a href="https://en.wikipedia.org/wiki/PNG">PNG</a>, <a href="https://en.wikipedia.org/wiki/SVG">SVG</a>, <a href="https://en.wikipedia.org/wiki/WAV">WAV</a>, and others.
+        Corrupted costumes appear as <a href="defaultBitmap.png">a question mark in a gray box</a>, and corrupted sounds are replaced with zero-second sounds.
+        There are other bugs that can result in these symptoms even if the asset is not corrupt.
+        Some corrupted costumes load fine but cause a crash if you try to edit them.
+        At this time, sb3fix does not attempt to fix asset corruption beyond our attempts to fix zip corruption.
+        Asset corruption is not common and is rarely catastrophic as the rest of the project can still load.
+      </p>
+      <p>sb3fix is open source at <a href="https://github.com/Sailfish-Studio/sb3fix">https://github.com/Sailfish-Studio/sb3fix</a></p>
+
+      <h2>Privacy</h2>
+      <p>Files are processed locally on your computer and never sent to any server.</p>
+    </main>
+
+    <script src="sb3fix.js"></script>
+
+    <script>
+      /** @type {HTMLFileElement} */
+      const fileInput = document.querySelector('.file');
+      /** @type {HTMLSelectElement} */
+      const platformInput = document.querySelector('.platform');
+      /** @type {HTMLElement} */
+      const output = document.querySelector('.output');
+
+      const searchParams = new URLSearchParams(location.search);
+      const platformParam = searchParams.get('platform');
+      if (platformParam && Object.prototype.hasOwnProperty.call(sb3fix.platforms, platformParam)) {
+        platformInput.value = platformParam;
+      }
+
+      // Start handling drag events as soon as possible
+      const dropIndicator = document.querySelector('.drop-indicator');
+      document.addEventListener('dragover', (e) => {
+        if (e.dataTransfer.types.includes('Files')) {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'copy';
+          document.body.classList.add('dropping');
+        }
+      });
+      document.addEventListener('dragleave', (e) => {
+        document.body.classList.remove('dropping');
+      });
+      document.addEventListener('drop', (e) => {
+        if (e.dataTransfer.types.includes('Files')) {
+          e.preventDefault();
+          document.body.classList.remove('dropping');
+          fileInput.files = e.dataTransfer.files;
+          fileInput.dispatchEvent(new Event('change'));
+        }
+      });
+    </script>
+
+    <script>
+      const stringifyError = (error) => {
+        if (error && error.message && error.stack) {
+          return `${error.message}\n${error.stack}`;
+        }
+        return `${error}`;
+      };
+
+      const readAsText = (blob) => new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onload = () => resolve(fr.result);
+        fr.onerror = () => reject(fr.error);
+        fr.readAsText(blob);
+      });
+
+      const processFile = async (file) => {
+        const container = Object.assign(document.createElement('div'), {
+          className: 'project'
+        });
+        output.appendChild(container);
+
+        container.appendChild(Object.assign(document.createElement('h3'), {
+          textContent: file.name,
+          className: 'project-title'
+        }));
+
+        const statusContainer = Object.assign(document.createElement('p'), {
+          textContent: '⌛ Processing...'
+        });
+        container.appendChild(statusContainer);
+
+        const logContainer = Object.assign(document.createElement('details'), {
+          className: 'log-container'
+        });
+        const logSummary = Object.assign(document.createElement('summary'), {
+          className: 'log-summary',
+          textContent: 'View log'
+        });
+        const logMessages = Object.assign(document.createElement('textarea'), {
+          className: 'log-messages',
+          readOnly: true,
+          placeholder: '(empty)'
+        });
+        logContainer.appendChild(logSummary);
+        logContainer.appendChild(logMessages);
+        container.appendChild(logContainer);
+
+        let dots = 0;
+        const processingInterval = setInterval(() => {
+          dots = (dots + 1) % 3;
+        }, 1000);
+
+        try {
+          const startTime = performance.now();
+          const options = {
+            platform: platformInput.value,
+            logCallback: (message) => {
+              const millis = ((performance.now() - startTime) / 1000).toFixed(3);
+              logMessages.textContent += `${logMessages.textContent.length > 0 ? '\n' : ''}[${millis}] ${message}`;
+            }
+          };
+
+          let fixedBlob;
+
+          if (file.name.endsWith('.json')) {
+            const text = await readAsText(file);
+            const fixed = sb3fix.fixJSON(text, options);
+            fixedBlob = new Blob([JSON.stringify(fixed)], {
+              type: 'application/json'
+            });
+          } else {
+            const fixed = await sb3fix.fixZip(file, options);
+            fixedBlob = new Blob([fixed], {
+              type: 'application/x.scratch.sb3'
+            });
+          }
+
+          const downloadElement = document.createElement('a');
+          downloadElement.href = URL.createObjectURL(fixedBlob);
+          downloadElement.download = `fixed ${file.name}`;
+          downloadElement.textContent = `Download fixed ${file.name}`;
+
+          while (statusContainer.firstChild) {
+            statusContainer.removeChild(statusContainer.firstChild);
+          }
+
+          statusContainer.appendChild(downloadElement);
+          container.dataset.success = true;
+        } catch (error) {
+          const errorElement = Object.assign(document.createElement('span'), {
+            className: 'error-message',
+            textContent: `ERROR: ${stringifyError(error)}`
+          });
+
+          while (statusContainer.firstChild) {
+            statusContainer.removeChild(statusContainer.firstChild);
+          }
+
+          statusContainer.appendChild(errorElement);
+          container.dataset.error = true;
+        }
+      };
+
+      const process = async () => {
+        fileInput.disabled = true;
+        platformInput.disabled = true;
+
+        while (output.firstChild) {
+          output.removeChild(output.firstChild);
+        }
+        for (const file of fileInput.files) {
+          await processFile(file);
+        }
+
+        fileInput.disabled = false;
+        platformInput.disabled = false;
+      };
+
+      fileInput.addEventListener('change', process);
+      platformInput.addEventListener('change', process);
+
+      // Files might've been selected before JS finished loading
+      if (fileInput.files.length > 0) {
+        process();
+      }
+    </script>
+  </body>
+</html>

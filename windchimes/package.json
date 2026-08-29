@@ -1,0 +1,27 @@
+{
+  "name": "@sailfish-studio/windchimes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sailfish-Studio/windchimes.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sailfish-Studio/windchimes/issues"
+  },
+  "homepage": "https://github.com/Sailfish-Studio/windchimes#readme",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.0"
+  },
+  "private": true
+}
