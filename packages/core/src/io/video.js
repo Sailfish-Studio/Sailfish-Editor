@@ -215,4 +215,4 @@ class Video {
 }
 
 
-module.exports = Video;
+if (typeof module !== "undefined") module.exports = Video;

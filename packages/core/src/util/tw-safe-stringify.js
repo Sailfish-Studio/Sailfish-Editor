@@ -27,4 +27,4 @@ const safeStringify = input => {
     return `${input}`;
 };
 
-module.exports = safeStringify;
+if (typeof module !== "undefined") module.exports = safeStringify;

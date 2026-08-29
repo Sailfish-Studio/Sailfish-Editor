@@ -236,4 +236,4 @@ class SharedDispatch {
     }
 }
 
-module.exports = SharedDispatch;
+if (typeof module !== "undefined") module.exports = SharedDispatch;

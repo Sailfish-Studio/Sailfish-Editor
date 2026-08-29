@@ -119,4 +119,4 @@ class MathUtil {
     }
 }
 
-module.exports = MathUtil;
+if (typeof module !== "undefined") module.exports = MathUtil;

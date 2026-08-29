@@ -266,4 +266,4 @@ class AudioEngine {
     }
 }
 
-module.exports = AudioEngine;
+if (typeof module !== "undefined") module.exports = AudioEngine;

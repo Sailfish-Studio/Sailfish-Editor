@@ -763,4 +763,4 @@ class Scratch3Text2SpeechBlocks {
             });
     }
 }
-module.exports = Scratch3Text2SpeechBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3Text2SpeechBlocks;

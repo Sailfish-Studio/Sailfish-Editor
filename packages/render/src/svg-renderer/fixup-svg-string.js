@@ -3,7 +3,7 @@
  * @param {!string} svgString String of the svg to fix.
  * @returns {!string} fixed svg that should be parseable.
  */
-module.exports = function (svgString) {
+if (typeof module !== "undefined") module.exports = function (svgString) {
     // Add root svg namespace if it does not exist.
     const svgAttrs = svgString.match(/<svg [^>]*>/);
     if (svgAttrs && svgAttrs[0].indexOf('xmlns=') === -1) {

@@ -16,6 +16,6 @@ const supportsNullishCoalescing = () => {
     }
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     supportsNullishCoalescing: supportsNullishCoalescing()
 };

@@ -155,4 +155,4 @@ class BitmapAdapter {
     }
 }
 
-module.exports = BitmapAdapter;
+if (typeof module !== "undefined") module.exports = BitmapAdapter;

@@ -224,4 +224,4 @@ const createScratchX = Scratch => {
     };
 };
 
-module.exports = createScratchX;
+if (typeof module !== "undefined") module.exports = createScratchX;

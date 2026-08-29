@@ -2432,4 +2432,4 @@ RenderWebGL.UseGpuModes = {
  */
 RenderWebGL.powerPreference = 'default';
 
-module.exports = RenderWebGL;
+if (typeof module !== "undefined") module.exports = RenderWebGL;

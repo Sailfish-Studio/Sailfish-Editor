@@ -1339,4 +1339,4 @@ class Scratch3MusicBlocks {
     }
 }
 
-module.exports = Scratch3MusicBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3MusicBlocks;

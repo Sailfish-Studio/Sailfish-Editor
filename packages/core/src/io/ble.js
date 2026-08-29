@@ -253,4 +253,4 @@ class BLE extends JSONRPC {
     }
 }
 
-module.exports = BLE;
+if (typeof module !== "undefined") module.exports = BLE;

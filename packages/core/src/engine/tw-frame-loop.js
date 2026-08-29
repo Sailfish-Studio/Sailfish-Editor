@@ -127,4 +127,4 @@ class FrameLoop {
     }
 }
 
-module.exports = FrameLoop;
+if (typeof module !== "undefined") module.exports = FrameLoop;

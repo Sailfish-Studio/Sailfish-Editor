@@ -393,4 +393,4 @@ class Scratch3MakeyMakeyBlocks {
         return this.sequences[sequenceString].completed;
     }
 }
-module.exports = Scratch3MakeyMakeyBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3MakeyMakeyBlocks;

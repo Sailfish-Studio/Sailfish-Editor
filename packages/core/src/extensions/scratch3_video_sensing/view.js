@@ -506,4 +506,4 @@ class VideoMotionView {
     }
 }
 
-module.exports = VideoMotionView;
+if (typeof module !== "undefined") module.exports = VideoMotionView;

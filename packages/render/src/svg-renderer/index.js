@@ -12,7 +12,7 @@ const DOMPurify = require('dompurify');
 //  * Export for NPM & Node.js
 //  * @type {RenderWebGL}
 //  */
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     BitmapAdapter: BitmapAdapter,
     convertFonts: convertFonts,
     inlineSvgFonts: inlineSvgFonts,

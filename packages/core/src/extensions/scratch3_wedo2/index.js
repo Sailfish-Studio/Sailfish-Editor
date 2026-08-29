@@ -1611,4 +1611,4 @@ class Scratch3WeDo2Blocks {
     }
 }
 
-module.exports = Scratch3WeDo2Blocks;
+if (typeof module !== "undefined") module.exports = Scratch3WeDo2Blocks;

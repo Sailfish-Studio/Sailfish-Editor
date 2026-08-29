@@ -314,4 +314,4 @@ class FontManager extends EventEmitter {
     }
 }
 
-module.exports = FontManager;
+if (typeof module !== "undefined") module.exports = FontManager;

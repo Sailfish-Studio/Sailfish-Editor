@@ -174,4 +174,4 @@ class Sprite {
     }
 }
 
-module.exports = Sprite;
+if (typeof module !== "undefined") module.exports = Sprite;

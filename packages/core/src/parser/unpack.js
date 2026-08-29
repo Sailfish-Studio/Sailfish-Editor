@@ -10,7 +10,7 @@ var unzip = require('./unzip');
  * @param {Function}        callback Error or stringified project data
  * @return {void}
  */
-module.exports = function (input, isSprite, callback) {
+if (typeof module !== "undefined") module.exports = function (input, isSprite, callback) {
     if (typeof input === 'string') {
         // Pass string to callback
         return callback(null, [input, null]);

@@ -199,4 +199,4 @@ class BT extends JSONRPC {
     }
 }
 
-module.exports = BT;
+if (typeof module !== "undefined") module.exports = BT;

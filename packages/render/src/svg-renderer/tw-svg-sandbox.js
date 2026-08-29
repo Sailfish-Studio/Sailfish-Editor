@@ -52,4 +52,4 @@ const getSandbox = () => {
     return iframe.contentDocument.body;
 };
 
-module.exports = getSandbox;
+if (typeof module !== "undefined") module.exports = getSandbox;

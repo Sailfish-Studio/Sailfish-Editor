@@ -242,4 +242,4 @@ class SVGSkin extends Skin {
 
 }
 
-module.exports = SVGSkin;
+if (typeof module !== "undefined") module.exports = SVGSkin;

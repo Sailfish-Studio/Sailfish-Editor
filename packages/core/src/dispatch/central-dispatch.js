@@ -140,4 +140,4 @@ class CentralDispatch extends SharedDispatch {
     }
 }
 
-module.exports = new CentralDispatch();
+if (typeof module !== "undefined") module.exports = new CentralDispatch();

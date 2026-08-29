@@ -599,4 +599,4 @@ class Scratch3VideoSensingBlocks {
     }
 }
 
-module.exports = Scratch3VideoSensingBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3VideoSensingBlocks;

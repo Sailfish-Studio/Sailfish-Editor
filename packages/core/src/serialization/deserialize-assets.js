@@ -172,7 +172,7 @@ const deserializeCostume = function (costume, runtime, zip, assetFileName, textL
     ]);
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     deserializeSound,
     deserializeCostume
 };

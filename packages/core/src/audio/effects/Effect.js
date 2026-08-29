@@ -171,4 +171,4 @@ class Effect {
     }
 }
 
-module.exports = Effect;
+if (typeof module !== "undefined") module.exports = Effect;

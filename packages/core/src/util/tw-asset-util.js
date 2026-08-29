@@ -39,4 +39,4 @@ class AssetUtil {
     }
 }
 
-module.exports = AssetUtil;
+if (typeof module !== "undefined") module.exports = AssetUtil;

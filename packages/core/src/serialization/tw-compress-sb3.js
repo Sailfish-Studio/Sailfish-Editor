@@ -157,4 +157,4 @@ const compress = projectData => {
     }
 };
 
-module.exports = compress;
+if (typeof module !== "undefined") module.exports = compress;

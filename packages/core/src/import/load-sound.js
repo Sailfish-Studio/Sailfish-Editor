@@ -114,7 +114,7 @@ const loadSound = function (sound, runtime, soundBank) {
         });
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     loadSound,
     loadSoundFromAsset
 };

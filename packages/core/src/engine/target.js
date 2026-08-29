@@ -801,4 +801,4 @@ class Target extends EventEmitter {
 
 }
 
-module.exports = Target;
+if (typeof module !== "undefined") module.exports = Target;

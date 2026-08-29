@@ -14,4 +14,4 @@ class Clone {
     }
 }
 
-module.exports = Clone;
+if (typeof module !== "undefined") module.exports = Clone;

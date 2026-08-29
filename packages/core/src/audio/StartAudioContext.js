@@ -3,7 +3,7 @@
 // to before we even try to "start" it.  Our test api audio context is started by default.
 const StartAudioContext = require('@turbowarp/startaudiocontext');
 
-module.exports = function (context) {
+if (typeof module !== "undefined") module.exports = function (context) {
     if (typeof document !== 'undefined') {
         return StartAudioContext(context);
     }

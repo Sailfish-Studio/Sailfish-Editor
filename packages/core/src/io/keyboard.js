@@ -220,4 +220,4 @@ class Keyboard {
     }
 }
 
-module.exports = Keyboard;
+if (typeof module !== "undefined") module.exports = Keyboard;

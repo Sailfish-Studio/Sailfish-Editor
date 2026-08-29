@@ -68,4 +68,4 @@ class SvgElement {
     }
 }
 
-module.exports = SvgElement;
+if (typeof module !== "undefined") module.exports = SvgElement;

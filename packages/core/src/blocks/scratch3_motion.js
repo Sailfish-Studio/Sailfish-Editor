@@ -291,4 +291,4 @@ class Scratch3MotionBlocks {
     }
 }
 
-module.exports = Scratch3MotionBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3MotionBlocks;

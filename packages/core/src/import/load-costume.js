@@ -495,7 +495,7 @@ const loadCostume = function (md5ext, costume, runtime, optVersion) {
         });
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     loadCostume,
     loadCostumeFromAsset
 };

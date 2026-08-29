@@ -103,4 +103,4 @@ class TurboWarpBlocks {
     }
 }
 
-module.exports = TurboWarpBlocks;
+if (typeof module !== "undefined") module.exports = TurboWarpBlocks;

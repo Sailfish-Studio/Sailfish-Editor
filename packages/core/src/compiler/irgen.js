@@ -1556,7 +1556,7 @@ class IRGenerator {
     }
 }
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     ScriptTreeGenerator,
     IRGenerator
 };

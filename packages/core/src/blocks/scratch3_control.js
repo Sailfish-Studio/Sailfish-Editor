@@ -203,4 +203,4 @@ class Scratch3ControlBlocks {
     }
 }
 
-module.exports = Scratch3ControlBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3ControlBlocks;

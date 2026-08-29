@@ -101,4 +101,4 @@ ProxyTool.TOOL_FILTER = {
     READY: 'ready'
 };
 
-module.exports = ProxyTool;
+if (typeof module !== "undefined") module.exports = ProxyTool;

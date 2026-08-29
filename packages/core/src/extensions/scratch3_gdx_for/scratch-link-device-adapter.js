@@ -41,4 +41,4 @@ class ScratchLinkDeviceAdapter {
     }
 }
 
-module.exports = ScratchLinkDeviceAdapter;
+if (typeof module !== "undefined") module.exports = ScratchLinkDeviceAdapter;

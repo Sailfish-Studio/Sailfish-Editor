@@ -277,4 +277,4 @@ class Silhouette {
     }
 }
 
-module.exports = Silhouette;
+if (typeof module !== "undefined") module.exports = Silhouette;

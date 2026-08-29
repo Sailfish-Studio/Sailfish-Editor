@@ -18,4 +18,4 @@ const defaults = {
     videoSprites: 'https://extensions.sailfish-studio.org/lab/video-sprites.js'
 };
 
-module.exports = defaults;
+if (typeof module !== "undefined") module.exports = defaults;

@@ -20,4 +20,4 @@ class VariablePool {
     }
 }
 
-module.exports = VariablePool;
+if (typeof module !== "undefined") module.exports = VariablePool;

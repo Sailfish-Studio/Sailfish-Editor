@@ -54,4 +54,4 @@ const ArgumentType = {
     SOUND: 'sound'
 };
 
-module.exports = ArgumentType;
+if (typeof module !== "undefined") module.exports = ArgumentType;

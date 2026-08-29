@@ -69,4 +69,4 @@ const saferFetch = (url, options) => new Promise(resolve => {
     checkStartNextFetch();
 });
 
-module.exports = saferFetch;
+if (typeof module !== "undefined") module.exports = saferFetch;

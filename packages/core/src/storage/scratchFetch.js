@@ -102,7 +102,7 @@ const unsetMetadata = name => {
     metadata.delete(name);
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     default: scratchFetch,
 
     Headers: crossFetch.Headers,
@@ -122,5 +122,5 @@ if (process.env.NODE_ENV === 'development') {
      */
     const getMetadata = name => metadata.get(name);
 
-    module.exports.getMetadata = getMetadata;
+if (typeof module !== "undefined") module.exports.getMetadata = getMetadata;
 }

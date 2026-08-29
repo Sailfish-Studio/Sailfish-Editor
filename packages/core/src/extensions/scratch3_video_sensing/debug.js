@@ -7,7 +7,7 @@
 const VideoMotion = require('./library');
 const VideoMotionView = require('./view');
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     VideoMotion,
     VideoMotionView
 };

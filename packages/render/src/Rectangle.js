@@ -193,4 +193,4 @@ class Rectangle {
 
 }
 
-module.exports = Rectangle;
+if (typeof module !== "undefined") module.exports = Rectangle;

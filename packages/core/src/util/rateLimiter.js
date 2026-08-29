@@ -70,4 +70,4 @@ class RateLimiter {
     }
 }
 
-module.exports = RateLimiter;
+if (typeof module !== "undefined") module.exports = RateLimiter;

@@ -1,4 +1,4 @@
 const nanolog = require('@sailfish/shared');
 nanolog.enable();
 
-module.exports = nanolog('vm');
+if (typeof module !== "undefined") module.exports = nanolog('vm');

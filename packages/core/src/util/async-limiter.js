@@ -33,4 +33,4 @@ class AsyncLimiter {
     }
 }
 
-module.exports = AsyncLimiter;
+if (typeof module !== "undefined") module.exports = AsyncLimiter;

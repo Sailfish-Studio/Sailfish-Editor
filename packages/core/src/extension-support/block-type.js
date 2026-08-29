@@ -57,4 +57,4 @@ const BlockType = {
     XML: 'xml'
 };
 
-module.exports = BlockType;
+if (typeof module !== "undefined") module.exports = BlockType;

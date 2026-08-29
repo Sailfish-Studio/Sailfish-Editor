@@ -110,4 +110,4 @@ class WorkerDispatch extends SharedDispatch {
     }
 }
 
-module.exports = new WorkerDispatch();
+if (typeof module !== "undefined") module.exports = new WorkerDispatch();

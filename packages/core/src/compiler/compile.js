@@ -40,4 +40,4 @@ const compile = (/** @type {import("../engine/thread")} */ thread) => {
     };
 };
 
-module.exports = compile;
+if (typeof module !== "undefined") module.exports = compile;

@@ -72,7 +72,7 @@ const exportCostume = costume => {
     return new _TextEncoder().encode(decodedData);
 };
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     parseVectorMetadata,
     exportCostume
 };

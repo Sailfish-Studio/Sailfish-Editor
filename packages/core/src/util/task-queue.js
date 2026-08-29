@@ -200,4 +200,4 @@ class TaskQueue {
     }
 }
 
-module.exports = TaskQueue;
+if (typeof module !== "undefined") module.exports = TaskQueue;

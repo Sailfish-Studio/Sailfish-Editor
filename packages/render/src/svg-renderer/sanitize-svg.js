@@ -59,4 +59,4 @@ sanitizeSvg.sanitizeSvgText = function (rawSvgText) {
     return sanitizedText;
 };
 
-module.exports = sanitizeSvg;
+if (typeof module !== "undefined") module.exports = sanitizeSvg;

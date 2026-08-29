@@ -823,7 +823,7 @@ class IROptimizer {
 }
 
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     IROptimizer,
     TypeState
 };

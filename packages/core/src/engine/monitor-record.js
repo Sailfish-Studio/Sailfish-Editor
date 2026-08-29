@@ -199,4 +199,4 @@ MonitorRecord.externalDeltaToJS = obj => {
     return obj;
 };
 
-module.exports = MonitorRecord;
+if (typeof module !== "undefined") module.exports = MonitorRecord;

@@ -105,4 +105,4 @@ class StringUtil {
     }
 }
 
-module.exports = StringUtil;
+if (typeof module !== "undefined") module.exports = StringUtil;

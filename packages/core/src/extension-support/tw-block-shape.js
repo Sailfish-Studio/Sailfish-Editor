@@ -22,4 +22,4 @@ const BlockShape = {
     SQUARE: ScratchBlocksConstants.OUTPUT_SHAPE_SQUARE
 };
 
-module.exports = BlockShape;
+if (typeof module !== "undefined") module.exports = BlockShape;

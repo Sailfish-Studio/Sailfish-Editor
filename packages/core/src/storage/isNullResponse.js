@@ -13,4 +13,4 @@ const isNullResponse = response => (
     response.status === 503
 );
 
-module.exports = isNullResponse;
+if (typeof module !== "undefined") module.exports = isNullResponse;

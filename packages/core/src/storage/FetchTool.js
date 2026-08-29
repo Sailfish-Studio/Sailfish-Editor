@@ -58,4 +58,4 @@ class FetchTool {
     }
 }
 
-module.exports = FetchTool;
+if (typeof module !== "undefined") module.exports = FetchTool;

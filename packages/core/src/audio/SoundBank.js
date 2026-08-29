@@ -159,4 +159,4 @@ class SoundBank {
 
 }
 
-module.exports = SoundBank;
+if (typeof module !== "undefined") module.exports = SoundBank;

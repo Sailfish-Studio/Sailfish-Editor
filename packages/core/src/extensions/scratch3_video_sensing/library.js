@@ -381,4 +381,4 @@ class VideoMotion {
     }
 }
 
-module.exports = VideoMotion;
+if (typeof module !== "undefined") module.exports = VideoMotion;

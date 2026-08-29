@@ -25,4 +25,4 @@ class MouseWheel {
     }
 }
 
-module.exports = MouseWheel;
+if (typeof module !== "undefined") module.exports = MouseWheel;

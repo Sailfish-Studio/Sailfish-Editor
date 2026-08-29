@@ -189,4 +189,4 @@ class WebHelper extends Helper {
     }
 }
 
-module.exports = WebHelper;
+if (typeof module !== "undefined") module.exports = WebHelper;

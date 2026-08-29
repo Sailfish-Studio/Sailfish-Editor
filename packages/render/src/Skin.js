@@ -239,4 +239,4 @@ class Skin {
 
 }
 
-module.exports = Skin;
+if (typeof module !== "undefined") module.exports = Skin;

@@ -166,4 +166,4 @@ class SvgRenderer {
     }
 }
 
-module.exports = SvgRenderer;
+if (typeof module !== "undefined") module.exports = SvgRenderer;

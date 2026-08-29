@@ -177,4 +177,4 @@ class Mouse {
     }
 }
 
-module.exports = Mouse;
+if (typeof module !== "undefined") module.exports = Mouse;

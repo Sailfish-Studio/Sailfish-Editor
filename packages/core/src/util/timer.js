@@ -100,4 +100,4 @@ class Timer {
     }
 }
 
-module.exports = Timer;
+if (typeof module !== "undefined") module.exports = Timer;

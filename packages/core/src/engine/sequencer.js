@@ -374,4 +374,4 @@ class Sequencer {
     }
 }
 
-module.exports = Sequencer;
+if (typeof module !== "undefined") module.exports = Sequencer;

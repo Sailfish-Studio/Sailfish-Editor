@@ -1815,4 +1815,4 @@ addExtensionOp(weDo2, 'getTilt', {
     ]
 });
 
-module.exports = specMap;
+if (typeof module !== "undefined") module.exports = specMap;

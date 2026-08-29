@@ -19,4 +19,4 @@ class Helper {
     }
 }
 
-module.exports = Helper;
+if (typeof module !== "undefined") module.exports = Helper;

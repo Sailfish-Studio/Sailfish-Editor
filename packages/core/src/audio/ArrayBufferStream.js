@@ -174,4 +174,4 @@ class ArrayBufferStream {
     }
 }
 
-module.exports = ArrayBufferStream;
+if (typeof module !== "undefined") module.exports = ArrayBufferStream;

@@ -43,7 +43,7 @@ const inputs = [
     'sound_volume'
 ];
 
-module.exports = {
+if (typeof module !== "undefined") module.exports = {
     stacked,
     inputs
 };

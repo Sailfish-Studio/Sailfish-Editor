@@ -133,4 +133,4 @@ class Scratch3ProcedureBlocks {
     }
 }
 
-module.exports = Scratch3ProcedureBlocks;
+if (typeof module !== "undefined") module.exports = Scratch3ProcedureBlocks;

@@ -160,4 +160,4 @@ class BuiltinHelper extends Helper {
     }
 }
 
-module.exports = BuiltinHelper;
+if (typeof module !== "undefined") module.exports = BuiltinHelper;

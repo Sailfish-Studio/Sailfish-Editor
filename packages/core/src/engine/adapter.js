@@ -173,4 +173,4 @@ const adapter = function (e) {
     return domToBlocks(html.parseDOM(e.xml.outerHTML, {decodeEntities: true}));
 };
 
-module.exports = adapter;
+if (typeof module !== "undefined") module.exports = adapter;

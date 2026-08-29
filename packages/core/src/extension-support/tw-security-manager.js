@@ -164,4 +164,4 @@ class SecurityManager {
     }
 }
 
-module.exports = SecurityManager;
+if (typeof module !== "undefined") module.exports = SecurityManager;
