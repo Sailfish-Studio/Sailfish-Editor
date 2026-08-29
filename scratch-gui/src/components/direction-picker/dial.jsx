@@ -5,8 +5,8 @@ import {getEventXY} from '../../lib/touch-utils';
 
 import styles from './dial.css';
 
-import dialFace from '!../../lib/tw-recolor/build!./icon--dial.svg';
-import dialHandle from '!../../lib/tw-recolor/build!./icon--handle.svg';
+import dialFace from "./icon--dial.svg?url";
+import dialHandle from "./icon--handle.svg?url";
 
 class Dial extends React.Component {
     constructor (props) {

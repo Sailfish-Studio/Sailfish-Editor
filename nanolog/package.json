@@ -5,10 +5,7 @@
   "main": "index.js",
   "browser": "browser.js",
   "types": "index.d.ts",
-  "scripts": {
-    "build": "bun run ../../scripts/build.js nanolog",
-    "test": "node test"
-  },
+  "scripts": {},
   "homepage": "https://github.com/TurboWarp/nanolog",
   "repository": {
     "type": "git",

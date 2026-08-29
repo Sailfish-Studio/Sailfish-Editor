@@ -3,13 +3,7 @@
   "version": "0.5.0",
   "description": "Fix corrupted Scratch projects",
   "main": "src/sb3fix.js",
-  "scripts": {
-    "build": "bun run ../../scripts/build.js sb3fix",
-    "watch": "bun run ../../scripts/build.js --watch sb3fix",
-    "start": "bun run ../../scripts/build.js --watch sb3fix",
-    "update": "node tests/snapshots --update",
-    "test": "node tests/snapshots --validate"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sailfish-Studio/sb3fix.git"
@@ -23,9 +17,5 @@
   "dependencies": {
     "@sailfish-studio/jszip": "workspace:*"
   },
-  "devDependencies": {
-    "copy-webpack-plugin": "^14.0.0",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
-  }
+  "devDependencies": {}
 }

@@ -37,10 +37,4 @@ tmp/
 # TurboWarp original repos (archived)
 turbowarp-repos/
 
-# Non-workspace repos (keep but ignore in git)
-.github/
-addons/
-dangotron/
-packager-extras/
-winget-pkgs/
-types/
+# Non-workspace repos (archived)

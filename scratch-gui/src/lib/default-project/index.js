@@ -1,11 +1,10 @@
 import projectData from './project-data';
-
-/* eslint-disable import/no-unresolved */
-import overrideDefaultProject from '!arraybuffer-loader!./override-default-project.sb3';
-import backdrop from '!raw-loader!./cd21514d0531fdffb22204e0ec5ed84a.svg';
-import costume1 from '!raw-loader!./dango-cat.svg';
-/* eslint-enable import/no-unresolved */
+import backdrop from './cd21514d0531fdffb22204e0ec5ed84a.svg?raw';
+import costume1 from './dango-cat.svg?raw';
 import {TextEncoder} from '../tw-text-encoder';
+
+// Empty override file (was loaded as ArrayBuffer by webpack)
+const overrideDefaultProject = new Uint8Array(0);
 
 const defaultProject = translator => {
     if (overrideDefaultProject.byteLength > 0) {

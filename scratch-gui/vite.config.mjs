@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import postcssImport from 'postcss-import';
 import postcssVars from 'postcss-simple-vars';
 import autoprefixer from 'autoprefixer';
+import webpackCompat from './vite-plugin-webpack-compat.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.ROOT || '';
@@ -32,14 +33,13 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         'text-encoding$': resolve(__dirname, 'src/lib/tw-text-encoder'),
-        'scratch-render-fonts$': resolve(__dirname, 'src/lib/tw-scratch-render-fonts'),
+        'scratch-render-fonts': resolve(__dirname, 'src/lib/tw-scratch-render-fonts'),
       },
     },
 
     // CSS
     css: {
       modules: {
-        // Match webpack's naming: [name]_[local]_[hash:base64:5]
         localsConvention: 'camelCase',
         generateScopedName: '[name]_[local]_[hash:base64:5]',
       },
@@ -55,6 +55,7 @@ export default defineConfig(({ mode }) => {
 
     // JSX
     plugins: [
+      webpackCompat(),
       react({
         babel: {
           plugins: [
@@ -89,6 +90,7 @@ export default defineConfig(({ mode }) => {
       outDir: 'build',
       sourcemap: mode === 'development' ? 'inline' : false,
       minify: IS_PROD,
+      emptyOutDir: true,
       target: 'esnext',
       // Copy static assets
       rollupOptions: {
@@ -102,14 +104,13 @@ export default defineConfig(({ mode }) => {
         },
         // Code splitting (replaces webpack splitChunks)
         output: {
-          manualChunks: {
-            'vendor-react': ['react', 'react-dom', 'react-redux', 'redux'],
-            'vendor-scratch': [
-              'scratch-vm',
-              'scratch-render',
-              'scratch-blocks',
-              'scratch-paint',
-            ],
+          manualChunks (id) {
+            if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/') || id.includes('node_modules/redux/') || id.includes('node_modules/react-redux/')) {
+              return 'vendor-react';
+            }
+            if (id.includes('scratch-blocks')) {
+              return 'scratch-blocks';
+            }
           },
         },
       },

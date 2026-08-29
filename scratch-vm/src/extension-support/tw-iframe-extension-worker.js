@@ -1,5 +1,8 @@
 const uid = require('../util/uid');
-const frameSource = require('./tw-load-script-as-plain-text!./tw-iframe-extension-worker-entry');
+// Raw source of the iframe extension worker entry (inlined at build time by Vite)
+// In webpack this was: require('./tw-load-script-as-plain-text!./tw-iframe-extension-worker-entry')
+import workerSource from './tw-iframe-extension-worker-entry.js?raw';
+const frameSource = workerSource;
 
 const none = "'none'";
 const featurePolicy = {

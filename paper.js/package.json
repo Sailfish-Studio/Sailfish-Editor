@@ -15,15 +15,8 @@
   ],
   "main": "dist/paper-full.js",
   "types": "dist/paper.d.ts",
-  "scripts": {
-    "build": "gulp build",
-    "dist": "gulp dist",
-    "zip": "gulp zip",
-    "docs": "gulp docs",
-    "load": "gulp load",
-    "jshint": "gulp jshint",
-    "test": "gulp test"
-  },
+  "browser": "./src/paper.js",
+  "scripts": {},
   "files": [
     "AUTHORS.md",
     "CHANGELOG.md",
@@ -35,60 +28,7 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "gulp jshint --ensure-branch develop",
-      "pre-push": "gulp test --ensure-branch develop"
-    }
-  },
-  "overrides": {
-    "graceful-fs": "^4.2.11"
-  },
-  "browser": {
-    "canvas": false,
-    "jsdom": false,
-    "jsdom/lib/jsdom/living/generated/utils": false,
-    "source-map-support": false,
-    "./dist/node/self.js": false,
-    "./dist/node/extend.js": false
-  },
-  "devDependencies": {
-    "acorn": "0.5.0",
-    "canvas": "2.11.2",
-    "del": "4.1.1",
-    "gulp": "3.9.1",
-    "gulp-cached": "1.1.1",
-    "gulp-git-streamed": "2.10.1",
-    "gulp-jshint": "2.1.0",
-    "gulp-json-editor": "2.6.0",
-    "gulp-prepro": "2.4.0",
-    "gulp-qunits": "2.1.2",
-    "gulp-rename": "1.4.0",
-    "gulp-shell": "0.8.0",
-    "gulp-symlink": "2.1.4",
-    "gulp-typescript": "5.0.1",
-    "gulp-uglify": "1.5.4",
-    "gulp-uncomment": "0.3.0",
-    "gulp-util": "3.0.8",
-    "gulp-webserver": "0.9.1",
-    "gulp-whitespace": "0.1.0",
-    "gulp-zip": "3.2.0",
-    "jsdom": "15.2.1",
-    "jshint": "2.13.6",
-    "jshint-summary": "0.4.0",
-    "merge-stream": "2.0.0",
-    "minimist": "1.2.8",
-    "mustache": "3.2.1",
-    "prepro": "2.4.0",
-    "qunitjs": "1.23.1",
-    "require-dir": "1.2.0",
-    "resemblejs": "3.2.5",
-    "run-sequence": "2.2.1",
-    "source-map-support": "0.5.21",
-    "stats.js": "0.17.0",
-    "straps": "3.0.1",
-    "typescript": "4.9.5"
-  },
+  "devDependencies": {},
   "keywords": [
     "vector",
     "graphic",
