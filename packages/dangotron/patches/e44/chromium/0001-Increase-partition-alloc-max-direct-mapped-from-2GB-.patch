@@ -1,0 +1,58 @@
+From 4dd6ef0e45004d6823088caa65a3af70de2e8b07 Mon Sep 17 00:00:00 2001
+From: Thomas Weber <muffin@muffin.ink>
+Date: Sat, 4 Jul 2026 19:11:32 -0500
+Subject: Increase partition alloc max direct mapped from ~2GB to ~4GB
+
+---
+ .../src/partition_alloc/partition_alloc.cc                | 8 ++++++--
+ .../src/partition_alloc/partition_alloc_constants.h       | 7 ++++++-
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+diff --git a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc.cc b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc.cc
+index 4e8d2b62e094b..cbdbc2d8c0d59 100644
+--- a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc.cc
++++ b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc.cc
+@@ -6,6 +6,8 @@
+ 
+ #include <cstdint>
+ #include <cstring>
++// Dangotron: import constant used below
++#include <limits>
+ #include <memory>
+ 
+ #include "partition_alloc/address_pool_manager.h"
+@@ -54,9 +56,11 @@ void PartitionAllocGlobalInit(OomFunction on_out_of_memory) {
+       "page metadata fits in hole");
+ 
+   // Limit to prevent callers accidentally overflowing an int size.
++  // Dangotron: Paired with our change to MaxDirectMapped in the header, we need to
++  // adjust this assert to allow our higher value. Size gets stored in a uint32_t,
++  // so our 2GB -> 4GB increase still works.
+   STATIC_ASSERT_OR_PA_CHECK(
+-      internal::MaxDirectMapped() <=
+-          (1UL << 31) + internal::DirectMapAllocationGranularity(),
++      internal::MaxDirectMapped() <= std::numeric_limits<uint32_t>::max(),
+       "maximum direct mapped allocation");
+ 
+   // Check that some of our zanier calculations worked out as expected.
+diff --git a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
+index 17082f16af7cc..17f9b5f2a2ee3 100644
+--- a/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
++++ b/base/allocator/partition_allocator/src/partition_alloc/partition_alloc_constants.h
+@@ -396,7 +396,12 @@ constexpr size_t kMinDirectMappedDownsize =
+ PA_ALWAYS_INLINE constexpr size_t MaxDirectMapped() {
+   // Subtract kSuperPageSize to accommodate for granularity inside
+   // PartitionRoot::GetDirectMapReservationSize.
+-  return (1UL << 31) - kSuperPageSize;
++  // Dangotron: We override this from upstream's about 2GB to about 4GB. This limit
++  // controls how big a V8-allocated Uint8Array can be. Increasing the limit helps
++  // us run larger projects. This is a security trade-off - it makes Chromium bugs
++  // regarding size_t vs int confusion more exploitable. We've decided this is an
++  // acceptable tradeoff.
++  return (1ULL << 32) - kSuperPageSize;
+ }
+ 
+ // Max alignment supported by AlignedAlloc().
+-- 
+2.55.0
+

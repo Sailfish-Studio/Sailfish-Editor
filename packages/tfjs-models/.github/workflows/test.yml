@@ -1,0 +1,35 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+permissions: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install Chromium
+        run: sudo snap install chromium
+      - name: Install xvfb
+        run: sudo apt-get install xvfb
+      - name: Test top level
+        run: |
+          yarn install
+          yarn presubmit
+      - name: Test packages
+        run: |
+          for package in "face-detection"; do
+            pushd "$package"
+            yarn install
+            xvfb-run --auto-servernum yarn test
+            popd
+          done

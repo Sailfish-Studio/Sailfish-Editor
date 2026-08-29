@@ -1,0 +1,27 @@
+{
+  "name": "@turbowarp/json",
+  "version": "0.1.2",
+  "description": " Parse and stringify non-standards-compliant JSON",
+  "main": "./lib/cjs.cjs",
+  "module": "./src/index.js",
+  "types": "./index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "prepublish": "rollup -c",
+    "benchmark": "node benchmark/benchmark.js"
+  },
+  "author": "Thomas Weber",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurboWarp/json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TurboWarp/json/issues"
+  },
+  "devDependencies": {
+    "rollup": "^4.34.8",
+    "vitest": "^3.0.6"
+  }
+}

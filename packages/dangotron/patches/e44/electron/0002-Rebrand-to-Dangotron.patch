@@ -1,0 +1,51 @@
+From 7de1a2444b3f339330543000efb74e003c477f71 Mon Sep 17 00:00:00 2001
+From: Thomas Weber <muffin@muffin.ink>
+Date: Sun, 5 Jul 2026 12:00:55 -0500
+Subject: Rebrand to Dangotron
+
+We leave the actual executable name as "electron" to avoid having to
+fork the entire ecosystem around Electron.
+---
+ build/templates/electron_rc.tmpl | 12 ++++++------
+ shell/app/BRANDING.json          |  4 ++--
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/build/templates/electron_rc.tmpl b/build/templates/electron_rc.tmpl
+index 2f75d9003b..c4e857ec13 100644
+--- a/build/templates/electron_rc.tmpl
++++ b/build/templates/electron_rc.tmpl
+@@ -66,13 +66,13 @@ BEGIN
+     BEGIN
+         BLOCK "040904b0"
+         BEGIN
+-            VALUE "CompanyName", "GitHub, Inc."
+-            VALUE "FileDescription", "Electron"
++            VALUE "CompanyName", "TurboWarp Contributors"
++            VALUE "FileDescription", "Dangotron"
+             VALUE "FileVersion", "$major.$minor.$patch"
+-            VALUE "InternalName", "electron.exe"
+-            VALUE "LegalCopyright", "Copyright (C) 2015 GitHub, Inc. All rights reserved."
+-            VALUE "OriginalFilename", "electron.exe"
+-            VALUE "ProductName", "Electron"
++            VALUE "InternalName", "dangotron.exe"
++            VALUE "LegalCopyright", "Copyright (C) 2015 GitHub, Inc. Copyright (C) 2026 TurboWarp Contributors. All rights reserved."
++            VALUE "OriginalFilename", "dangotron.exe"
++            VALUE "ProductName", "Dangotron"
+             VALUE "ProductVersion", "$major.$minor.$patch"
+             VALUE "SquirrelAwareVersion", "1"
+         END
+diff --git a/shell/app/BRANDING.json b/shell/app/BRANDING.json
+index 118f3d1593..9d0825df25 100644
+--- a/shell/app/BRANDING.json
++++ b/shell/app/BRANDING.json
+@@ -1,5 +1,5 @@
+ {
+   "project_name": "electron",
+-  "product_name": "Electron",
+-  "mac_bundle_id": "com.github.Electron"
++  "product_name": "Dangotron",
++  "mac_bundle_id": "org.turbowarp.Dangotron"
+ }
+-- 
+2.55.0
+

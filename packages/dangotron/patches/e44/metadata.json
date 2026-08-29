@@ -1,0 +1,9 @@
+{
+    "upstream": {
+        "electron": "a35584bfcd3c9ab173c6a38a6295b2902f7b0ce1"
+    },
+    "paths": {
+        "chromium": "",
+        "electron": "electron"
+    }
+}
