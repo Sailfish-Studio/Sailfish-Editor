@@ -87,9 +87,9 @@ const loadFonts = () => fetchFonts()
 const getFonts = () => fontData;
 
 // We have to use legacy module.exports as some parts of Scratch expect require('scratch-render-font') to be a function
-module.exports = getFonts;
-module.exports.loadFonts = loadFonts;
-module.exports.FONTS = fontData;
+if(typeof module!=="undefined")module.exports=getFonts;
+if(typeof module!=="undefined")module.exports.loadFonts=loadFonts;
+if(typeof module!=="undefined")module.exports.FONTS=fontData;
 
 // ESM named exports for Vite/Rollup build
 export { loadFonts, getFonts };

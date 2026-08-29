@@ -31,4 +31,4 @@ const createLog = (namespace = '') => {
  */
 createLog.enable = createLog.disable = () => {};
 
-module.exports = createLog;
+if(typeof module!=="undefined")module.exports=createLog;
