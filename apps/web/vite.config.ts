@@ -42,7 +42,9 @@ const workspaceAliases: Record<string, string> = {
   '@sailfish/core': resolve(MONO_ROOT, 'packages/core/src/index.js'),
   '@sailfish/render': resolve(MONO_ROOT, 'packages/render/src/index.js'),
   '@sailfish/ui': resolve(MONO_ROOT, 'packages/ui/src/index.js'),
+  '@sailfish/ui-playground': resolve(MONO_ROOT, 'packages/ui/src/playground'),
   '@sailfish/blocks-ui': resolve(MONO_ROOT, 'packages/blocks-ui/dist/vertical.js'),
+  '@sailfish/shared/extended-json': resolve(MONO_ROOT, 'packages/shared/src/extended-json.js'),
   '@sailfish/shared': resolve(MONO_ROOT, 'packages/shared/src/index.js'),
   '@sailfish/paper': resolve(MONO_ROOT, 'packages/paper/src/paper.js'),
 };
@@ -66,8 +68,6 @@ export default defineConfig(({ mode }) => {
         ...workspaceAliases,
         'text-encoding$': resolve(MONO_ROOT, 'packages/ui/src/lib/tw-text-encoder'),
         'scratch-render-fonts': resolve(MONO_ROOT, 'packages/ui/src/lib/tw-scratch-render-fonts'),
-        '@sailfish/shared/extended-json': resolve(MONO_ROOT, 'packages/shared/src/extended-json.js'),
-        '@sailfish/ui-playground': resolve(MONO_ROOT, 'packages/ui/src/playground'),
       },
     },
 
@@ -142,7 +142,7 @@ export default defineConfig(({ mode }) => {
     publicDir: resolve(MONO_ROOT, 'packages/ui/static'),
 
     optimizeDeps: {
-      exclude: [...Object.keys(workspaceAliases), '@sailfish/ui-playground'],
+      exclude: [...Object.keys(workspaceAliases)],
       esbuildOptions: {
         plugins: [stripFlowPropTypes],
       },
