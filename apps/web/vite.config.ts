@@ -110,11 +110,7 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       target: 'esnext',
       commonjsOptions: {
-        // Force CJS→ESM transform for ALL workspace packages resolved via alias
-        // This is critical because workspace aliases bypass node_modules,
-        // so Vite's default CJS detection doesn't apply
-        include: /.*/, // Transform ALL files (workspace pkgs + node_modules)
-        transformMixedEsModules: true, // Also transform files with mixed CJS/ESM syntax
+        include: [/node_modules/],
       },
       rollupOptions: {
         input: {
