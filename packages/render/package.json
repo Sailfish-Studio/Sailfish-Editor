@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@sailfish/core": "workspace:*",
-    "@sailfish/shared": "workspace:*"
+    "@sailfish/shared": "workspace:*",
+    "@turbowarp/ancient-hull.js": "^0.2.13"
   }
 }

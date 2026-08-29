@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.ROOT || '/';
 const IS_PROD = process.env.NODE_ENV === 'production';
 const PORT = parseInt(process.env.PORT || '8601', 10);
-const MONO_ROOT = resolve(__dirname, '..');
+const MONO_ROOT = resolve(__dirname, '..', '..');
 
 // esbuild plugin to strip broken Flow prop-type imports from react-virtualized
 const stripFlowPropTypes: PluginOption = {
@@ -62,6 +62,8 @@ export default defineConfig(({ mode }) => {
         ...workspaceAliases,
         'text-encoding$': resolve(MONO_ROOT, 'packages/ui/src/lib/tw-text-encoder'),
         'scratch-render-fonts': resolve(MONO_ROOT, 'packages/ui/src/lib/tw-scratch-render-fonts'),
+        '@sailfish/shared/extended-json': resolve(MONO_ROOT, 'packages/shared/src/extended-json.js'),
+        '@sailfish/ui-playground': resolve(MONO_ROOT, 'packages/ui/src/playground'),
       },
     },
 
@@ -134,7 +136,7 @@ export default defineConfig(({ mode }) => {
     publicDir: resolve(MONO_ROOT, 'packages/ui/static'),
 
     optimizeDeps: {
-      exclude: Object.keys(workspaceAliases),
+      exclude: [...Object.keys(workspaceAliases), '@sailfish/ui-playground'],
       esbuildOptions: {
         plugins: [stripFlowPropTypes],
       },

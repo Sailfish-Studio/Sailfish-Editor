@@ -1,4 +1,4 @@
-const ExtendedJSON = require('@sailfish-studio/json');
+const ExtendedJSON = require('@sailfish/shared/extended-json');
 
 /**
  * Converts string from unpack method into a project object. Note: this method

@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-const ExtendedJSON = require('@sailfish-studio/json');
+const ExtendedJSON = require('@sailfish/shared/extended-json');
 const uuid = require('uuid');
 
 const ArgumentType = require('../extension-support/argument-type');

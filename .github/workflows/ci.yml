@@ -15,30 +15,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v4
         with:
-          bun-version: '1.3.14'
-      - run: bun install --frozen-lockfile || bun install
-      - run: bun run typecheck
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile || pnpm install
+      - run: pnpm run typecheck
 
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v4
         with:
-          bun-version: '1.3.14'
-      - run: bun install --frozen-lockfile || bun install
-      - name: Build scratch-blocks (TS)
-        run: bun run scratch-blocks/build.ts
-      - name: Build scratch-gui (Vite + TS)
-        run: bun --bun vite build --config scratch-gui/vite.config.ts
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile || pnpm install
+      - name: Build blocks-ui (goog → UMD)
+        run: node packages/blocks-ui/build.mjs
+      - name: Build web app (Vite)
+        run: pnpm --filter @sailfish/web build
         env:
           NODE_ENV: production
           ROOT: /Sailfish-Studio/
       - name: Check build output
         run: |
           echo "Build output:"
-          ls -la scratch-gui/build/ | head -20
+          ls -la apps/web/build/ | head -20
           echo "---"
-          du -sh scratch-gui/build/
+          du -sh apps/web/build/

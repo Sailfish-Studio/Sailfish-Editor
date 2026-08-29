@@ -4,6 +4,10 @@
   "private": true,
   "main": "src/index.js",
   "dependencies": {
-    "@sailfish/shared": "workspace:*"
+    "@sailfish/shared": "workspace:*",
+    "@turbowarp/scratch-l10n": "^3.1001.0",
+    "@turbowarp/startaudiocontext": "^1.0.0",
+    "scratch-sb1-converter": "^2.0.280",
+    "uuid": "^3.4.0"
   }
 }

@@ -1,6 +1,6 @@
 const EventEmitter = require('events');
 
-const hull = require('@sailfish-studio/ancient-hull.js');
+const hull = require('@turbowarp/ancient-hull.js');
 const twgl = require('twgl.js');
 
 const SVGRenderer = require('@sailfish/render');

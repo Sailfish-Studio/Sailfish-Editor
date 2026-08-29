@@ -19,22 +19,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v4
         with:
-          bun-version: '1.3.14'
-      - run: bun install --frozen-lockfile || bun install
-      - name: Build scratch-blocks (TS)
-        run: bun run scratch-blocks/build.ts
-      - name: Build scratch-gui (Vite + TS)
-        run: bun --bun vite build --config scratch-gui/vite.config.ts
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile || pnpm install
+      - name: Build blocks-ui (goog → UMD)
+        run: node packages/blocks-ui/build.mjs
+      - name: Build web app (Vite)
+        run: pnpm --filter @sailfish/web build
         env:
           NODE_ENV: production
           ROOT: /Sailfish-Studio/
       - name: Copy landing page
-        run: cp index.html scratch-gui/build/index-landing.html
+        run: cp index.html apps/web/build/index-landing.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: scratch-gui/build
+          path: apps/web/build
 
   deploy:
     needs: build

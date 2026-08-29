@@ -3,7 +3,7 @@ const BlockType = require('../../extension-support/block-type');
 const Cast = require('../../util/cast');
 const log = require('../../util/log');
 const {fetchWithTimeout} = require('../../util/fetch-with-timeout');
-const languageNames = require('scratch-translate-extension-languages');
+const languageNames = require('@turbowarp/scratch-l10n');
 const formatMessage = require('format-message');
 
 /**
