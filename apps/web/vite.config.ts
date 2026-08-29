@@ -6,6 +6,7 @@ import postcssImport from 'postcss-import';
 import postcssVars from 'postcss-simple-vars';
 import autoprefixer from 'autoprefixer';
 import webpackCompat from './vite-plugin-webpack-compat.ts';
+import cjsShimPlugin from './vite-plugin-cjs-shim';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.ROOT || '/';
@@ -82,6 +83,7 @@ export default defineConfig(({ mode }) => {
     },
 
     plugins: [
+      cjsShimPlugin(),
       webpackCompat(),
       react({
         babel: {
