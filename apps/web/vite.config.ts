@@ -49,6 +49,18 @@ const workspaceAliases: Record<string, string> = {
   '@sailfish/paper': resolve(MONO_ROOT, 'packages/paper/src/paper.js'),
 };
 
+// Handle @rollup/plugin-commonjs virtual module IDs for dynamic requires
+const commonjsExternalPlugin = () => ({
+  name: 'commonjs-external',
+  enforce: 'pre' as const,
+  resolveId(id: string) {
+    if (id.endsWith('?commonjs-external')) {
+      return { id, external: true };
+    }
+    return null;
+  },
+});
+
 export default defineConfig(({ mode }) => {
   return {
     server: {
@@ -82,6 +94,7 @@ export default defineConfig(({ mode }) => {
     },
 
     plugins: [
+      commonjsExternalPlugin(),
       webpackCompat(),
       react({
         babel: {
