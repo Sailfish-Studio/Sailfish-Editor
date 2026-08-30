@@ -1123,4 +1123,4 @@ class RenderedTarget extends Target {
     }
 }
 
-if (typeof module !== "undefined") module.exports = RenderedTarget;
+module.exports = RenderedTarget;

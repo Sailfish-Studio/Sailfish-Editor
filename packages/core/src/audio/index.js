@@ -6,4 +6,4 @@
 
 const AudioEngine = require('./AudioEngine');
 
-if (typeof module !== "undefined") module.exports = AudioEngine;
+module.exports = AudioEngine;

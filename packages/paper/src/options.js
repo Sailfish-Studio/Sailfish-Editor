@@ -33,5 +33,4 @@ var __options = {
 };
 
 // Export for use in Gulp.js
-if (typeof module !== 'undefined')
-    module.exports = __options;
+module.exports = __options;

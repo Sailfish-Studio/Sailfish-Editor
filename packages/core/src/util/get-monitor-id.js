@@ -30,4 +30,4 @@ const getMonitorIdForBlockWithArgs = function (id, fields) {
     return `${id}${fieldString}`;
 };
 
-if (typeof module !== "undefined") module.exports = getMonitorIdForBlockWithArgs;
+module.exports = getMonitorIdForBlockWithArgs;

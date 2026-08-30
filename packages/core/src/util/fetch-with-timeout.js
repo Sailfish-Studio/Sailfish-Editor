@@ -50,7 +50,7 @@ const fetchWithTimeout = (resource, init, timeout) => {
     ]);
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     fetchWithTimeout,
     setFetch
 };

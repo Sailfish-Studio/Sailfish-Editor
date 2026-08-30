@@ -19,7 +19,7 @@ const generateExtensionId = scratchXName => {
  */
 const argumentIndexToId = i => i.toString();
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     generateExtensionId,
     argumentIndexToId
 };

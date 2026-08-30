@@ -387,4 +387,4 @@ Profiler.START = START;
  */
 Profiler.STOP = STOP;
 
-if (typeof module !== "undefined") module.exports = Profiler;
+module.exports = Profiler;

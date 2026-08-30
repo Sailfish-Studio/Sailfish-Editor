@@ -1212,4 +1212,4 @@ JSGenerator.unstable_exports = {
 // Test hook used by automated snapshot testing.
 JSGenerator.testingApparatus = null;
 
-if (typeof module !== "undefined") module.exports = JSGenerator;
+module.exports = JSGenerator;

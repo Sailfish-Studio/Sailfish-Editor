@@ -612,4 +612,4 @@ class ExtensionManager {
     }
 }
 
-if (typeof module !== "undefined") module.exports = ExtensionManager;
+module.exports = ExtensionManager;

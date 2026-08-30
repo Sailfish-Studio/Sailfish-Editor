@@ -1913,4 +1913,4 @@ class VirtualMachine extends EventEmitter {
     }
 }
 
-if (typeof module !== "undefined") module.exports = VirtualMachine;
+module.exports = VirtualMachine;

@@ -978,4 +978,4 @@ class Scratch3GdxForBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3GdxForBlocks;
+module.exports = Scratch3GdxForBlocks;

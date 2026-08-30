@@ -237,4 +237,4 @@ class ScratchStorage {
     }
 }
 
-if (typeof module !== "undefined") module.exports = ScratchStorage;
+module.exports = ScratchStorage;

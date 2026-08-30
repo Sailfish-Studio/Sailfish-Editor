@@ -54,7 +54,7 @@ const serializeCostumes = function (runtime, optTargetId) {
     return serializeAssets(runtime, 'costumes', optTargetId);
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     serializeSounds,
     serializeCostumes
 };

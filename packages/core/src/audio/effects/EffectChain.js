@@ -179,4 +179,4 @@ class EffectChain {
     }
 }
 
-if (typeof module !== "undefined") module.exports = EffectChain;
+module.exports = EffectChain;

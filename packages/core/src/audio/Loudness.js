@@ -79,4 +79,4 @@ class Loudness {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Loudness;
+module.exports = Loudness;

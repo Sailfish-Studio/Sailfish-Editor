@@ -134,7 +134,7 @@ const interpolate = (runtime, time) => {
     }
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     setupInitialState,
     interpolate
 };

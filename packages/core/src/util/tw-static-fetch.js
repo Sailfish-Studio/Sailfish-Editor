@@ -33,4 +33,4 @@ const staticFetch = url => {
     return null;
 };
 
-if (typeof module !== "undefined") module.exports = staticFetch;
+module.exports = staticFetch;

@@ -1,4 +1,4 @@
 const VirtualMachine = require('./virtual-machine');
 
-if (typeof module !== "undefined") module.exports = VirtualMachine;
+module.exports = VirtualMachine;
 export default VirtualMachine;

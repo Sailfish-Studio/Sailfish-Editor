@@ -17,4 +17,4 @@ const DataFormat = {
     WOFF2: 'woff2'
 };
 
-if (typeof module !== "undefined") module.exports = DataFormat;
+module.exports = DataFormat;

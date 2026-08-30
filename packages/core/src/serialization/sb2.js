@@ -1349,6 +1349,6 @@ const parseBlock = function (sb2block, addBroadcastMsg, getVariableId, extension
     return [activeBlock, commentIndex];
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     deserialize: sb2import
 };

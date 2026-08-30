@@ -166,4 +166,4 @@ class Cloud {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Cloud;
+module.exports = Cloud;

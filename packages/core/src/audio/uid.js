@@ -26,4 +26,4 @@ const uid = function () {
     return id.join('');
 };
 
-if (typeof module !== "undefined") module.exports = uid;
+module.exports = uid;

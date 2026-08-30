@@ -31,7 +31,7 @@ var validate = function (isSprite, input, callback) {
     callback(validationErrors);
 };
 
-if (typeof module !== "undefined") module.exports = function (isSprite, input, callback) {
+module.exports = function (isSprite, input, callback) {
     // If validate fails, try using sb3fix to salvage the input
     validate(isSprite, input, function (err, result) {
         if (!err) {

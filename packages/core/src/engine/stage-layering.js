@@ -26,4 +26,4 @@ class StageLayering {
     }
 }
 
-if (typeof module !== "undefined") module.exports = StageLayering;
+module.exports = StageLayering;

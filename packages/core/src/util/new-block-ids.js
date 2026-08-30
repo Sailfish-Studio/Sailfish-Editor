@@ -5,9 +5,8 @@ const uid = require('./uid');
  * Does not return anything to make it clear that the blocks are updated in-place.
  * @param {array} blocks - blocks to be mutated.
  */
-if (typeof module !== "undefined") module.exports = blocks => {
+module.exports = blocks => {
     const oldToNew = {};
-
     // First update all top-level IDs and create old-to-new mapping
     for (let i = 0; i < blocks.length; i++) {
         const newId = uid();

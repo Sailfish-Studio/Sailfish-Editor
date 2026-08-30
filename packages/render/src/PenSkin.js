@@ -562,4 +562,4 @@ class PenSkin extends Skin {
     }
 }
 
-if (typeof module !== "undefined") module.exports = PenSkin;
+module.exports = PenSkin;

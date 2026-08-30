@@ -49,4 +49,4 @@ const AssetType = {
     }
 };
 
-if (typeof module !== "undefined") module.exports = AssetType;
+module.exports = AssetType;

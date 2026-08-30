@@ -529,4 +529,4 @@ class Thread {
 // for extensions
 Thread._StackFrame = _StackFrame;
 
-if (typeof module !== "undefined") module.exports = Thread;
+module.exports = Thread;

@@ -15,4 +15,4 @@ const defineMessages = function (messages) {
     return messages;
 };
 
-if (typeof module !== "undefined") module.exports = defineMessages;
+module.exports = defineMessages;

@@ -981,4 +981,4 @@ class Scratch3MicroBitBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3MicroBitBlocks;
+module.exports = Scratch3MicroBitBlocks;

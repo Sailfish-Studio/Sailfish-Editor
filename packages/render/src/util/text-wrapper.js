@@ -109,4 +109,4 @@ class TextWrapper {
     }
 }
 
-if (typeof module !== "undefined") module.exports = TextWrapper;
+module.exports = TextWrapper;

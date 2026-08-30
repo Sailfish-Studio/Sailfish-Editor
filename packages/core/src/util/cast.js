@@ -236,4 +236,4 @@ class Cast {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Cast;
+module.exports = Cast;

@@ -125,4 +125,4 @@ class PitchEffect extends Effect {
     }
 }
 
-if (typeof module !== "undefined") module.exports = PitchEffect;
+module.exports = PitchEffect;

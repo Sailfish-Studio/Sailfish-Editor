@@ -1,4 +1,4 @@
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     'drums/1-snare.mp3': require('./assets/drums/1-snare.mp3'),
     'drums/2-bass-drum.mp3': require('./assets/drums/2-bass-drum.mp3'),
     'drums/3-side-stick.mp3': require('./assets/drums/3-side-stick.mp3'),

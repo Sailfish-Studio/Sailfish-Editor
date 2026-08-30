@@ -334,4 +334,4 @@ const loadSvgString = (svgString, fromVersion2) => {
     return svgTag;
 };
 
-if (typeof module !== "undefined") module.exports = loadSvgString;
+module.exports = loadSvgString;

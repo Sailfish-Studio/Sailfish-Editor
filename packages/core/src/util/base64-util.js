@@ -43,4 +43,4 @@ class Base64Util {
 
 }
 
-if (typeof module !== "undefined") module.exports = Base64Util;
+module.exports = Base64Util;

@@ -813,4 +813,4 @@ class Scratch3PenBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3PenBlocks;
+module.exports = Scratch3PenBlocks;

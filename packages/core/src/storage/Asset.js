@@ -150,4 +150,4 @@ class Asset {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Asset;
+module.exports = Asset;

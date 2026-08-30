@@ -295,7 +295,7 @@ const InputOpcode = {
     TW_KEY_LAST_PRESSED: 'tw.lastKeyPressed'
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     StackOpcode,
     InputOpcode,
     InputType

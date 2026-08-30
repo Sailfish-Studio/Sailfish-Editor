@@ -196,7 +196,7 @@ const loadUnsandboxedExtension = (extensionURL, vm) => new Promise((resolve, rej
 const limiter = new AsyncLimiter(loadUnsandboxedExtension, 1);
 const load = (extensionURL, vm) => limiter.do(extensionURL, vm);
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     setupUnsandboxedExtensionAPI,
     load
 };

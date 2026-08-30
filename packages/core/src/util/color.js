@@ -215,4 +215,4 @@ class Color {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Color;
+module.exports = Color;

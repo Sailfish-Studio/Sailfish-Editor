@@ -194,4 +194,4 @@ class EffectTransform {
     }
 }
 
-if (typeof module !== "undefined") module.exports = EffectTransform;
+module.exports = EffectTransform;

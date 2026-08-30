@@ -64,4 +64,4 @@ class VolumeEffect extends Effect {
     }
 }
 
-if (typeof module !== "undefined") module.exports = VolumeEffect;
+module.exports = VolumeEffect;

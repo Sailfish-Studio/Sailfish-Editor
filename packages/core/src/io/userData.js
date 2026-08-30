@@ -21,4 +21,4 @@ class UserData {
     }
 }
 
-if (typeof module !== "undefined") module.exports = UserData;
+module.exports = UserData;

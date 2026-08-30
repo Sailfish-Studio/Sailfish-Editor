@@ -1,4 +1,4 @@
 const nanolog = require('@sailfish/shared');
 nanolog.enable();
 
-if (typeof module !== "undefined") module.exports = nanolog('scratch-svg-render');
+module.exports = nanolog('scratch-svg-render');

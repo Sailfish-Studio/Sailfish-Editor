@@ -655,4 +655,4 @@ const transformStrokeWidths = function (svgTag, windowRef, bboxForTesting) {
     applyTransforms(svgTag, inherited, 1 /* default SVG stroke width */);
 };
 
-if (typeof module !== "undefined") module.exports = transformStrokeWidths;
+module.exports = transformStrokeWidths;

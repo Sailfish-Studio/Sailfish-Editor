@@ -283,4 +283,4 @@ class Scratch3TranslateBlocks {
         return translatePromise;
     }
 }
-if (typeof module !== "undefined") module.exports = Scratch3TranslateBlocks;
+module.exports = Scratch3TranslateBlocks;

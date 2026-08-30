@@ -237,4 +237,4 @@ class Scratch3DataBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3DataBlocks;
+module.exports = Scratch3DataBlocks;

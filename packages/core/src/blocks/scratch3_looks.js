@@ -615,4 +615,4 @@ class Scratch3LooksBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3LooksBlocks;
+module.exports = Scratch3LooksBlocks;

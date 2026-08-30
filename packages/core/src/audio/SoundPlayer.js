@@ -342,4 +342,4 @@ class SoundPlayer extends EventEmitter {
     }
 }
 
-if (typeof module !== "undefined") module.exports = SoundPlayer;
+module.exports = SoundPlayer;

@@ -154,4 +154,4 @@ class Scratch3OperatorsBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3OperatorsBlocks;
+module.exports = Scratch3OperatorsBlocks;

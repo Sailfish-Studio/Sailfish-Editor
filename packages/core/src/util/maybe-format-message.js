@@ -15,4 +15,4 @@ const maybeFormatMessage = function (maybeMessage, args, locale) {
     return maybeMessage;
 };
 
-if (typeof module !== "undefined") module.exports = maybeFormatMessage;
+module.exports = maybeFormatMessage;

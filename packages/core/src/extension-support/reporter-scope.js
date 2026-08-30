@@ -15,4 +15,4 @@ const ReporterScope = {
     TARGET: 'target'
 };
 
-if (typeof module !== "undefined") module.exports = ReporterScope;
+module.exports = ReporterScope;

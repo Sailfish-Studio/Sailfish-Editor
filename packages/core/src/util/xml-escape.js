@@ -30,4 +30,4 @@ const xmlEscape = function (unsafe) {
     });
 };
 
-if (typeof module !== "undefined") module.exports = xmlEscape;
+module.exports = xmlEscape;

@@ -385,7 +385,7 @@ class IntermediateRepresentation {
     }
 }
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     IntermediateStackBlock,
     IntermediateInput,
     IntermediateStack,

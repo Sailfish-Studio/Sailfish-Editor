@@ -45,4 +45,4 @@ class CanvasMeasurementProvider {
     }
 }
 
-if (typeof module !== "undefined") module.exports = CanvasMeasurementProvider;
+module.exports = CanvasMeasurementProvider;

@@ -748,4 +748,4 @@ class Drawable {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Drawable;
+module.exports = Drawable;

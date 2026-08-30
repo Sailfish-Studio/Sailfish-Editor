@@ -4,4 +4,4 @@ export { APP_NAME };
 
 // Legacy CJS export for build scripts
 // eslint-disable-next-line import/no-commonjs
-if (typeof module !== 'undefined') module.exports = { APP_NAME };
+module.exports = { APP_NAME };

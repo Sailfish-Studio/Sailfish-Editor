@@ -9,7 +9,7 @@ const ExtendedJSON = require('@sailfish/shared/extended-json');
  * @param {Function} callback Returns error or parsed JSON object
  * @return {void}
  */
-if (typeof module !== "undefined") module.exports = function (input, callback) {
+module.exports = function (input, callback) {
     var result;
     try {
         // The input is a JSON string, which may contain control characters

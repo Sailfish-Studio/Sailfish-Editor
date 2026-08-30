@@ -358,4 +358,4 @@ class Scratch3SensingBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3SensingBlocks;
+module.exports = Scratch3SensingBlocks;

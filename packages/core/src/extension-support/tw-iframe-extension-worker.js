@@ -96,4 +96,4 @@ class IframeExtensionWorker {
     }
 }
 
-if (typeof module !== "undefined") module.exports = IframeExtensionWorker;
+module.exports = IframeExtensionWorker;

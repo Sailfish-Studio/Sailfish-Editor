@@ -346,4 +346,4 @@ const oldCompilerCompatibility = {
     JSGeneratorStub
 };
 
-if (typeof module !== "undefined") module.exports = oldCompilerCompatibility;
+module.exports = oldCompilerCompatibility;

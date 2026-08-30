@@ -190,4 +190,4 @@ class PublicFetchWorkerTool {
     }
 }
 
-if (typeof module !== "undefined") module.exports = PublicFetchWorkerTool;
+module.exports = PublicFetchWorkerTool;

@@ -245,4 +245,4 @@ class ADPCMSoundDecoder {
     }
 }
 
-if (typeof module !== "undefined") module.exports = ADPCMSoundDecoder;
+module.exports = ADPCMSoundDecoder;

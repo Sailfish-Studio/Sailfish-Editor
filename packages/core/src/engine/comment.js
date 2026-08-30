@@ -53,4 +53,4 @@ class Comment {
 
 }
 
-if (typeof module !== "undefined") module.exports = Comment;
+module.exports = Comment;

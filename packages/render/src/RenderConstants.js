@@ -4,7 +4,7 @@
  * Various constants meant for use throughout the renderer.
  * @enum
  */
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     /**
      * The ID value to use for "no item" or when an object has been disposed.
      * @const {int}

@@ -84,4 +84,4 @@ external.evalAndReturn = async (url, returnExpression) => {
     return fn();
 };
 
-if (typeof module !== "undefined") module.exports = external;
+module.exports = external;

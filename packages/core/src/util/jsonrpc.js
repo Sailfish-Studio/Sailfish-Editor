@@ -111,4 +111,4 @@ class JSONRPC {
     }
 }
 
-if (typeof module !== "undefined") module.exports = JSONRPC;
+module.exports = JSONRPC;

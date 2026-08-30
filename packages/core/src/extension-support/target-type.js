@@ -14,4 +14,4 @@ const TargetType = {
     STAGE: 'stage'
 };
 
-if (typeof module !== "undefined") module.exports = TargetType;
+module.exports = TargetType;

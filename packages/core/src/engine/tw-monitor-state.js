@@ -115,4 +115,4 @@ class MonitorState {
     }
 }
 
-if (typeof module !== "undefined") module.exports = MonitorState;
+module.exports = MonitorState;

@@ -58,4 +58,4 @@ const createTranslate = vm => {
     return translate;
 };
 
-if (typeof module !== "undefined") module.exports = createTranslate;
+module.exports = createTranslate;

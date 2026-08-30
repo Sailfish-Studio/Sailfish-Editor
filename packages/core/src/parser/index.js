@@ -11,7 +11,7 @@ var validate = pify(require('./lib/validate'));
   * @param {boolean}         isSprite Whether this is a sprite (true) or whole project (false)
   * @param {Function}        callback Returns error or project data
   */
-if (typeof module !== "undefined") module.exports = function (input, isSprite, callback) {
+module.exports = function (input, isSprite, callback) {
     // Unpack the input and further transform the json portion by parsing and
     // validating it.
     unpack(input, isSprite)

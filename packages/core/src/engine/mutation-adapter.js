@@ -45,4 +45,4 @@ const mutationAdpater = function (mutation) {
     return mutatorTagToObject(mutationParsed);
 };
 
-if (typeof module !== "undefined") module.exports = mutationAdpater;
+module.exports = mutationAdpater;

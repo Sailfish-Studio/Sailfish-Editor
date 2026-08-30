@@ -24,4 +24,4 @@ const ScratchBlocksConstants = {
     OUTPUT_SHAPE_SQUARE: 3
 };
 
-if (typeof module !== "undefined") module.exports = ScratchBlocksConstants;
+module.exports = ScratchBlocksConstants;

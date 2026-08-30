@@ -113,4 +113,4 @@ class BitmapSkin extends Skin {
 
 }
 
-if (typeof module !== "undefined") module.exports = BitmapSkin;
+module.exports = BitmapSkin;

@@ -68,4 +68,4 @@ class Variable {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Variable;
+module.exports = Variable;

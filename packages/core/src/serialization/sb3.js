@@ -1603,7 +1603,7 @@ const deserialize = async function (json, runtime, zip, isSingleSprite) {
         }));
 };
 
-if (typeof module !== "undefined") module.exports = {
+module.exports = {
     serialize: serialize,
     deserialize: deserialize,
     deserializeBlocks: deserializeBlocks,

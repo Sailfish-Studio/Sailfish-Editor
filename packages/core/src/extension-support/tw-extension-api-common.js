@@ -14,4 +14,4 @@ const Scratch = {
     external
 };
 
-if (typeof module !== "undefined") module.exports = Scratch;
+module.exports = Scratch;

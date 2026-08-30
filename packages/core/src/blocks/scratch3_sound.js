@@ -370,4 +370,4 @@ class Scratch3SoundBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3SoundBlocks;
+module.exports = Scratch3SoundBlocks;

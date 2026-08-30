@@ -45,4 +45,4 @@ class VariableUtil {
     }
 }
 
-if (typeof module !== "undefined") module.exports = VariableUtil;
+module.exports = VariableUtil;

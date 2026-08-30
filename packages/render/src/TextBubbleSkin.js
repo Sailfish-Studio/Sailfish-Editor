@@ -298,4 +298,4 @@ class TextBubbleSkin extends Skin {
     }
 }
 
-if (typeof module !== "undefined") module.exports = TextBubbleSkin;
+module.exports = TextBubbleSkin;

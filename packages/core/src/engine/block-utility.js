@@ -239,4 +239,4 @@ class BlockUtility {
     }
 }
 
-if (typeof module !== "undefined") module.exports = BlockUtility;
+module.exports = BlockUtility;

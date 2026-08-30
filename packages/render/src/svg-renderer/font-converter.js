@@ -35,4 +35,4 @@ const convertFonts = function (svgTag) {
     }
 };
 
-if (typeof module !== "undefined") module.exports = convertFonts;
+module.exports = convertFonts;

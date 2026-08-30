@@ -134,4 +134,4 @@ class Scratch3EventBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3EventBlocks;
+module.exports = Scratch3EventBlocks;

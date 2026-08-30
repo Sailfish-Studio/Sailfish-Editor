@@ -79,4 +79,4 @@ const fixForVanilla = rawData => {
     return rawData;
 };
 
-if (typeof module !== "undefined") module.exports = fixForVanilla;
+module.exports = fixForVanilla;

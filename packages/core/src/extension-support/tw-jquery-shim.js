@@ -109,4 +109,4 @@ jQuery.ajax = async (arg1, arg2) => {
     }
 };
 
-if (typeof module !== "undefined") module.exports = jQuery;
+module.exports = jQuery;

@@ -16,4 +16,4 @@ const serializeSvgToString = (svgTag, injectFonts) => {
     return string;
 };
 
-if (typeof module !== "undefined") module.exports = serializeSvgToString;
+module.exports = serializeSvgToString;

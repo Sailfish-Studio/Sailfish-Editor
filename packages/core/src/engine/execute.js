@@ -599,4 +599,4 @@ const execute = function (sequencer, thread) {
     }
 };
 
-if (typeof module !== "undefined") module.exports = execute;
+module.exports = execute;

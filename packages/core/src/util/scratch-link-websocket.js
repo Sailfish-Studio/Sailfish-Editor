@@ -130,4 +130,4 @@ class ScratchLinkWebSocket {
     }
 }
 
-if (typeof module !== "undefined") module.exports = ScratchLinkWebSocket;
+module.exports = ScratchLinkWebSocket;

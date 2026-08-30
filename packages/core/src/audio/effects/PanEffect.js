@@ -95,4 +95,4 @@ class PanEffect extends Effect {
     }
 }
 
-if (typeof module !== "undefined") module.exports = PanEffect;
+module.exports = PanEffect;

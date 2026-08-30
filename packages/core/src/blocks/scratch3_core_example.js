@@ -66,4 +66,4 @@ class Scratch3CoreExample {
 
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3CoreExample;
+module.exports = Scratch3CoreExample;

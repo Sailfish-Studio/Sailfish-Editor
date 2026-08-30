@@ -2110,4 +2110,4 @@ class Scratch3BoostBlocks {
     }
 }
 
-if (typeof module !== "undefined") module.exports = Scratch3BoostBlocks;
+module.exports = Scratch3BoostBlocks;

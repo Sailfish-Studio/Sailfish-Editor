@@ -2,7 +2,7 @@
 
 const SingleEntryPlugin = require('webpack/lib/SingleEntryPlugin');
 
-if (typeof module !== "undefined") module.exports.pitch = function (request) {
+module.exports.pitch = function (request) {
     // Technically this loader does work in other environments, but our use case does not want that.
     if (this.target !== 'web') {
         return 'throw new Error("Not supported in non-web environment");';

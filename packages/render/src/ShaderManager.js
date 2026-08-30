@@ -201,4 +201,4 @@ ShaderManager.DRAW_MODE = {
     background: 'background'
 };
 
-if (typeof module !== "undefined") module.exports = ShaderManager;
+module.exports = ShaderManager;

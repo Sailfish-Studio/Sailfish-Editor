@@ -646,4 +646,4 @@ execute.runtimeFunctions = runtimeFunctions;
 execute.saveGlobalState = saveGlobalState;
 execute.restoreGlobalState = restoreGlobalState;
 
-if (typeof module !== "undefined") module.exports = execute;
+module.exports = execute;

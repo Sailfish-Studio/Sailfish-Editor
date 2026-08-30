@@ -3507,4 +3507,4 @@ class Runtime extends EventEmitter {
  * @param {Target} [sourceTarget] - the target used as a source for the new clone, if any.
  */
 
-if (typeof module !== "undefined") module.exports = Runtime;
+module.exports = Runtime;

@@ -1402,4 +1402,4 @@ BlocksRuntimeCache.getScripts = function (blocks, opcode) {
     return scripts;
 };
 
-if (typeof module !== "undefined") module.exports = Blocks;
+module.exports = Blocks;

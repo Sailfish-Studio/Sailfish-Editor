@@ -71,4 +71,4 @@ const inlineSvgFonts = function (svgString, customFontFaces = {}) {
     return svgString;
 };
 
-if (typeof module !== "undefined") module.exports = inlineSvgFonts;
+module.exports = inlineSvgFonts;
