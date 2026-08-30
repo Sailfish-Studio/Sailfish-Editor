@@ -54,8 +54,17 @@ const commonjsExternalPlugin = () => ({
   name: 'commonjs-external',
   enforce: 'pre' as const,
   resolveId(id: string) {
-    if (id.endsWith('?commonjs-external')) {
-      return { id, external: true };
+    if (id.includes('?commonjs-external')) {
+      // Return a virtual module ID with null-byte prefix
+      return '\0cjs-external:' + id;
+    }
+    return null;
+  },
+  load(id: string) {
+    if (id.startsWith('\0cjs-external:')) {
+      // Return an empty module - these are external CJS requires
+      // that we can't bundle (Node built-ins, dynamic requires, etc.)
+      return 'export default {};';
     }
     return null;
   },
