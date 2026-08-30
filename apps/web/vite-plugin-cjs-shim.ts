@@ -59,11 +59,14 @@ export default function cjsToEsmPlugin(): Plugin {
         return `/* require('${modPath}') destructured */`;
       });
 
-      // 2. Convert module.exports = X
+      // 2. Convert module.exports = X to export default X
+      // ONLY if NOT already inside a typeof module guard
       if (/\bmodule\.exports\s*=/.test(result)) {
         result = result.replace(
           /\bmodule\.exports\s*=\s*([^;\n]+)/g,
-          (_m: string, value: string) => {
+          (m: string, value: string, off: number) => {
+            const before = result.slice(Math.max(0, off - 80), off);
+            if (before.includes('typeof module')) return m;
             changed = true;
             return `export default ${value.trim()}`;
           }
