@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup v4
         with:
           version: 11
 
@@ -41,7 +41,7 @@ jobs:
         run: pnpm --filter @sailfish/web build
         env:
           NODE_ENV: production
-          ROOT: /Sailfish-Editor/
+          ROOT: /editor/
 
       - name: Copy landing page
         run: cp apps/web/index.html apps/web/build/index-landing.html
