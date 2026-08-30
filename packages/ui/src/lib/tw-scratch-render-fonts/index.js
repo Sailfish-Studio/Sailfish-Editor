@@ -1,13 +1,11 @@
-/* eslint-disable import/no-commonjs */
-
-const SansSerif = require('./NotoSans-Medium.woff2');
-const Serif = require('./SourceSerifPro-Regular.woff2');
-const Handwriting = require('./handlee-regular.woff2');
-const Marker = require('./Knewave.woff2');
-const Curly = require('./Griffy-Regular.woff2');
-const Pixel = require('./Grand9K-Pixel.woff2');
-const Scratch = require('./ScratchSavers_b2.woff2');
-const log = require('../log').default;
+import SansSerif from './NotoSans-Medium.woff2';
+import Serif from './SourceSerifPro-Regular.woff2';
+import Handwriting from './handlee-regular.woff2';
+import Marker from './Knewave.woff2';
+import Curly from './Griffy-Regular.woff2';
+import Pixel from './Grand9K-Pixel.woff2';
+import Scratch from './ScratchSavers_b2.woff2';
+import log from '../log';
 
 const fontSource = {
     'Sans Serif': SansSerif,
@@ -86,11 +84,6 @@ const loadFonts = () => fetchFonts()
 
 const getFonts = () => fontData;
 
-// We have to use legacy module.exports as some parts of Scratch expect require('scratch-render-font') to be a function
-module.exports = getFonts;
-module.exports.loadFonts = loadFonts;
-module.exports.FONTS = fontData;
-
-// ESM named exports for Vite/Rollup build
-export { loadFonts, getFonts };
+// ESM exports
+export { loadFonts, getFonts, getFonts as default };
 export const FONTS = fontData;
