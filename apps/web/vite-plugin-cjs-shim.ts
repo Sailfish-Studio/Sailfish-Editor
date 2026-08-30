@@ -1,39 +1,67 @@
 import type { Plugin } from 'vite';
 
 /**
- * Vite plugin that converts bare CJS module.exports in workspace packages
- * to ESM-compatible guarded versions. This handles cases where
- * @rollup/plugin-commonjs doesn't process certain workspace files.
+ * Vite plugin that converts bare CJS patterns in workspace packages to
+ * ESM-compatible guarded versions. Handles both require() and module.exports.
  */
 export default function cjsShimPlugin(): Plugin {
   return {
     name: 'sailfish-cjs-shim',
     enforce: 'pre',
     transform(code: string, id: string) {
-      // Only process workspace package files (not node_modules, not blocks-ui dist)
-      if (!/packages\/(?!blocks-ui\/dist)/.test(id)) return null;
-      // Skip files already handled by CJS plugin
+      // Only workspace packages
+      if (!/packages/(?!blocks-ui/.dist)/.test(id)) return null;
+      // Skip non-JS files
+      if (!/\.(js|jsx|ts|tsx|mjs|cjs)$/.test(id)) return null;
+      // Skip files already processed by CJS plugin
       if (/\bvar\s+module\b/.test(code) || /\bvar\s+__toCommonJS\b/.test(code)) return null;
-      // Only process files with module.exports
-      if (!code.includes('module.exports')) return null;
-      
-      // Replace bare module.exports assignments with guarded versions
-      // Pattern: module.exports = X  →  if(typeof module!=="undefined")module.exports=X
-      // Pattern: module.exports.X = Y  →  if(typeof module!=="undefined")module.exports.X=Y
+      // Must have CJS patterns
+      if (!code.includes('module.exports') && !code.includes('require(')) return null;
+
       let transformed = code;
       let changed = false;
-      
-      // Guard module.exports = value (not already guarded)
-      const assignRegex = /(?<!typeof module!=="undefined"\s*\&\&\s*)(?<!typeof module<"u"\s*\&\&\s*)module\.exports\s*=\s*/g;
-      
-      transformed = transformed.replace(assignRegex, (match, offset) => {
-        // Check if already guarded (look backwards for typeof)
-        const before = transformed.slice(Math.max(0, offset - 60), offset);
-        if (before.includes('typeof module')) return match;
-        changed = true;
-        return 'if(typeof module!=="undefined")' + match;
-      });
-      
+
+      // 1. Guard module.exports = X
+      transformed = transformed.replace(
+        /(?<!if\(typeof\s+module!=='undefined'\s*&&\s*)module\.exports\s*=\s*/g,
+        (match, offset: number) => {
+          const before = transformed.slice(Math.max(0, offset - 60), offset);
+          if (before.includes('typeof module') || before.includes('typeof module<')) return match;
+          changed = true;
+          return 'if(typeof module!=="undefined")' + match;
+        }
+      );
+
+      // 2. Guard module.exports.X = Y
+      transformed = transformed.replace(
+        /(?<!if\(typeof\s+module!=='undefined'\s*&&\s*)module\.exports\.\w+\s*=/g,
+        (match, offset: number) => {
+          const before = transformed.slice(Math.max(0, offset - 60), offset);
+          if (before.includes('typeof module') || before.includes('typeof module<')) return match;
+          changed = true;
+          return 'if(typeof module!=="undefined")' + match;
+        }
+      );
+
+      // 3. Replace require() with a safe fallback
+      // Pattern: require('module-name') → typeof require!=='undefined'?require('module-name'):undefined
+      // But only for bare require calls, not already guarded
+      if (transformed.includes('require(')) {
+        // Match require('...') that isn't already guarded
+        transformed = transformed.replace(
+          /(?<!typeof\s+require!==['"']undefined['"']\s*\?\s*)require\s*\(\s*['"']([^'"']+)['"']\s*\)/g,
+          (match: string, modName: string, offset: number) => {
+            const before = transformed.slice(Math.max(0, offset - 80), offset);
+            if (before.includes('typeof require')) return match;
+            changed = true;
+            // For Node builtins that Vite externalizes, use a try/catch dynamic import pattern
+            // For other modules, the CJS plugin should handle them
+            // Use a simple inline check
+            return `(typeof require!=='undefined'?require('${modName}':void 0)`;
+          }
+        );
+      }
+
       if (changed) {
         return { code: transformed, map: null };
       }
