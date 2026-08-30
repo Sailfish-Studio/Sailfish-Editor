@@ -14,6 +14,7 @@ import SVGSkin from './SVGSkin';
 import TextBubbleSkin from './TextBubbleSkin';
 import EffectTransform from './EffectTransform';
 import CanvasMeasurementProvider from './util/canvas-measurement-provider';
+import TextWrapper from './util/text-wrapper';
 import log from './util/log';
 
 const __isTouchingDrawablesPoint = twgl.v3.create();
@@ -90,14 +91,8 @@ const colorMatches = (a, b, offset) => (
 const FENCE_WIDTH = 15;
 
 // Loading text wrapper takes a while because of some of its dependencies, so only do so when needed.
-let _TextWrapper;
-const lazilyLoadTextWrapper = () => {
-    if (!_TextWrapper) {
-        // eslint-disable-next-line global-require
-        _TextWrapper = require('./util/text-wrapper');
-    }
-    return _TextWrapper;
-};
+// Now uses static ESM import; bundler handles code splitting.
+const lazilyLoadTextWrapper = () => TextWrapper;
 
 let _stylesheet;
 const loadStyles = () => {

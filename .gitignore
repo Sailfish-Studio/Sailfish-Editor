@@ -4,3 +4,4 @@ node_modules/
 *.bak
 .env.local
 .DS_Store
+editor/
