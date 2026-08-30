@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup v4
+      - uses: pnpm/action-setup@v4
         with:
           version: 11
 
@@ -34,7 +34,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile || pnpm install
 
-      - name: Build blocks-ui (goog â†’ UMD)
+      - name: Build blocks-u‰ (goog to UMD)
         run: node packages/blocks-ui/build.mjs
 
       - name: Production build for GitHub Pages
