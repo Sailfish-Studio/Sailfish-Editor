@@ -111,6 +111,7 @@ export default defineConfig(({ mode }) => {
       target: 'esnext',
       commonjsOptions: {
         include: [/node_modules/, /packages\/(?!blocks-ui\/dist)/],
+        transformMixedEsModules: true,
       },
       rollupOptions: {
         input: {
