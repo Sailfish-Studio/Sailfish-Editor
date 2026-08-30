@@ -6,7 +6,7 @@ import postcssImport from 'postcss-import';
 import postcssVars from 'postcss-simple-vars';
 import autoprefixer from 'autoprefixer';
 import webpackCompat from './vite-plugin-webpack-compat.ts';
-import cjsShimPlugin from './vite-plugin-cjs-shim';
+import cjsToEsmPlugin from './vite-plugin-cjs-shim';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = process.env.ROOT || '/';
@@ -83,7 +83,7 @@ export default defineConfig(({ mode }) => {
     },
 
     plugins: [
-      cjsShimPlugin(),
+      cjsToEsmPlugin(),
       webpackCompat(),
       react({
         babel: {
@@ -112,9 +112,7 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       target: 'esnext',
       commonjsOptions: {
-        // Cover workspace packages too (resolved via alias, not node_modules)
-        // Do NOT use transformMixedEsModules - it causes webpack-compat issues
-        include: [/node_modules/, /packages\/(?!blocks-ui\/dist)/],
+        include: [/node_modules/],
       },
       rollupOptions: {
         input: {
