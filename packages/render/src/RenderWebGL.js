@@ -1,6 +1,6 @@
 import EventEmitter from 'events';
 import hull from '@turbowarp/ancient-hull.js';
-import twgl from 'twgl.js';
+import * as twgl from 'twgl.js';
 import rendererCSS from './renderer.css?inline';
 import SVGRenderer from '@sailfish/render';
 import Skin from './Skin';
