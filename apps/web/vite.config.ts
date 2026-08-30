@@ -49,27 +49,6 @@ const workspaceAliases: Record<string, string> = {
   '@sailfish/paper': resolve(MONO_ROOT, 'packages/paper/src/paper.js'),
 };
 
-// Handle @rollup/plugin-commonjs virtual module IDs for dynamic requires
-const commonjsExternalPlugin = () => ({
-  name: 'commonjs-external',
-  enforce: 'pre' as const,
-  resolveId(id: string) {
-    if (id.includes('?commonjs-external')) {
-      // Return a virtual module ID with null-byte prefix
-      return '\0cjs-external:' + id;
-    }
-    return null;
-  },
-  load(id: string) {
-    if (id.startsWith('\0cjs-external:')) {
-      // Return an empty module - these are external CJS requires
-      // that we can't bundle (Node built-ins, dynamic requires, etc.)
-      return 'export default {};';
-    }
-    return null;
-  },
-});
-
 export default defineConfig(({ mode }) => {
   return {
     server: {
@@ -103,7 +82,6 @@ export default defineConfig(({ mode }) => {
     },
 
     plugins: [
-      commonjsExternalPlugin(),
       webpackCompat(),
       react({
         babel: {
@@ -132,8 +110,7 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
       target: 'esnext',
       commonjsOptions: {
-        include: [/node_modules/, /packages\/(?!blocks-ui\/dist)/],
-        transformMixedEsModules: true,
+        include: [/node_modules/, /packages\/(?!blocks-ui\/.dist)/],
       },
       rollupOptions: {
         input: {
