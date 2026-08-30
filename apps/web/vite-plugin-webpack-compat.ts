@@ -17,11 +17,18 @@ export default function webpackCompatPlugin(): Plugin {
   return {
     name: 'webpack-compat',
     enforce: 'pre',
-    resolveId(source, importer) {
+    resolveId(id: string, importer: string | undefined) {
+      // Handle ?commonjs-external suffix from our own transform
+      if (id.endsWith('?commonjs-external')) {
+        const realId = id.replace('?commonjs-external', '');
+        this.warn(`External CJS: ${realId} (from ${importer || 'unknown'})`);
+        return { id: realId, external: true };
+      }
+
       // Handle webpack inline loader syntax: !loader-path!file-path
       // Strips the !...! prefix and resolves the actual file path.
       // Matches patterns like: !../../tw-recolor/build!./icons/group.svg
-      const webpackLoaderMatch = source.match(/^(?:!+[^!]+!)+(.+)$/);
+      const webpackLoaderMatch = id.match(/^(?:!+[^!]+!)+(.+)$/);
       if (webpackLoaderMatch && importer) {
         const filePath = webpackLoaderMatch[1];
         const dir = dirname(importer);
@@ -33,14 +40,14 @@ export default function webpackCompatPlugin(): Plugin {
 
       // CSS Modules: redirect .css imports from source to virtual modules
       if (
-        source.endsWith('.css') &&
-        !source.includes('?') &&
+        id.endsWith('.css') &&
+        !id.includes('?') &&
         importer &&
         !importer.includes('node_modules')
       ) {
         // Resolve the actual file path
         const dir = dirname(importer);
-        const resolved = pathResolve(dir, source);
+        const resolved = pathResolve(dir, id);
         if (existsSync(resolved)) {
           return CSS_MODULE_PREFIX + resolved.replace(/\.css$/, '.css.js');
         }
