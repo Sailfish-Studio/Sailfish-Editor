@@ -1,7 +1,7 @@
 const twgl = require('twgl.js');
 
 const Skin = require('./Skin');
-const {loadSvgString, serializeSvgToString} = require('@sailfish/render');
+const {loadSvgString, serializeSvgToString} = require('./svg-renderer');
 const ShaderManager = require('./ShaderManager');
 
 /**

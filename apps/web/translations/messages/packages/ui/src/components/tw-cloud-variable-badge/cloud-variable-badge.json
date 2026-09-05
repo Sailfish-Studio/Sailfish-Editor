@@ -21,7 +21,7 @@
   },
   {
     "id": "tw.customCloudServer",
-    "description": "Appears when using a non-Sailfish-Studio provided cloud variable server. {server} is replaced with the server's URL, eg. wss://clouddata.sailfish-studio.org",
+    "description": "Appears when using a non-Sailfish-Studio provided cloud variable server. {server} is replaced with the server's URL, eg. wss://clouddata.turbowarp.org",
     "defaultMessage": "Using a custom cloud variable server: {server}"
   },
   {

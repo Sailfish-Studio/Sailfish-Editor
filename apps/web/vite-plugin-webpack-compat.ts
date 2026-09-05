@@ -139,6 +139,21 @@ export default function webpackCompatPlugin(): Plugin {
         (_m, path) => { changed = true; return `require("${path}?raw")`; },
       );
 
+      // worker-loader inline syntax (no leading '!', JSON query):
+      //   require('worker-loader?{...}!./path.worker')
+      //   require('worker-loader?name=...!./path.worker')
+      // Vite has no worker-loader equivalent; replace with null so call sites
+      // receive `null` and fall through to their existing fallback / try-catch.
+      result = result.replace(
+        /require\(["']worker-loader\?[^"']+["']\)/g,
+        () => { changed = true; return 'null'; },
+      );
+      // Same pattern but already converted to ESM `import "..."` form.
+      result = result.replace(
+        /\bimport\s*["']worker-loader\?[^"']+["']\s*;?/g,
+        () => { changed = true; return ''; },
+      );
+
       return changed ? result : null;
     },
   };

@@ -22,7 +22,7 @@ const DefaultAssets = [
         format: DataFormat.PNG,
         id: null,
         data: Buffer.from(
-            require('./builtins/defaultBitmap.png') // eslint-disable-line global-require
+            require('./builtins/defaultBitmap.b64.js'), 'base64' // eslint-disable-line global-require
         )
     },
     {
@@ -30,7 +30,7 @@ const DefaultAssets = [
         format: DataFormat.WAV,
         id: null,
         data: Buffer.from(
-            require('./builtins/defaultSound.wav') // eslint-disable-line global-require
+            require('./builtins/defaultSound.b64.js'), 'base64' // eslint-disable-line global-require
         )
     },
     {
@@ -38,7 +38,7 @@ const DefaultAssets = [
         format: DataFormat.SVG,
         id: null,
         data: Buffer.from(
-            require('./builtins/defaultVector.svg') // eslint-disable-line global-require
+            require('./builtins/defaultVector.b64.js'), 'base64' // eslint-disable-line global-require
         )
     }
 ];

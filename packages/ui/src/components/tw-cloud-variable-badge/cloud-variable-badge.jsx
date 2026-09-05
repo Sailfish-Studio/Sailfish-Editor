@@ -9,7 +9,7 @@ import {APP_NAME} from '../../lib/brand';
 const hosts = [
     {
         name: 'US East',
-        cloudHost: 'wss://clouddata.sailfish-studio.org'
+        cloudHost: 'wss://clouddata.turbowarp.org'
     }
 ];
 
@@ -79,7 +79,7 @@ const CloudVariableBadge = props => {
                 <FormattedMessage
                     defaultMessage="Using a custom cloud variable server: {server}"
                     // eslint-disable-next-line max-len
-                    description="Appears when using a non-Sailfish-Studio provided cloud variable server. {server} is replaced with the server's URL, eg. wss://clouddata.sailfish-studio.org"
+                    description="Appears when using a non-Sailfish-Studio provided cloud variable server. {server} is replaced with the server's URL, eg. wss://clouddata.turbowarp.org"
                     id="tw.customCloudServer"
                     values={{
                         server: props.cloudHost
@@ -109,7 +109,7 @@ const CloudVariableBadge = props => {
             <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://docs.sailfish-studio.org/cloud-variables"
+                href="https://docs.turbowarp.org/cloud-variables"
             >
                 <FormattedMessage
                     defaultMessage="Learn more about cloud variables."

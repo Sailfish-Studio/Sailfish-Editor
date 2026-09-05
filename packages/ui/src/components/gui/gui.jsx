@@ -47,9 +47,9 @@ import {isRendererSupported, isBrowserSupported} from '../../lib/tw-environment-
 
 import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
-import codeIcon from "./icon--code.svg?url";
-import costumesIcon from "./icon--costumes.svg?url";
-import soundsIcon from "./icon--sounds.svg?url";
+import codeIcon from './icon--code.svg';
+import costumesIcon from './icon--costumes.svg';
+import soundsIcon from './icon--sounds.svg';
 
 const messages = defineMessages({
     addExtension: {
@@ -341,7 +341,7 @@ const GUIComponent = props => {
                                     <Tab className={tabClassNames.tab}>
                                         <img
                                             draggable={false}
-                                            src={codeIcon()}
+                                            src={codeIcon}
                                         />
                                         <FormattedMessage
                                             defaultMessage="Code"
@@ -355,7 +355,7 @@ const GUIComponent = props => {
                                     >
                                         <img
                                             draggable={false}
-                                            src={costumesIcon()}
+                                            src={costumesIcon}
                                         />
                                         {targetIsStage ? (
                                             <FormattedMessage
@@ -377,7 +377,7 @@ const GUIComponent = props => {
                                     >
                                         <img
                                             draggable={false}
-                                            src={soundsIcon()}
+                                            src={soundsIcon}
                                         />
                                         <FormattedMessage
                                             defaultMessage="Sounds"

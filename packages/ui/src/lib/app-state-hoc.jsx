@@ -9,6 +9,16 @@ import localesReducer, {initLocale, localesInitialState} from '../reducers/local
 
 import {setPlayer, setFullScreen} from '../reducers/mode.js';
 
+import guiReducer, {
+    guiInitialState,
+    guiMiddleware,
+    initEmbedded,
+    initFullScreen,
+    initPlayer,
+    initTelemetryModal
+} from '../reducers/gui';
+import {ScratchPaintReducer} from './tw-scratch-paint';
+
 import locales from '@turbowarp/scratch-l10n';
 import {detectLocale} from './detect-locale';
 
@@ -43,20 +53,6 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
                 initialState = {locales: initializedLocales};
                 enhancer = composeEnhancers();
             } else {
-                // You are right, this is gross. But it's necessary to avoid
-                // importing unneeded code that will crash unsupported browsers.
-                const guiRedux = require('../reducers/gui');
-                const guiReducer = guiRedux.default;
-                const {
-                    guiInitialState,
-                    guiMiddleware,
-                    initFullScreen,
-                    initPlayer,
-                    initEmbedded,
-                    initTelemetryModal
-                } = guiRedux;
-                const {ScratchPaintReducer} = require('./tw-scratch-paint');
-
                 let initializedGui = guiInitialState;
                 if (props.isFullScreen || props.isPlayerOnly) {
                     if (props.isFullScreen) {

@@ -177,7 +177,9 @@ Blockly.Workspace.prototype.addTopBlock = function(block) {
  */
 Blockly.Workspace.prototype.removeTopBlock = function(block) {
   if (!goog.array.remove(this.topBlocks_, block)) {
-    throw 'Block not present in workspace\'s list of top-most blocks.';
+    // Duplicate removals can happen while a workspace update is being
+    // re-synced; tolerate them instead of throwing.
+    return;
   }
 };
 

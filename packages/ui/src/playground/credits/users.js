@@ -10,7 +10,7 @@ const shuffle = list => {
 
 const fromHardcoded = ({userID = '0', username}) => {
     const result = {
-        image: `https://trampoline.sailfish-studio.org/avatars/${userID}`,
+        image: `https://trampoline.turbowarp.org/avatars/${userID}`,
         text: username
     };
     if (username && userID !== '0') {

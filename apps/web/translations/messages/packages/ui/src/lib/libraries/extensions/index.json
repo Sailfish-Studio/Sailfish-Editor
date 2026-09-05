@@ -146,7 +146,7 @@
   },
   {
     "id": "tw.extensionGallery.name",
-    "description": "Name of extensions.sailfish-studio.org in extension library",
+    "description": "Name of extensions.turbowarp.org in extension library",
     "defaultMessage": "{APP_NAME} Extension Gallery"
   },
   {
@@ -157,11 +157,11 @@
   {
     "id": "tw.extensionGallery.more",
     "description": "Appears after the extension list from the gallery was loaded successfully",
-    "defaultMessage": "Learn more about extensions at extensions.sailfish-studio.org."
+    "defaultMessage": "Learn more about extensions at extensions.turbowarp.org."
   },
   {
     "id": "tw.extensionGallery.error",
     "description": "Appears when an error occurred loading extension list from the custom extension gallery",
-    "defaultMessage": "Error loading extension gallery. Visit extensions.sailfish-studio.org to find more extensions."
+    "defaultMessage": "Error loading extension gallery. Visit extensions.turbowarp.org to find more extensions."
   }
 ]

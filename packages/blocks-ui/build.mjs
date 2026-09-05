@@ -29,17 +29,67 @@ for (const file of allFiles) {
 }
 console.log(`Found ${provides.size} provided modules`);
 
-const visited = new Set();
-const order = [];
-function visit(name) {
-  if (visited.has(name)) return;
-  visited.add(name);
-  if (!provides.has(name)) return;
-  const file = provides.get(name);
-  for (const dep of (requires.get(file) || [])) visit(dep);
-  if (!order.includes(file)) order.push(file);
+// Build a file-level dependency graph, then topologically sort with Tarjan
+// SCC. Inside a strongly-connected component files keep their natural
+// (alphabetical readdir) order, which keeps base files such as core/block.js
+// ahead of subclasses like core/block_svg.js even where requires form cycles.
+const fileIdx = new Map();
+allFiles.forEach((f, idx) => fileIdx.set(f, idx));
+const adj = allFiles.map(() => []);
+for (const file of allFiles) {
+  const seen = new Set();
+  for (const req of (requires.get(file) || [])) {
+    const provider = provides.get(req);
+    if (provider && provider !== file && !seen.has(provider)) {
+      seen.add(provider);
+      adj[fileIdx.get(file)].push(fileIdx.get(provider));
+    }
+  }
 }
-for (const name of provides.keys()) visit(name);
+
+const n = allFiles.length;
+const index = new Array(n).fill(-1);
+const low = new Array(n).fill(0);
+const onStack = new Array(n).fill(false);
+const stack = [];
+const components = [];
+let counter = 0;
+const strongconnect = (v) => {
+  index[v] = counter;
+  low[v] = counter;
+  counter += 1;
+  stack.push(v);
+  onStack[v] = true;
+  for (const w of adj[v]) {
+    if (index[w] === -1) {
+      strongconnect(w);
+      low[v] = Math.min(low[v], low[w]);
+    } else if (onStack[w]) {
+      low[v] = Math.min(low[v], index[w]);
+    }
+  }
+  if (low[v] === index[v]) {
+    const comp = [];
+    let w;
+    do {
+      w = stack.pop();
+      onStack[w] = false;
+      comp.push(w);
+    } while (w !== v);
+    comp.sort((a, b) => a - b); // natural file order within the SCC
+    components.push(comp);
+  }
+};
+for (let v = 0; v < n; v++) {
+  if (index[v] === -1) strongconnect(v);
+}
+
+// Tarjan emits SCCs finishing leaves first, i.e. dependencies before the
+// files that require them.
+const order = [];
+for (const comp of components) {
+  for (const v of comp) order.push(allFiles[v]);
+}
 console.log(`Sorted ${order.length} files in dependency order`);
 
 const googShim = readFileSync(resolve(__dirname, 'goog-shim.js'), 'utf8');
@@ -48,14 +98,27 @@ const googShim = readFileSync(resolve(__dirname, 'goog-shim.js'), 'utf8');
 const RE_PROVIDE = new RegExp("^goog\\.provide\\(['\"][^'\"]+['\"]\\);?\\s*$", "gm");
 const RE_REQUIRE = new RegExp("^goog\\.require\\(['\"][^'\"]+['\"]\\);?\\s*$", "gm");
 
-let output = googShim + '\n// --- scratch-blocks source files ---\n\n';
+let output = googShim + '\n// --- pre-create all goog.provide() namespaces ---\n';
+output += '(function () {\n';
+for (const name of provides.keys()) {
+  output += `  goog.provide('${name}');\n`;
+}
+output += '})();\n\n// --- scratch-blocks source files ---\n\n';
 for (const file of order) {
   let content = readFileSync(file, 'utf8');
   content = content.replace(RE_PROVIDE, '');
   content = content.replace(RE_REQUIRE, '');
+  // Inline goog.inherits as a deferred inheritance: queue (child, parent)
+  // accessor closures and apply them after every module has executed. This
+  // makes class extension order independent of cyclic module ordering.
+  content = content.replace(
+    /goog\.inherits\(\s*([A-Za-z_$][\w.$]*)\s*,\s*([A-Za-z_$][\w.$]*)\s*\)/g,
+    (_m, child, parent) => `goog.__inheritLater__(function(){return ${child};},function(){return ${parent};})`
+  );
   output += `// File: ${file.replace(__dirname + '/', '')}\n`;
   output += content + '\n\n';
 }
+output += 'goog.__inheritFlush__();\n\n';
 
 output += `
 (function(root, factory) {

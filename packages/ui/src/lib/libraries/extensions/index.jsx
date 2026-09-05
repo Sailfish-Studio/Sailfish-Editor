@@ -128,7 +128,7 @@ export default [
             />
         ),
         extensionId: 'faceSensing',
-        extensionURL: 'https://extensions.sailfish-studio.org/lab/face-sensing.js',
+        extensionURL: 'https://extensions.turbowarp.org/lab/face-sensing.js',
         iconURL: faceSensingIconURL,
         insetIconURL: faceSensingInsetIconURL,
         description: (
@@ -433,14 +433,14 @@ export const galleryLoading = {
     name: (
         <FormattedMessage
             defaultMessage="{APP_NAME} Extension Gallery"
-            description="Name of extensions.sailfish-studio.org in extension library"
+            description="Name of extensions.turbowarp.org in extension library"
             id="tw.extensionGallery.name"
             values={{
                 APP_NAME
             }}
         />
     ),
-    href: 'https://extensions.sailfish-studio.org/',
+    href: 'https://extensions.turbowarp.org/',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
@@ -459,20 +459,20 @@ export const galleryMore = {
     name: (
         <FormattedMessage
             defaultMessage="{APP_NAME} Extension Gallery"
-            description="Name of extensions.sailfish-studio.org in extension library"
+            description="Name of extensions.turbowarp.org in extension library"
             id="tw.extensionGallery.name"
             values={{
                 APP_NAME
             }}
         />
     ),
-    href: 'https://extensions.sailfish-studio.org/',
+    href: 'https://extensions.turbowarp.org/',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
         <FormattedMessage
             // eslint-disable-next-line max-len
-            defaultMessage="Learn more about extensions at extensions.sailfish-studio.org."
+            defaultMessage="Learn more about extensions at extensions.turbowarp.org."
             description="Appears after the extension list from the gallery was loaded successfully"
             id="tw.extensionGallery.more"
         />
@@ -485,20 +485,20 @@ export const galleryError = {
     name: (
         <FormattedMessage
             defaultMessage="{APP_NAME} Extension Gallery"
-            description="Name of extensions.sailfish-studio.org in extension library"
+            description="Name of extensions.turbowarp.org in extension library"
             id="tw.extensionGallery.name"
             values={{
                 APP_NAME
             }}
         />
     ),
-    href: 'https://extensions.sailfish-studio.org/',
+    href: 'https://extensions.turbowarp.org/',
     extensionId: 'gallery',
     iconURL: galleryIcon,
     description: (
         <FormattedMessage
             // eslint-disable-next-line max-len
-            defaultMessage="Error loading extension gallery. Visit extensions.sailfish-studio.org to find more extensions."
+            defaultMessage="Error loading extension gallery. Visit extensions.turbowarp.org to find more extensions."
             description="Appears when an error occurred loading extension list from the custom extension gallery"
             id="tw.extensionGallery.error"
         />

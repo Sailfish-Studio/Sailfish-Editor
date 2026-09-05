@@ -133,25 +133,25 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'Sailfish-Studio Desktop'}
                     </a>
-                    <a href="https://packager.sailfish-studio.org/">
+                    <a href="https://packager.turbowarp.org/">
                         {/* Do not translate */}
                         {'Sailfish-Studio Packager'}
                     </a>
-                    <a href="https://docs.sailfish-studio.org/embedding">
+                    <a href="https://docs.turbowarp.org/embedding">
                         <FormattedMessage
                             defaultMessage="Embedding"
                             description="Link in footer to embedding documentation for embedding link"
                             id="tw.footer.embed"
                         />
                     </a>
-                    <a href="https://docs.sailfish-studio.org/url-parameters">
+                    <a href="https://docs.turbowarp.org/url-parameters">
                         <FormattedMessage
                             defaultMessage="URL Parameters"
                             description="Link in footer to URL parameters documentation"
                             id="tw.footer.parameters"
                         />
                     </a>
-                    <a href="https://docs.sailfish-studio.org/">
+                    <a href="https://docs.turbowarp.org/">
                         <FormattedMessage
                             defaultMessage="Documentation"
                             description="Link in footer to additional documentation"
@@ -286,11 +286,11 @@ class Interface extends React.Component {
                                             values={{
                                                 link: (
                                                     <a
-                                                        href="https://docs.sailfish-studio.org/unshared-projects"
+                                                        href="https://docs.turbowarp.org/unshared-projects"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                     >
-                                                        {'https://docs.sailfish-studio.org/unshared-projects'}
+                                                        {'https://docs.turbowarp.org/unshared-projects'}
                                                     </a>
                                                 )
                                             }}

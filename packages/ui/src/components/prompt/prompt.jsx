@@ -43,7 +43,7 @@ const messages = defineMessages({
 
 const Packager = () => (
     <a
-        href="https://packager.sailfish-studio.org"
+        href="https://packager.turbowarp.org"
         target="_blank"
         rel="noopener noreferrer"
     >

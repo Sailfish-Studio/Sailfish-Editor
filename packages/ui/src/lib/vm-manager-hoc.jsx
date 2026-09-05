@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import VM from '@sailfish/core';
-import AudioEngine from '@sailfish/core';
+import AudioEngine from '@sailfish/core/audio';
 
 import {setProjectUnchanged} from '../reducers/project-changed';
 import {
@@ -86,7 +86,11 @@ const vmManagerHOC = function (WrappedComponent) {
                     if (!this.props.isStarted) {
                         // Wrap in a setTimeout because skin loading in
                         // the renderer can be async.
-                        setTimeout(() => this.props.vm.renderer.draw());
+                        setTimeout(() => {
+                            if (this.props.vm.renderer) {
+                                this.props.vm.renderer.draw();
+                            }
+                        });
                     }
                 })
                 .catch(e => {

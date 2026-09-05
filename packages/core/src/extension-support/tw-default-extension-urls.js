@@ -6,16 +6,16 @@ const defaults = {
     // compatible with the original version due to fields vs inputs.
 
     // Scratch Lab Animated Text - https://lab.scratch.mit.edu/text/
-    text: 'https://extensions.sailfish-studio.org/lab/text.js',
+    text: 'https://extensions.turbowarp.org/lab/text.js',
 
     // Turboloader's AudioStream
-    audiostr: 'https://extensions.sailfish-studio.org/turboloader/audiostream.js',
+    audiostr: 'https://extensions.turbowarp.org/turboloader/audiostream.js',
 
     // Face Sensing - https://lab.scratch.mit.edu/face/ - https://scratch.mit.edu/discuss/topic/842592/
-    faceSensing: 'https://extensions.sailfish-studio.org/lab/face-sensing.js',
+    faceSensing: 'https://extensions.turbowarp.org/lab/face-sensing.js',
 
     // Video Sprites - https://lab.scratch.mit.edu/videosprites/
-    videoSprites: 'https://extensions.sailfish-studio.org/lab/video-sprites.js'
+    videoSprites: 'https://extensions.turbowarp.org/lab/video-sprites.js'
 };
 
 module.exports = defaults;

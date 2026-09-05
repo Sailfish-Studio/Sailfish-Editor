@@ -45,7 +45,7 @@ goog.dom = { createDom: function(t,a){var e=document.createElement(t);if(a){for(
 goog.userAgent = { JSCRIPT:false, EDGE:typeof navigator!=='undefined'&&/Edge\/\d+/.test(navigator.userAgent), GECKO:typeof navigator!=='undefined'&&/Gecko\/\d+/.test(navigator.userAgent)&&!/like Gecko/.test(navigator.userAgent), WEBKIT:typeof navigator!=='undefined'&&/WebKit\//.test(navigator.userAgent)&&!/Edge\/\d+/.test(navigator.userAgent), MAC:typeof navigator!=='undefined'&&/Macintosh/.test(navigator.userAgent), WINDOWS:typeof navigator!=='undefined'&&/Windows/.test(navigator.userAgent), LINUX:typeof navigator!=='undefined'&&/Linux/.test(navigator.userAgent), PLATFORM:typeof navigator!=='undefined'?navigator.platform||'':'' };
 goog.userAgent.product = { CHROME:typeof navigator!=='undefined'&&/Chrome/.test(navigator.userAgent)&&!/Edge/.test(navigator.userAgent), SAFARI:typeof navigator!=='undefined'&&/Safari/.test(navigator.userAgent)&&!/Chrome/.test(navigator.userAgent), FIREFOX:typeof navigator!=='undefined'&&/Firefox/.test(navigator.userAgent), IE:false, EDGE:typeof navigator!=='undefined'&&/Edge\/\d+/.test(navigator.userAgent) };
 goog.css = { classes: { add: function(e,c){if(e.classList)e.classList.add(c);else e.className+=' '+c;}, remove: function(e,c){if(e.classList)e.classList.remove(c);else e.className=e.className.replace(new RegExp('(^|\\b)'+c+'(\\b|$)','g'),'');}, has: function(e,c){if(e.classList)return e.classList.contains(c);return new RegExp('(^|\\b)'+c+'(\\b|$)').test(e.className);}, toggle: function(e,c){if(goog.css.classes.has(e,c))goog.css.classes.remove(e,c);else goog.css.classes.add(e,c);}, enable: function(e,c,en){if(en)goog.css.classes.add(e,c);else goog.css.classes.remove(e,c);} } };
-goog.events = { listen: function(s,t,l,c,h){s.addEventListener(t,h||l,!!c);return{key:t,src:s,listener:l,capture:!!c,handler:h||l};}, unlisten: function(k){if(k&&k.src)k.src.removeEventListener(k.key,k.handler,k.capture);}, unlistenByKey: function(k){goog.events.unlisten(k);}, removeAll: function(){}, getListeners: function(){return[];}, fireListeners: function(){return true;} };
+goog.events = { BrowserFeature: { HAS_W3C_EVENT_SUPPORT: true, SET_KEY_CODE_TO_PREVENT_DEFAULT: false, HAS_W3C_BUTTON: true, HAS_W3C_MOUSEWHEEL: true, HAS_W3C_DETAIL: true, HAS_POINTER_EVENT: typeof window!=='undefined'&&!!window.PointerEvent, HAS_TOUCH_EVENTS: typeof window!=='undefined'&&('ontouchstart' in window), TOUCH_ENABLED: typeof window!=='undefined'&&('ontouchstart' in window||(navigator.maxTouchPoints||0)>0) }, listen: function(s,t,l,c,h){s.addEventListener(t,h||l,!!c);return{key:t,src:s,listener:l,capture:!!c,handler:h||l};}, unlisten: function(k){if(k&&k.src)k.src.removeEventListener(k.key,k.handler,k.capture);}, unlistenByKey: function(k){goog.events.unlisten(k);}, removeAll: function(){}, getListeners: function(){return[];}, fireListeners: function(){return true;} };
 goog.async = { nextTick: function(cb,c){if(typeof queueMicrotask==='function')queueMicrotask(c?cb.bind(c):cb);else setTimeout(c?cb.bind(c):cb,0);}, throwException: function(e){setTimeout(function(){throw e;},0);} };
 goog.dispose = function(o){if(o&&typeof o.dispose==='function')o.dispose();};
 goog.Disposable = function(){};
@@ -65,3 +65,176 @@ goog.Uri.prototype.getParameterValue = function(){return null;};
 goog.Uri.prototype.toString = function(){var s='';if(this.scheme_)s+=this.scheme_+'://';if(this.domain_)s+=this.domain_;if(this.path_)s+=this.path_;return s;};
 goog.Uri.prototype.parse_ = function(u){var m=u.match(/^(https?:\/\/)([^\/]+)([^?]*)(.*)/);if(m){this.scheme_=m[1].replace(/:$/,'').replace(/\//g,'');this.domain_=m[2];this.path_=m[3];}else{this.path_=u;}};
 goog.Uri.parse = function(u){return new goog.Uri(u);};
+
+// --- Extended Closure stubs used by scratch-blocks runtime ---
+goog.dom.TagName = { A:'a', BUTTON:'button', CANVAS:'canvas', DIV:'div', IMG:'img', INPUT:'input', LABEL:'label', LI:'li', SELECT:'select', SPAN:'span', SVG:'svg', TABLE:'table', TD:'td', TEXTAREA:'textarea', TR:'tr', UL:'ul' };
+goog.dom.classes = { add:function(e,c){if(e.classList)e.classList.add(c);else e.className+=' '+c;}, remove:function(e,c){if(e.classList)e.classList.remove(c);else e.className=e.className.replace(new RegExp('(^|\\b)'+c+'(\\b|$)','g'),'');}, has:function(e,c){if(e.classList)return e.classList.contains(c);return new RegExp('(^|\\b)'+c+'(\\b|$)').test(e.className);}, toggle:function(e,c){if(goog.dom.classes.has(e,c))goog.dom.classes.remove(e,c);else goog.dom.classes.add(e,c);}, enable:function(e,c,en){if(en)goog.dom.classes.add(e,c);else goog.dom.classes.remove(e,c);}, swap:function(e,a,b){goog.dom.classes.remove(e,a);goog.dom.classes.add(e,b);} };
+goog.dom.createElement = function(tag){return document.createElement(tag);};
+goog.dom.contains = function(a,b){return a&&b?(a===b||!!(a.compareDocumentPosition(b)&16)):false;};
+goog.dom.getDocumentScroll = function(){return new goog.math.Coordinate(window.pageXOffset||document.documentElement.scrollLeft||0,window.pageYOffset||document.documentElement.scrollTop||0);};
+goog.dom.insertSiblingAfter = function(n,r){if(r&&r.parentNode)r.parentNode.insertBefore(n,r.nextSibling);};
+goog.dom.removeChildren = function(n){while(n.firstChild)n.removeChild(n.firstChild);};
+goog.dom.animationFrame = { polyfill: function(){} };
+
+goog.style = {
+  setStyle: function(e,s){if(typeof s==='string'){e.style.cssText=s;}else{for(var k in s){if(s.hasOwnProperty(k)){try{e.style[k]=s[k];}catch(_e){}}}}},
+  getSize: function(e){var r=e.getBoundingClientRect();return new goog.math.Size(r.width||e.offsetWidth||0,r.height||e.offsetHeight||0);},
+  getPageOffset: function(e){var r=e.getBoundingClientRect();return new goog.math.Coordinate(r.left+(window.pageXOffset||0),r.top+(window.pageYOffset||0));},
+  getViewportPageOffset: function(){return new goog.math.Coordinate(window.pageXOffset||0,window.pageYOffset||0);}
+};
+
+goog.math.Rect = function(x,y,w,h){this.left=x;this.top=y;this.width=w;this.height=h;};
+goog.math.Rect.prototype.getLeft=function(){return this.left;};
+goog.math.Rect.prototype.getTop=function(){return this.top;};
+goog.math.Rect.prototype.getWidth=function(){return this.width;};
+goog.math.Rect.prototype.getHeight=function(){return this.height;};
+goog.math.Rect.prototype.getRight=function(){return this.left+this.width;};
+goog.math.Rect.prototype.getBottom=function(){return this.top+this.height;};
+goog.math.Rect.prototype.getSize=function(){return new goog.math.Size(this.width,this.height);};
+goog.math.Rect.prototype.getTopLeft=function(){return new goog.math.Coordinate(this.left,this.top);};
+goog.math.Rect.prototype.clone=function(){return new goog.math.Rect(this.left,this.top,this.width,this.height);};
+goog.math.Rect.prototype.contains=function(r){return r instanceof goog.math.Rect?this.left<=r.left&&this.right>=r.right&&this.top<=r.top&&this.bottom>=r.bottom:this.containsPoint(r);};
+goog.math.Rect.prototype.containsPoint=function(c){return c.x>=this.left&&c.x<=this.left+this.width&&c.y>=this.top&&c.y<=this.top+this.height;};
+goog.math.Rect.prototype.intersects=function(r){return this.left<r.getRight()&&r.getLeft()<this.getRight()&&this.top<r.getBottom()&&r.getTop()<this.getBottom();};
+goog.math.Rect.prototype.intersection=function(r){var x0=Math.max(this.left,r.getLeft()),x1=Math.min(this.left+this.width,r.getRight()),y0=Math.max(this.top,r.getTop()),y1=Math.min(this.top+this.height,r.getBottom());if(x0<=x1&&y0<=y1)return new goog.math.Rect(x0,y0,x1-x0,y1-y0);return null;};
+goog.math.Rect.prototype.boundingRect=function(r){var x0=Math.min(this.left,r.left),y0=Math.min(this.top,r.top),x1=Math.max(this.getRight(),r.getRight()),y1=Math.max(this.getBottom(),r.getBottom());return new goog.math.Rect(x0,y0,x1-x0,y1-y0);};
+goog.math.Coordinate.prototype.add=function(c){this.x+=c.x;this.y+=c.y;return this;};
+goog.math.Coordinate.prototype.difference=function(c){return new goog.math.Coordinate(this.x-c.x,this.y-c.y);};
+goog.math.Coordinate.prototype.scale=function(sx,sy){this.x*=sx;this.y*=sy;return this;};
+goog.math.Coordinate.prototype.offset=function(dx,dy){this.x+=dx;this.y+=dy;return this;};
+goog.math.Coordinate.prototype.toString=function(){return '('+this.x+', '+this.y+')';};
+goog.math.Coordinate.prototype.equals=function(other){return other!=null&&this.x===other.x&&this.y===other.y;};
+goog.math.Coordinate.distance=function(a,b){var dx=a.x-b.x,dy=a.y-b.y;return Math.sqrt(dx*dx+dy*dy);};
+goog.math.Coordinate.equals=function(a,b){return a!=null&&b!=null&&a.x===b.x&&a.y===b.y;};
+
+goog.Timer = { callOnce: function(fn,ms){var h=setTimeout(function(){fn.call(null);},ms||1);if(h.unref)h.unref();return h;}, clear: function(h){clearTimeout(h);} };
+
+goog.color = {
+  hexToRgb: function(hex){var h=String(hex).replace('#','');if(h.length===3)h=h.replace(/(.)/g,'$1$1');var n=parseInt(h,16);return [(n>>16)&255,(n>>8)&255,n&255];},
+  rgbArrayToHex: function(rgb){return '#'+((1<<24)|(rgb[0]<<16)|(rgb[1]<<8)|rgb[2]).toString(16).slice(1);},
+  rgbToHsv: function(r,g,b){r/=255;g/=255;b/=255;var max=Math.max(r,g,b),min=Math.min(r,g,b),h=0,s=max===0?0:1-min/max,v=max;if(max!==min){var d=max-min;if(max===r)h=(g-b)/d+(g<b?6:0);else if(max===g)h=(b-r)/d+2;else h=(r-g)/d+4;h/=6;}return [h*360,s*100,v*100];},
+  hexToHsv: function(hex){var rgb=goog.color.hexToRgb(hex);return goog.color.rgbToHsv(rgb[0],rgb[1],rgb[2]);},
+  hsvToRgb: function(h,s,v){h=((h%360)+360)%360;s/=100;v/=100;var c=v*s,x=c*(1-Math.abs((h/60)%2-1)),m=v-c,rs=0,gs=0,bs=0;if(h<60){rs=c;gs=x;}else if(h<120){rs=x;gs=c;}else if(h<180){gs=c;bs=x;}else if(h<240){gs=x;bs=c;}else if(h<300){rs=x;bs=c;}else{rs=c;bs=x;}return [Math.round((rs+m)*255),Math.round((gs+m)*255),Math.round((bs+m)*255)];},
+  hsvToHex: function(h,s,v){return goog.color.rgbArrayToHex(goog.color.hsvToRgb(h,s,v));},
+  darken: function(hex,factor){var rgb=goog.color.hexToRgb(hex);return goog.color.rgbArrayToHex(rgb.map(function(v){return Math.max(0,Math.round(v*(1-factor)));}));}
+};
+
+goog.html = {
+  SafeHtml: function(s){this.s=s;},
+  SafeStyle: function(s){this.s=s;}
+};
+goog.html.SafeHtml.create = function(tag, attrs, content) {
+  var e = document.createElement(tag);
+  if (attrs) for (var k in attrs) if (attrs.hasOwnProperty(k)) {
+    if (k === 'class') e.className = attrs[k];
+    else if (k === 'style' && typeof attrs[k] === 'string') e.style.cssText = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  if (content != null) {
+    if (typeof content === 'string') e.textContent = content;
+    else if (content.s != null) e.textContent = content.s;
+    else if (content.appendChild) e.appendChild(content);
+  }
+  return e;
+};
+goog.html.SafeHtml.htmlEscape = function(s) {
+  return String(s).replace(/[&<>"']/g, function(c) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+};
+goog.html.SafeHtml.concat = function() {
+  var parts = [];
+  for (var i = 0; i < arguments.length; i++) parts.push(arguments[i].s != null ? arguments[i].s : String(arguments[i]));
+  return new goog.html.SafeHtml(parts.join(''));
+};
+
+goog.html.SafeHtml.prototype.toString=function(){return this.s;};
+goog.html.SafeStyle.prototype.toString=function(){return this.s;};
+
+goog.ui = {
+  Component: function(){} , MenuItem: function(){} , Menu: function(){} , Slider: function(){} , DatePicker: function(){} , ColorPicker: function(){},
+  tree: { TreeControl: function(){}, TreeNode: function(){} }
+};
+goog.ui.Component.EventType={ACTION:'action',CHANGE:'change',CLICK:'click'};
+goog.ui.Component.setDefaultRightToLeft=function(){};
+goog.ui.ColorPicker.EventType={CHANGE:'change'};
+goog.ui.ColorPicker.SIMPLE_GRID_COLORS=[];
+goog.ui.DatePicker.Events={CHANGE:'change'};
+goog.ui.MenuItemRenderer={};goog.ui.MenuRenderer={};goog.ui.MenuSeparatorRenderer={};
+
+goog.date = { DateTime: function(){} };
+goog.i18n = { DateTimeSymbols: {}, DateTimeSymbols_he: {}, compactNumberingSystems: {}, NumberFormatSymbols: {} };
+
+// --- core goog runtime helpers used by scratch-blocks ---
+goog.inherits = function(childCtor, parentCtor) {
+  function tempCtor() {}
+  tempCtor.prototype = parentCtor.prototype;
+  childCtor.superClass_ = parentCtor.prototype;
+  childCtor.prototype = new tempCtor();
+  childCtor.prototype.constructor = childCtor;
+};
+goog.global = typeof window !== 'undefined' ? window : globalThis;
+goog.isString = function(v){ return typeof v === 'string'; };
+goog.isNumber = function(v){ return typeof v === 'number'; };
+goog.isFunction = function(v){ return typeof v === 'function'; };
+goog.isBoolean = function(v){ return typeof v === 'boolean'; };
+goog.isArray = function(v){ return Array.isArray(v); };
+goog.isDef = function(v){ return v !== undefined; };
+goog.isNull = function(v){ return v === null; };
+goog.isDefAndNotNull = function(v){ return v != null; };
+goog.isObject = function(v){ return v != null && (typeof v === 'object' || typeof v === 'function'); };
+goog.mixin = function(target, source) {
+  for (var k in source) {
+    if (!(k in target)) target[k] = source[k];
+  }
+  return target;
+};
+goog.getObjectByName = function(name, obj) {
+  obj = obj || goog.global;
+  var parts = name.split('.');
+  for (var i = 0; i < parts.length; i++) {
+    obj = obj[parts[i]];
+    if (obj == null) return null;
+  }
+  return obj;
+};
+goog.DEBUG = false;
+goog.getMsg = function(msg, vars) {
+  if (vars) {
+    return String(msg).replace(/\{\$([a-zA-Z0-9_]+)\}/g, function(_, n) {
+      return vars[n] != null ? vars[n] : '{$' + n + '}';
+    });
+  }
+  return msg;
+};
+goog.getMsgOrig = goog.getMsg;
+
+// Extra goog.string helpers used by scratch-blocks
+goog.string.repeat = function(s, n) { return (new Array((n || 0) + 1)).join(s); };
+goog.string.trim = function(s) { return String(s).replace(/^\s+|\s+$/g, ''); };
+goog.string.htmlEscape = function(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+goog.string.caseInsensitiveEquals = function(a, b) { return String(a).toLowerCase() === String(b).toLowerCase(); };
+
+// Deferred inheritance: applied after all scratch-blocks modules have run, so
+// base classes are guaranteed to be final regardless of file ordering.
+goog.__inheritQueue__ = [];
+goog.__inheritLater__ = function(childAccessor, parentAccessor) {
+  goog.__inheritQueue__.push([childAccessor, parentAccessor]);
+};
+goog.__inheritFlush__ = function() {
+  for (var i = 0; i < goog.__inheritQueue__.length; i++) {
+    var child = goog.__inheritQueue__[i][0]();
+    var parent = goog.__inheritQueue__[i][1]();
+    if (child == null || parent == null) continue;
+    child.superClass_ = parent.prototype;
+    if (typeof Object.setPrototypeOf === 'function') {
+      Object.setPrototypeOf(child.prototype, parent.prototype);
+    } else {
+      child.prototype.__proto__ = parent.prototype;
+    }
+    child.prototype.constructor = child;
+  }
+  goog.__inheritQueue__ = [];
+};

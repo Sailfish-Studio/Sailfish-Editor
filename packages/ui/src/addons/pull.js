@@ -410,7 +410,7 @@ const generateEntries = (items, callback) => {
             // eslint-disable-next-line max-len
             exportSection += `  ${JSON.stringify(i)}: () => import(/* webpackChunkName: ${JSON.stringify(name)} */ ${JSON.stringify(src)}),\n`;
         } else if (type === 'lazy-require') {
-            exportSection += `  ${JSON.stringify(i)}: () => require(${JSON.stringify(src)}),\n`;
+            exportSection += `  ${JSON.stringify(i)}: () => import(/* webpackChunkName: ${JSON.stringify(name)} */ ${JSON.stringify(src)}),\n`;
         } else if (type === 'eager-import') {
             const importName = importSection.add(src, i);
             exportSection += `  ${JSON.stringify(i)}: ${importName},\n`;

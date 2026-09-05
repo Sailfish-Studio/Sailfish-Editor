@@ -11,7 +11,7 @@ export const fetchProjectMeta = async projectId => {
     // trampoline says not to, so we're going to try putting a cache buster in here.
     const cacheBuster = `?rudebuster=${Math.random()}`;
     const urls = [
-        `https://trampoline.sailfish-studio.org/api/projects/${projectId}${cacheBuster}`,
+        `https://trampoline.turbowarp.org/api/projects/${projectId}${cacheBuster}`,
         `https://trampoline.sailfish-studio.xyz/api/projects/${projectId}${cacheBuster}`
     ];
     let firstError;
@@ -73,7 +73,7 @@ const TWProjectMetaFetcherHOC = function (WrappedComponent) {
                             this.props.onSetProjectTitle(title);
                         }
                         const authorName = data.author.username;
-                        const authorThumbnail = `https://trampoline.sailfish-studio.org/avatars/${data.author.id}`;
+                        const authorThumbnail = `https://trampoline.turbowarp.org/avatars/${data.author.id}`;
                         this.props.onSetAuthor(authorName, authorThumbnail);
                         const instructions = data.instructions || '';
                         const credits = data.description || '';

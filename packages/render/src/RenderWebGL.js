@@ -2,7 +2,7 @@ import EventEmitter from 'events';
 import hull from '@turbowarp/ancient-hull.js';
 import * as twgl from 'twgl.js';
 import rendererCSS from './renderer.css?inline';
-import SVGRenderer from '@sailfish/render';
+import SVGRenderer from './svg-renderer/svg-renderer';
 import Skin from './Skin';
 import BitmapSkin from './BitmapSkin';
 import Drawable from './Drawable';

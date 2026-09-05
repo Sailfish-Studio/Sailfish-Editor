@@ -24,7 +24,7 @@ const blockIconURI = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMA
  * The url of the translate server.
  * @type {string}
  */
-const serverURL = 'https://trampoline.sailfish-studio.org/translate/';
+const serverURL = 'https://trampoline.turbowarp.org/translate/';
 
 /**
  * How long to wait in ms before timing out requests to translate server.
